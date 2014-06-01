@@ -15,10 +15,10 @@ layout: default
 <p>{% if page.description %} {{ page.description }} {% endif  %}</p>
 
 <!-- images -->
-{% for i in (1..{{ page.nrOfImages }}) %}
+<!-- {% for i in (1..{{ page.nrOfImages }}) %} -->
 <img src="{{ "{{ page.imgPath }}/{{ i }}.jpg" | prepend: site.baseurl }}" alt="testing" height="42" width="42"><br>
 <p>"{{ "{{ page.imgPath }}/{{ i }}.jpg" | prepend: site.baseurl }}"</p>
-{% endfor %}
+<!-- {% endfor %} -->
 
 <!-- -->
 </div>
