@@ -19,6 +19,10 @@ layout: default
 <img src="{{ page.imgPath }}{{ i }}.jpg" height="42" width="42" >
 {% endfor %}
 
+<!-- pdf files -->
+{% for i in (1..page.nrOfFiles) %} 
+<img src="{{ page.filePath }}{{ i }}.jpg" height="42" width="42" >
+{% endfor %}
 
 
 </div>
