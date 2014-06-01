@@ -4,6 +4,11 @@ body {
     width: 960px;
 }
 
+/*clear class to clear floats*/
+.clear{
+  clear: both;
+}
+
 /* main container of body  */
 .page-content{
   display: block;
