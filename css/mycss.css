@@ -1,7 +1,39 @@
 /* main container of body  */
 .page-content{
+  
 }
 
+/* left part of the body*/
 .left-body{
 
+}
+
+/* div inside left body*/
+.navigation{
+  
+}
+
+/* ul inside left body*/
+.navigation ul{
+  
+}
+
+/* right side of body*/
+.right{
+  
+}
+
+/*div inside right body*/
+.post{
+  
+}
+
+/*Title heading*/
+.post h1{
+  
+}
+
+/*footer*/
+.site-footer{
+  
 }
