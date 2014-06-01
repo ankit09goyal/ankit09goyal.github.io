@@ -19,5 +19,5 @@ layout: default
 <img src="{{ "page.imgPath/{{ i }}.jpg" | prepend: site.baseurl }}" alt="testing" height="42" width="42"><br>
 {% endfor %}
 
-
+<!-- -->
 </div>
