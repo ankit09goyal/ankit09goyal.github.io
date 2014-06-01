@@ -18,17 +18,9 @@ layout: default
 
 <p>{{ page.nrOfImages }}</p>
 
-{% for i in (1..page.nrOfImages) %} 
-
-<img src="{{ page.imgPath }}{{ i }}.jpg" >
-<p>hiiiiiiiii {{ i }}</p>
-<p>{{ page.imgPath i}}.jpg</p>
-
-{% endfor %} 
 <!-- images -->
-<!-- {% for i in (1..{{ page.nrOfImages }}) %} 
-<img src="{{ "{{ page.imgPath }}/1.jpg" | prepend: site.baseurl }}" alt="testing" height="42" width="42"><br> -->
-
-<!-- {% endfor %} -->
+{% for i in (1..page.nrOfImages) %} 
+<img src="{{ page.imgPath }}{{ i }}.jpg" height="42" width="42" >
+{% endfor %} 
 
 </div>
