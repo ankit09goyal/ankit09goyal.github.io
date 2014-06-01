@@ -20,7 +20,9 @@ layout: default
 
 {% for i in (1..page.nrOfImages) %} 
 
+<img src="{{ page.imgPath"/{{ i }}.jpg" | prepend: site.baseurl }}" >
 <p>hiiiiiiiii {{ i }}</p>
+<p>{{ page.imgPath"/{{ i }}.jpg" | prepend: site.baseurl }}</p>
 
 {% endfor %} 
 <!-- images -->
