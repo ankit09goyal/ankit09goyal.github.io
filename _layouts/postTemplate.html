@@ -1,15 +1,20 @@
 ---
 layout: default
 ---
+
+<!-- template of the right side of the page for template based teams -->
 <div class="post">
 
-  <header class="post-header">
+<!-- Team Name -->
     <h1>{{ page.title }}</h1>
-    <p class="meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
-  </header>
 
-  <article class="post-content">
-  {{ content }}
-  </article>
+<!-- year -->
+<h2>{{ page.year }}</h2>
+
+<!-- description -->
+<p>{% if page.description %} {{ page.description }} {% endif  %}</p>
+
+<!-- image -->
+<img src={{ "/projects/2012/TeamA/img/1.jpg" | prepend: site.baseurl }} alt="testing" height="42" width="42" >
 
 </div>
