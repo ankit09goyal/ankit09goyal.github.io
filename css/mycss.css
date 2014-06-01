@@ -1,23 +1,26 @@
 body {
-  margin:0px auto;
+  height: 100%;
+    margin: 0 auto;
+    width: 960px;
 }
 
 /* main container of body  */
 .page-content{
-  width:960px;
-  height:100%;
-  margin:0px auto;
-  display:block;
+  display: block;
+    height: 100%;
+    margin: 0 auto;
+    position: absolute;
+    width: 960px;
 }
 
 /* left part of the body*/
 .left-body{
-width:125px;
-height:100%;
-background-color:#f7f7f7;
-float:left;
-margin-right:20px;
-border:#333333 solid;
+ background-color: #F7F7F7;
+    border: thin solid #333333;
+    float: left;
+    height: 100%;
+    margin-right: 5px;
+    width: 140px;
 }
 
 /* div inside left body*/
@@ -27,23 +30,26 @@ border:#333333 solid;
 
 /* ul inside left body*/
 .navigation ul{
-    color: #666666;
+       color: #333333;
     font-family: 'PacificoRegular',Arial,sans-serif;
-    font-size: 16px;
+    font-size: 13px;
     margin: 15px 0;
-    padding: 10px;
-    text-align: center;
-    text-shadow: 1px 1px 1px #FFFFFF;
+    padding: 20px;
+    text-align: left;
+    text-shadow: 0 0 1px #333333;
+}
+
+.navigation ul li a{
+  color: #333333; 
 }
 
 /* right side of body*/
 .right{
- width:840px;
-height:100%;
-background-color:#ffffff;
-float:right;
-border:#333333 solid; 
-}
+ background-color: #F7F7F7;
+    border: thin solid #333333;
+    float: right;
+    height: 100%;
+    width: 810px;
 
 /*div inside right body*/
 .post{
