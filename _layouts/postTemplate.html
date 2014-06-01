@@ -14,12 +14,14 @@ layout: default
 <!-- description -->
 <p>{% if page.description %} {{ page.description }} {% endif  %}</p>
 
+<h3>{{ page.images }}</h3>
+
+<p>{{ page.imgpath }}</p>
+
 <!-- images -->
 <!-- {% for i in (1..{{ page.nrOfImages }}) %} 
 <img src="{{ "{{ page.imgPath }}/1.jpg" | prepend: site.baseurl }}" alt="testing" height="42" width="42"><br> -->
-<p>{{ page.imgpath }}</p>
-<p>{{ page.images }}</p>
+
 <!-- {% endfor %} -->
 
-<!-- -->
 </div>
