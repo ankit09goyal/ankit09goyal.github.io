@@ -11,10 +11,10 @@ body {
 
 /* main container of body  */
 .page-content{
-  display: block;
+  
     height: 100%;
     margin: 0 auto;
-    position: absolute;
+    
     width: 960px;
 }
 
