@@ -1,0 +1,28 @@
+---
+layout: default
+---
+
+<div>
+  <h1>Projects:</h1>
+  
+  <!-- div for a particular year starts  -->
+  {% for project in page.projects %}
+  <div class="yearDiv">
+    <h2 class="year">{{ project.year }}</h2>
+    <ul>
+    <!-- teams in that year starts-->
+    {% for team in project.teams%}
+      <li>
+        <h3>{{ team.name }}</h3>
+        {% if team.description %}
+        <p>{{ team.description }}</p>
+        {% endif %}
+      </li>
+    {% endfor %}  
+    <!-- teams in that year ends-->  
+    </ul>
+  </div>
+  {% endfor %}
+  <!-- div for a particular year ends  -->
+  
+</div>
