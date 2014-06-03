@@ -13,10 +13,25 @@ layout: default
     <!-- teams in that year starts-->
     {% for team in project.teams%}
       <li>
-        <h3>{{ team.name }}</h3>
-        {% if team.description %}
-        <p>{{ team.description }}</p>
+        <!--team name-->
+        {% if team.link %}
+        <a href="{{ team.link }}">
+          <h3>{{ team.name }}</h3>
+        </a>
         {% endif %}
+        
+        <!--team logo-->
+        {% if team.logo %} <img src="{{ team.logo }}" width="60px" height="40px"> {% endif %}
+        
+        <!--industry partner-->
+        {% if team.partnerIndustry %} <h4>{{ team.partnerIndustry }}</h4> {% endif %}
+        
+        <!--industry partner logo-->
+        {% if team.partnerIndustryLogo %} <img src="{{ team.partnerIndustryLogo }}" width="60px" height="40px">  {% endif %}
+        
+        <!--team description-->
+        {% if team.description %} <p>{{ team.description }}</p> {% endif %}
+        
       </li>
     {% endfor %}  
     <!-- teams in that year ends-->  
