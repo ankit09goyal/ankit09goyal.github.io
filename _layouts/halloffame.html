@@ -14,11 +14,13 @@ layout: default
     {% for team in project.teams%}
       <li>
         <!--team name-->
-        
+        {% if team.link %}
         <a href="{{ site.baseurl }}/{{ team.link }}">
           <h3>{{ team.name }}</h3>
         </a>
-        
+        {% else %}
+          <h3>{{ team.name }}</h3>
+        {% endif %}
         
         <!--team logo-->
         {% if team.logo %} <img src="{{ team.logo }}" width="60px" height="40px"> {% endif %}
