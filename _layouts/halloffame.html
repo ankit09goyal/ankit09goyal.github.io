@@ -1,45 +1,64 @@
 ---
-layout: default
+layout: home
 ---
+        {% for project in page.projects %}
+        <!-- div year starts -->
+            <div class="year">
+                <h2>Year: {{ project.year }}</h2>
+                
+                <!-- div added only to add dotted line -->
+                <div class="dottedLineDiv">
 
-<div>
-  <h1>Projects:</h1>
-  
-  <!-- div for a particular year starts  -->
-  {% for project in page.projects %}
-  <div class="yearDiv">
-    <h2 class="year">{{ project.year }}</h2>
-    <ul>
-    <!-- teams in that year starts-->
-    {% for team in project.teams%}
-      <li>
-        <!--team name-->
-        {% if team.link %}
-        <a href="{{ site.baseurl }}/{{ team.link }}">
-          <h3>{{ team.name }}</h3>
-        </a>
-        {% else %}
-          <h3>{{ team.name }}</h3>
-        {% endif %}
-        
-        <!--team logo-->
-        {% if team.logo %} <img src="{{ team.logo }}" width="60px" height="40px"> {% endif %}
-        
-        <!--industry partner-->
-        {% if team.partnerIndustry %} <h4>{{ team.partnerIndustry }}</h4> {% endif %}
-        
-        <!--industry partner logo-->
-        {% if team.partnerIndustryLogo %} <img src="{{ team.partnerIndustryLogo }}" width="60px" height="40px">  {% endif %}
-        
-        <!--team description-->
-        {% if team.description %} <p>{{ team.description }}</p> {% endif %}
-        
-      </li>
-    {% endfor %}  
-    <!-- teams in that year ends-->  
-    </ul>
-  </div>
-  {% endfor %}
-  <!-- div for a particular year ends  -->
-  
-</div>
+          {% for team in project.teams%}
+                <!-- single team contatiner starts -->
+                <div class="team">
+                    <div class="headContainer">
+                        <div class="teamNameDiv">
+                    
+                    <!-- Team name starts -->    
+                          {% if team.link %}
+                             <a href="{{ site.baseurl }}/{{ team.link }}"><h2>{{ team.name }}</h2></a>
+                          {% else %}
+                            <a><h2>{{ team.name }}</h2></a>
+                          {% endif %}
+                    <!-- Team name ends -->
+                    
+                        </div>
+                        
+                    <!--team logo-->
+                        <div class="logoDiv">
+                            {% if team.logo %} <img class="teamLogo" src="{{ team.logo }}"> {% endif %}
+                        </div>
+                    <!--team logo ends -->      
+                    
+                    </div>
+                    <div class="clear"></div>
+                    
+                    <!-- description -->
+                     {% if team.description %} <p>{{ team.description }}</p> {% endif %}
+                    
+                    <div class="headContainer">
+                        <div class="industryDiv">
+                          <!--industry partner-->
+                          {% if team.partnerIndustry %} <h3>{{ team.partnerIndustry }}</h3> {% endif %}
+                        </div>
+                        
+                        <div class="logoDiv">
+                          <!--industry partner logo-->
+                          {% if team.partnerIndustryLogo %} <img class="teamLogo" src="{{ team.partnerIndustryLogo }}">  {% endif %}
+                        </div>
+                        
+                        <div class="clear"></div>
+                    </div>
+                    
+                </div>
+                 {% endfor %}  
+                <!-- single team contatiner ends -->
+            
+            </div>
+            <!-- div dotted line ends -->
+
+            </div>
+            {% endfor %}
+            <!-- div year ends -->
+
