@@ -1,2 +1,25 @@
-.body{
+.clear {
+    clear: both;
+}
+
+.mainBody{
+  height: 100%;
+    left: 0;
+    margin: 0 auto;
+    position: fixed;
+    right: 0;
+    width: 960px;
+
+.left-body{
+  width:170px;
+  height:100%;
+  float:left;
+  border:solid 1px #999;
+}
+
+.right-body{
+  width:750px;
+  height:100%;
+  float:right;
+  border:solid 1px #999;
 }
