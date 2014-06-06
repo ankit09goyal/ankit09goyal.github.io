@@ -23,10 +23,29 @@ body{
   float:left;
 }
 
-.left-body ul li{
-    list-style: none;
+.left-body ul{
+    width:100%;
+    margin-left:-25px;
 }
 
+.left-body ul li{
+    list-style: none;
+    border:1px solid #FFF;
+    background-color: #FBF1F2;
+}
+
+.left-body ul li:hover{
+    background-color: #FFF;
+    color:#B90F22;
+}
+
+.left-body ul a{
+    color: #666;
+    font-family: Tahoma,Arial,Helvetica,sans-serif;
+    font-size: 12px;
+    text-align: left;
+    text-decoration:none;
+}
 /* css of left body ends */
 
 /* css of right body starts */
