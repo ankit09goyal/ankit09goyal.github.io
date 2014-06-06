@@ -15,6 +15,28 @@ body{
   box-shadow: 1px 0 2px #AAAAAA;
 }
 
+/* right header ends*/
+.right-header{
+    float:left;
+    margin-top:20px;
+    margin-left:20px;
+    
+}
+
+.right-header a, .right-header span{
+    color: #666;
+     font-family: Tahoma,Arial,Helvetica,sans-serif;
+    font-size: 12px;
+    margin-bottom: 20px;
+    text-align: left;
+    text-decoration:none;
+}
+
+.right-header a:hover{
+    color:#B90F22;
+}
+/* right header ends*/
+
 /* css of left body starts */
 
 .left-body{
@@ -69,26 +91,6 @@ margin-top: 30px;
 margin-bottom: 30px;
      color: #B90F22;
      font-size: 22px;
-}
-
-.right-header{
-    float:left;
-    margin-top:20px;
-    margin-left:10px;
-    
-}
-
-.right-header a, .right-header span{
-    color: #666;
-     font-family: Tahoma,Arial,Helvetica,sans-serif;
-    font-size: 12px;
-    margin-bottom: 20px;
-    text-align: left;
-    text-decoration:none;
-}
-
-.right-header a:hover{
-    color:#B90F22;
 }
 
 .year h2{
