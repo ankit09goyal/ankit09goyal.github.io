@@ -11,6 +11,7 @@ defaults:
     scope:
       path: "" # empty string for all files
     values:
+      layout: "postTemplate"
       title: "sample title"
       logo: "/projects/2012/TeamA/img/logo.jpg"
       year: "2012"
