@@ -11,12 +11,12 @@ defaults:
     scope:
       path: "" # empty string for all files
     values:
-      title: sample title
-      logo: /projects/2012/TeamA/img/logo.jpg
-      year: 2012
-      description: sample description
-      nrOfImages: 2
-      imgPath: /projects/2012/TeamA/img/
+      title: "sample title"
+      logo: "/projects/2012/TeamA/img/logo.jpg"
+      year: "2012"
+      description: "sample description"
+      nrOfImages: "2"
+      imgPath: "/projects/2012/TeamA/img/"
 
 # Build settings
 markdown: kramdown
