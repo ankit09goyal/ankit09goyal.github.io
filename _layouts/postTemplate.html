@@ -6,22 +6,22 @@ layout: default
 <div class="post">
 
 <!-- Team Name -->
-    <h1>{{ page.title }}</h1>
+    <h1>{{ site.title }}</h1>
 
 <!-- year -->
-<h2>{{ page.year }}</h2>
+<h2>{{ site.year }}</h2>
 
 <!-- description -->
-<p>{% if page.description %} {{ page.description }} {% endif  %}</p>
+<p>{% if site.description %} {{ site.description }} {% endif  %}</p>
 
 <!-- images -->
-{% for i in (1..page.nrOfImages) %} 
-<img src="{{ page.imgPath }}{{ i }}.jpg" height="42" width="42" >
+{% for i in (1..site.nrOfImages) %} 
+<img src="{{ site.imgPath }}{{ i }}.jpg" height="42" width="42" >
 {% endfor %}
 
 <!-- pdf files -->
-{% for i in (1..page.nrOfFiles) %} 
-<img src="{{ page.filePath }}{{ i }}.jpg" height="42" width="42" >
+{% for i in (1..site.nrOfFiles) %} 
+<img src="{{ site.filePath }}{{ i }}.jpg" height="42" width="42" >
 {% endfor %}
 
 
