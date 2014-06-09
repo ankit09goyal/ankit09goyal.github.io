@@ -5,10 +5,6 @@ description: "Write an awesome description for your new site here. You can edit 
 baseurl: ""
 url: "http://yourdomain.com"
 
-# Build settings
-markdown: kramdown
-permalink: pretty
-
 #default values or our databse
 defaults:
   -
@@ -44,4 +40,8 @@ defaults:
             link: 
             partnerIndustry: "Bosch"
             partnerIndustryLogo: 
-  -
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+
