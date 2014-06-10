@@ -5,6 +5,12 @@ layout: default
 <!-- template of the right side of the page for template based teams -->
 <div class="post">
 
+{% for project in site.projects %}
+
+{% if project.year == page.year %}
+
+ {% for team in project.teams%}
+{% if team.name == page.title %}
 <!-- Team Name -->
     <h1>{{ site.title }}</h1>
 
@@ -24,5 +30,9 @@ layout: default
 <img src="{{ site.filePath }}{{ i }}.jpg" height="42" width="42" >
 {% endfor %}
 
+{% endif %}
+{% endfor %}
 
+{% endif %}
+{% endfor %}
 </div>
