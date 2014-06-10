@@ -27,6 +27,7 @@ layout: home
         
         {% for page in site.pages %}
         <!-- div year starts -->
+        {% if page.identifier != "1" %}
             <div class="year">
                 <h2>Year: {{ page.year }}</h2>
                 
@@ -82,6 +83,7 @@ layout: home
             <!-- div dotted line ends -->
 
             </div>
+            {% endif %}
             {% endfor %}
             <!-- div year ends -->
  </div>
