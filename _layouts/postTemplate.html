@@ -9,10 +9,10 @@ layout: default
 
 {% if project.year == page.year %}
 
- {% for team in project.teams%}
+ {% for team in project.teams %}
 {% if team.name == page.title %}
 <!-- Team Name -->
-    <h1>{{ site.title }}</h1>
+    <h1>{{ site.name }}</h1>
 
 <!-- year -->
 <h2>{{ site.year }}</h2>
@@ -20,15 +20,7 @@ layout: default
 <!-- description -->
 <p>{% if site.description %} {{ site.description }} {% endif  %}</p>
 
-<!-- images -->
-{% for i in (1..site.nrOfImages) %} 
-<img src="{{ site.imgPath }}{{ i }}.jpg" height="42" width="42" >
-{% endfor %}
 
-<!-- pdf files -->
-{% for i in (1..site.nrOfFiles) %} 
-<img src="{{ site.filePath }}{{ i }}.jpg" height="42" width="42" >
-{% endfor %}
 
 {% endif %}
 {% endfor %}
