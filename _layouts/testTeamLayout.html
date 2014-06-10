@@ -4,7 +4,14 @@ layout: default
 
 <!-- template of the right side of the page for template based teams -->
 <div class="post">
-<p>{{ site.pages }}</p>
+
+<p>
+{% for page in site.pages %}
+<ul>
+ <li>{{ page.title }}</li>
+</ul>
+{% endfor %}
+</p>
 
 {% for project in site.projects %}
 
