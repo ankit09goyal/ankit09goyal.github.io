@@ -27,7 +27,7 @@ layout: home
         
         {% for page in site.pages %}
         <!-- div year starts -->
-        {% if page.identifier != "1" %}
+        {% if page.identifier %}
             <div class="year">
                 <h2>Year: {{ page.year }}</h2>
                 
