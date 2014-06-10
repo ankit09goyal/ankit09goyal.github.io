@@ -7,15 +7,15 @@ layout: default
 
 {% for project in site.projects %}
 
-{% if project.year == page.year %}
+{% if project.year == "2014" %}
 
  {% for team in project.teams %}
-{% if team.name == page.title %}
+{% if team.name == "Team A" %}
 <!-- Team Name -->
     <h1>{{ site.name }}</h1>
 
 <!-- year -->
-<h2>{{ site.year }}</h2>
+<h2>{{ page.year }}</h2>
 
 <!-- description -->
 <p>{% if site.description %} {{ site.description }} {% endif  %}</p>
