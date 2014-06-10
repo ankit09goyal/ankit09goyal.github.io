@@ -28,12 +28,14 @@ layout: home
         {% for page in site.pages %}
         <!-- div year starts -->
         {% if page.identifier != 1 %}
+         {% if page.year %}
             <div class="year">
-                <h2>Year: {{ page.year }}</h2>
-                
+              
+            
+               <h2>Year: {{ page.year }}</h2>
                 <!-- div added only to add dotted line -->
                 <div class="dottedLineDiv">
-
+ {% endif %}
           
                 <!-- single team contatiner starts -->
                 <div class="team">
@@ -78,11 +80,12 @@ layout: home
                     
                 </div>
                 <!-- single team contatiner ends -->
-            
+            {% if page.year %}
             </div>
             <!-- div dotted line ends -->
 
             </div>
+            {% endif %}
             {% endif %}
             {% endfor %}
             <!-- div year ends -->
