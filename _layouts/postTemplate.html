@@ -12,13 +12,13 @@ layout: default
  {% for team in project.teams %}
 {% if team.name == "Team A" %}
 <!-- Team Name -->
-    <h1>{{ site.name }}</h1>
+    <h1>{{ team.name }}</h1>
 
 <!-- year -->
 <h2>{{ page.year }}</h2>
 
 <!-- description -->
-<p>{% if site.description %} {{ site.description }} {% endif  %}</p>
+<p>{% if team.description %} {{ team.description }} {% endif  %}</p>
 
 
 
