@@ -4,9 +4,35 @@ email: your-email@domain.com
 description: "Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description."
 baseurl: ""
 url: "http://yourdomain.com"
-
-name: "meta-blog default" # overrides previous default layout
-author: "Dr. Hyde default"
+projects:
+ - year: 2014 test it
+   teams:
+    - name: Team A test case
+      description: team a description team a description team a description team a description team a description team a description team a description team a description team a description
+      logo: http://upload.wikimedia.org/wikipedia/de/thumb/e/ee/Bosch-Logo.svg/800px-Bosch-Logo.svg.png
+      link: projects/2012/TeamA/
+      partnerIndustry: SAP
+      partnerIndustryLogo: http://npcloud.org/wp-content/uploads/2012/02/SAP-Logo.png
+    - name: Team B
+      description: team B description i have some more to tell here team B description i have some more to tell here team B description i have some more to tell here team B description i have some more to tell here
+      logo: http://upload.wikimedia.org/wikipedia/de/thumb/e/ee/Bosch-Logo.svg/800px-Bosch-Logo.svg.png
+      link: projects/2012/TeamA/
+      partnerIndustry: My Company Name
+      partnerIndustryLogo: http://npcloud.org/wp-content/uploads/2012/02/SAP-Logo.png
+ - year: 2013
+   teams:
+    - name: Team C
+      description: team C description team C description team C description team C description team C description team C description team C description team C description team C description
+      logo: http://upload.wikimedia.org/wikipedia/de/thumb/e/ee/Bosch-Logo.svg/800px-Bosch-Logo.svg.png
+      link:
+      partnerIndustry: SAP
+      partnerIndustryLogo: /projects/2012/TeamA/img/1.jpg
+    - name: Team D
+      description:
+      logo:
+      link:
+      partnerIndustry: Bosch
+      partnerIndustryLogo: 
 # Build settings
 markdown: kramdown
 permalink: pretty
