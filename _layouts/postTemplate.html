@@ -5,26 +5,24 @@ layout: default
 <!-- template of the right side of the page for template based teams -->
 <div class="post">
 
-{% for project in site.projects %}
-
-{% if project.year == "2014" %}
-
- {% for team in project.teams %}
-{% if team.name == "Team A" %}
 <!-- Team Name -->
-    <h1>{{ team.name }}</h1>
+    <h1>{{ page.title }}</h1>
 
 <!-- year -->
-<h2>{{ team.year }}</h2>
+<h2>{{ page.year }}</h2>
 
 <!-- description -->
-<p>{% if team.description %} {{ team.description }} {% endif  %}</p>
+<p>{% if page.description %} {{ page.description }} {% endif  %}</p>
 
-
-
-{% endif %}
+<!-- images -->
+{% for i in (1..page.nrOfImages) %} 
+<img src="{{ page.imgPath }}{{ i }}.jpg" height="42" width="42" >
 {% endfor %}
 
-{% endif %}
+<!-- pdf files -->
+{% for i in (1..page.nrOfFiles) %} 
+<img src="{{ page.filePath }}{{ i }}.jpg" height="42" width="42" >
 {% endfor %}
+
+
 </div>
