@@ -31,6 +31,7 @@ layout: home
           {% if weight == page.year %}   
             {% if page.identifier != 1 %}
               {% if i == 1 %}
+               {% capture i %} {{ i | plus:1 }} {% endcapture %}
                <!-- div year starts -->
                <div class="year">
                   <h2>Year: {{ page.year }}</h2>
@@ -81,21 +82,16 @@ layout: home
                     
                 </div>
                 <!-- single team contatiner ends -->
-            {% assign lengthOfLoop = forloop.length %}
-           
-            {% capture lengthOfLoop %} {{ lengthOfLoop | plus:1 }} {% endcapture %}
-            {% if i == lengthOfLoop %}
-            <h2>I am in the last loop</h2>
-            <h2>value of i: {{ i }}</h2>
-            <h2>value of length of loop: {{ lengthOfLoop }}</h2>
-             </div>
-             <!--div dotted line ends-->
-             </div>
+                
+               {% if forloop.last %}
+                <h2>I am in the last loop</h2>
+                </div>
+                <!--div dotted line ends-->
+                </div>
              <!-- div year ends -->
             {% endif %}
           {% endif %}
         {% endif %}
-            {% capture i %} {{ i | plus:1 }} {% endcapture %}
       {% endfor %}
     {% endfor %}
            
