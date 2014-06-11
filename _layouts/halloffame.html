@@ -35,7 +35,7 @@ layout: home
                <!-- div year starts -->
                <div class="year">
                   <h2>Year: {{ page.year }}</h2>
-                   
+                  <h2>Value of i: {{ i }}</h2> 
              <!-- div added only to add dotted line -->
                   <div class"dottedLineDiv">
               {% endif %}
@@ -86,6 +86,7 @@ layout: home
                 <!-- single team contatiner ends -->
                 
             {% if forloop.last %}
+            <h2>I am in the last loop</h2>
              </div>
              <!--div dotted line ends-->
              </div>
