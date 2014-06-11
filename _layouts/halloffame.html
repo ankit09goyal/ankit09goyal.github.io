@@ -31,16 +31,15 @@ layout: home
           {% if weight == page.year %}   
             {% if page.identifier != 1 %}
               {% if i == 1 %}
-              {% capture i %} {{ i | plus:1 }} {% endcapture %}
                <!-- div year starts -->
                <div class="year">
                   <h2>Year: {{ page.year }}</h2>
                   <h2>Value of i: {{ i }}</h2> 
-             <!-- div added only to add dotted line -->
+                  <!-- div added only to add dotted line -->
                   <div class"dottedLineDiv">
               {% endif %}
              
-             
+            {% capture i %} {{ i | plus:1 }} {% endcapture %}
                 <!-- single team contatiner starts -->
                 <div class="team">
                     <div class="headContainer">
@@ -84,9 +83,12 @@ layout: home
                     
                 </div>
                 <!-- single team contatiner ends -->
-                
-            {% if forloop.last %}
+            {% assign lengthOfLoop = forloop.length %}
+            {% capture lengthOfLoop %} {{ lengthOfLoop | plus:1 }} {% endcapture %}
+            {% if i == lengthOfLoop %}
             <h2>I am in the last loop</h2>
+            <h2>value of i: {{ i }}</h2>
+            <h2>value of length of loop: {{ lengthOfLoop }}</h2>
              </div>
              <!--div dotted line ends-->
              </div>
