@@ -85,6 +85,7 @@ layout: home
                 <!-- single team contatiner ends -->
             {% assign lengthOfLoop = forloop.length %}
              <h2>value of length of loop: {{ lengthOfLoop }}</h2>
+             <h2>value of i: {{ i }}</h2>
             {% capture lengthOfLoop %} {{ lengthOfLoop | plus:1 }} {% endcapture %}
             {% if i == lengthOfLoop %}
             <h2>I am in the last loop</h2>
