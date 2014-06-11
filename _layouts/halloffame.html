@@ -34,7 +34,6 @@ layout: home
                <!-- div year starts -->
                <div class="year">
                   <h2>Year: {{ page.year }}</h2>
-                  <h2>Value of i: {{ i }}</h2> 
                   <!-- div added only to add dotted line -->
                   <div class"dottedLineDiv">
               {% endif %}
@@ -83,7 +82,6 @@ layout: home
                 </div>
                 <!-- single team contatiner ends -->
             {% assign lengthOfLoop = forloop.length %}
-             <h2>value of length of loop: {{ lengthOfLoop }}</h2>
            
             {% capture lengthOfLoop %} {{ lengthOfLoop | plus:1 }} {% endcapture %}
             {% if i == lengthOfLoop %}
