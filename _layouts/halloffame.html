@@ -28,7 +28,7 @@ layout: home
       <div class="right-body">
       
         <h1>Hall Of Fame</h1>
-      {% for weight in (page.currentYear..page.startingYear) reversed %}
+      {% for weight in (page.startingYear..page.currentYear) reversed %}
        {% assign i = 1 %}
        
         {% for page in site.pages %}
