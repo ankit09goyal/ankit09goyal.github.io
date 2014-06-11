@@ -24,17 +24,20 @@ layout: home
       <div class="right-body">
       
         <h1>Hall Of Fame</h1>
-      {% for weight in (1..page.nrOfProjects) %}
+      {% for weight in (2012..page.currentYear) %}
+       {% assign i = 1 %}
+       
         {% for page in site.pages %}
-          {% if weight == page.weight %}   
+          {% if weight == page.year %}   
             {% if page.identifier != 1 %}
-              {% if page.year %}
+              {% if i == 1 %}
+               {{ i | plus:1 }}
                <!-- div year starts -->
                <div class="year">
                   <h2>Year: {{ page.year }}</h2>
                    
              <!-- div added only to add dotted line -->
-                  
+                  <div class"dottedLineDiv">
               {% endif %}
              
              
@@ -82,16 +85,17 @@ layout: home
                 </div>
                 <!-- single team contatiner ends -->
                 
-               <!-- div dotted line ends -->
-
-            {% if page.year %}
-            </div>
+            {% if forloop.last %}
+             </div>
+             <!--div dotted line ends-->
+             </div>
+             <!-- div year ends -->
             {% endif %}
-            {% endif %}
-            {% endif %}
-            {% endfor %}
-            {% endfor %}
-            <!-- div year ends -->
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+    {% endfor %}
+           
  </div>
       <!-- div right side starts -->
      
