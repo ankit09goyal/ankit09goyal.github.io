@@ -31,7 +31,7 @@ layout: home
           {% if weight == page.year %}   
             {% if page.identifier != 1 %}
               {% if i == 1 %}
-               {{ i | plus:1 }}
+              {% capture i %} {{ i | plus:1 }} {% endcapture %}
                <!-- div year starts -->
                <div class="year">
                   <h2>Year: {{ page.year }}</h2>
