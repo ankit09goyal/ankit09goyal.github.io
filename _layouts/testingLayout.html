@@ -1,3 +1,4 @@
+
 ---
 layout: home
 ---
@@ -25,28 +26,25 @@ layout: home
       
         <h1>Hall Of Fame</h1>
         
-        {% for page in site.pages %}
+        {% for project in page.projects %}
         <!-- div year starts -->
-        {% if page.identifier != 1 %}
-         {% if page.year %}
             <div class="year">
-              
-            
-               <h2>Year: {{ page.year }}</h2>
+                <h2>Year: {{ project.year }}</h2>
+                
                 <!-- div added only to add dotted line -->
-               
- {% endif %}
-          
+                <div class="dottedLineDiv">
+
+          {% for team in project.teams%}
                 <!-- single team contatiner starts -->
                 <div class="team">
                     <div class="headContainer">
                         <div class="teamNameDiv">
                     
                     <!-- Team name starts -->    
-                          {% if page.link %}
-                             <a href="{{ site.baseurl }}/{{ team.link }}"><h2>{{ page.name }}</h2></a>
+                          {% if team.link %}
+                             <a href="{{ site.baseurl }}/{{ team.link }}"><h2>{{ team.name }}</h2></a>
                           {% else %}
-                            <a><h2>{{ page.name }} {{ page.title }}</h2></a>
+                            <a><h2>{{ team.name }}</h2></a>
                           {% endif %}
                     <!-- Team name ends -->
                     
@@ -54,7 +52,7 @@ layout: home
                         
                     <!--team logo-->
                         <div class="logoDiv">
-                            {% if page.logo %} <img class="teamLogo" src="{{ page.logo }}"> {% endif %}
+                            {% if team.logo %} <img class="teamLogo" src="{{ team.logo }}"> {% endif %}
                         </div>
                     <!--team logo ends -->      
                     
@@ -62,31 +60,30 @@ layout: home
                     <div class="clear"></div>
                     
                     <!-- description -->
-                     {% if page.description %} <p>{{ page.description }}</p> {% endif %}
+                     {% if team.description %} <p>{{ team.description }}</p> {% endif %}
                     
                     <div class="headContainer">
                         <div class="industryDiv">
                           <!--industry partner-->
-                          {% if page.partnerIndustry %} <h3>Industry Partner: {{ page.partnerIndustry }}</h3> {% endif %}
+                          {% if team.partnerIndustry %} <h3>Industry Partner: {{ team.partnerIndustry }}</h3> {% endif %}
                         </div>
                         
                         <div class="logoDiv">
                           <!--industry partner logo-->
-                          {% if page.partnerIndustryLogo %} <img class="teamLogo" src="{{ page.partnerIndustryLogo }}">  {% endif %}
+                          {% if team.partnerIndustryLogo %} <img class="teamLogo" src="{{ team.partnerIndustryLogo }}">  {% endif %}
                         </div>
                         
                         <div class="clear"></div>
                     </div>
                     
                 </div>
+                 {% endfor %}  
                 <!-- single team contatiner ends -->
-            {% if page.year %}
             
+            </div>
             <!-- div dotted line ends -->
 
             </div>
-            {% endif %}
-            {% endif %}
             {% endfor %}
             <!-- div year ends -->
  </div>
