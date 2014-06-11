@@ -20,11 +20,15 @@ layout: home
         </div>
 <!-- div left side ends -->
 
+{% for i in (1..4) reversed %}
+  {{ i }}
+{% endfor %}
+
 <!-- div right side starts -->
       <div class="right-body">
       
         <h1>Hall Of Fame</h1>
-      {% for weight in (2012..page.currentYear) %}
+      {% for weight in (page.currentYear..page.startingYear) reversed %}
        {% assign i = 1 %}
        
         {% for page in site.pages %}
@@ -87,7 +91,6 @@ layout: home
           {% endif %}
         {% endif %}
       {% endfor %}
-    <h2>I am in the last loop</h2>
     </div>
     <!--div dotted line ends-->
     </div>
