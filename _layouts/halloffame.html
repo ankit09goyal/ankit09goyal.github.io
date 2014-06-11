@@ -24,8 +24,9 @@ layout: home
       <div class="right-body">
       
         <h1>Hall Of Fame</h1>
-        
+      {% for weight in (1..page.nrOfProjects) %}
         {% for page in site.pages %}
+          {% if weight == page.title %}   
           {% if page.identifier != 1 %}
              {% if page.year %}
                <!-- div year starts -->
@@ -35,7 +36,8 @@ layout: home
              <!-- div added only to add dotted line -->
                   
              {% endif %}
-          
+             
+             
                 <!-- single team contatiner starts -->
                 <div class="team">
                     <div class="headContainer">
@@ -84,6 +86,7 @@ layout: home
 
             {% if page.year %}
             </div>
+            {% endif %}
             {% endif %}
             {% endif %}
             {% endfor %}
