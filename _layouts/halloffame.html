@@ -28,8 +28,17 @@ layout: home
        {% assign i = 1 %}
        
         {% for page in site.pages %}
-          {% if weight == page.year %}   
-            {% if page.identifier != 1 %}
+        	var year = getYearFromUrl(page.url)
+        
+          {% if weight == year %}   
+            {% if page.identifier == TEAM %}
+            
+				var link = page.getLinkSomehow
+				var parts = link.split('/')
+				var year = parts[0]
+				var teamName = parts[1]
+				...
+            
               {% if i == 1 %}
                {% capture i %} {{ i | plus:1 }} {% endcapture %}
                <!-- div year starts -->
@@ -45,7 +54,7 @@ layout: home
                         <div class="teamNameDiv">
                     
                     <!-- Team name starts -->    
-                          {% if page.link %}
+                          {% if page.url %}
                              <a href="{{ site.baseurl }}/{{ page.link }}"><h2>{{ page.name }}</h2></a>
                           {% else %}
                             <a><h2>{{ page.name }}</h2></a>
