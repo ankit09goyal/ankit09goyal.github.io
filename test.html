@@ -48,7 +48,12 @@ layout: home
 	            <p>my team name: {{ teamName }}</p>
 		        
 		        {% endfor %}	
-		     {% endfor %}	
+		     {% endfor %}
+		     
+		     {% for myCategories in site.categories %}
+		     	{% for myCategory in myCategories %}
+		     		{% for myPosts in myCategory %}
+		     			<p>my posts links: {{ myPosts.url }}</p>
 		        	
  	</div>
       <!-- div right side starts -->
