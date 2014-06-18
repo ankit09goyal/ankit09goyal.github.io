@@ -26,9 +26,7 @@ layout: home
       	{% for post in site.posts %}
         	{% capture url %}{{ post.url }}{% endcapture %}
         <h2>{{ url | split:"/" }}</h2>	
-        	{% for item in url limit:2 offset:2 %}
-  		<p>	{{ item }}</p>
-		{% endfor %}
+        	
 		{% endfor %}     
  	</div>
       <!-- div right side starts -->
