@@ -24,7 +24,10 @@ layout: home
     <div class="right-body">
      
       	{% for post in site.posts %}
-        	<h1>{{ post.url }}</h1>
+        	{% capture url %}{{ post.url | split:"/" }}{% endcapture %}
+        	<h1>{{ url[1] }}</h1>
+        	<p>{{ url[2] }}</p>
+        	
 		{% endfor %}     
  	</div>
       <!-- div right side starts -->
