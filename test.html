@@ -44,8 +44,7 @@ layout: home
 	            {% assign link = mypage.url %}
 	            <p>my link: {{ link }}</p>
 	            {% assign teamName = link | split:"/" %}
-	            <p>my link split: {{ teamName }}</p>
-	            {% assign teamName = teamName[5] %}
+	            {% assign teamName = teamName[6] %}
 	            <p>my team name: {{ teamName }}</p>
 		        
 		        {% endfor %}	
