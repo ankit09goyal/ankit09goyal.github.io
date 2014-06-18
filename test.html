@@ -25,8 +25,8 @@ layout: home
      
       	{% for post in site.posts %}
         	{% capture url %}{{ post.url }}{% endcapture %}
-        	{{ url | split:"/" }}
-        	{% for item in url limit:1 offset:2 %}
+        <h2>{{ url | split:"/" }}</h2>	
+        	{% for item in url limit:2 offset:2 %}
   		<p>	{{ item }}</p>
 		{% endfor %}
 		{% endfor %}     
