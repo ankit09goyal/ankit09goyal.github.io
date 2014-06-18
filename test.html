@@ -33,7 +33,7 @@ layout: home
 	        	
 	        	{% assign i = 0 %}
 	        	{% assign myCategories[i] = urlArray[2] %}
-	        	
+	        		<p>category : {{ myCategories[i] }}</p>
 	        	{% capture i %} {{ i | plus:1 }} {% endcapture %}
 		{% endfor %}     
 		
