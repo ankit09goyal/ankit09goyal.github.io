@@ -50,16 +50,14 @@ layout: home
 		        {% endfor %}	
 		     {% endfor %}
 		     
-		     {% for myCategories in site.categories %}
-		     	<h1>myCategories: {{myCategories}}</h1>
+		   
 		     	{% for myCategory in myCategories %}
 		     		<h2>myCategory: {{myCategory}}</h2>
 		     		{% for myPosts in myCategory %}
 		     			<p>my posts links: {{ myPosts.url }}</p>
 		        	{% endfor %}
 					{% endfor %}     
-				{% endfor %}
-		
+			
  	</div>
       <!-- div right side starts -->
      
