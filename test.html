@@ -51,7 +51,7 @@ layout: home
 		     {% endfor %}
 		     
 		   	{% for mypage in site.categories %}
-		   		<p>{{ mypage }}</p>
+		   	{% if mypage != "projects" %}	<p>{{ mypage }}</p>{% endif %}
 		   	{% endfor %}
     
 			
