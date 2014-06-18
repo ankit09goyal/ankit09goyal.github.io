@@ -25,17 +25,21 @@ layout: home
      
       	{% for post in site.posts %}
         	
-  {% assign urlArray = post.url | split:"/" %}
-        	{% for urlElements in urlArray limit:1 offset:2 %}
-        	<h1>{{ urlElements }}</h1>
-        	{% endfor %}
+  			{% assign urlArray = post.url | split:"/" %}
         	
-        	{% assign i = 0 %}
-        	{% assign myCategories[i] = urlArray[2] %}
-        	
-        	<p>{{ myCategories[i] }}</p>
-        	{% capture i %} {{ i | plus:1 }} {% endcapture %}
+        		{% for urlElements in urlArray limit:1 offset:2 %}
+        			<h1>{{ urlElements }}</h1>
+        		{% endfor %}
+	        	
+	        	{% assign i = 0 %}
+	        	{% assign myCategories[i] = urlArray[2] %}
+	        	
+	        	{% capture i %} {{ i | plus:1 }} {% endcapture %}
 		{% endfor %}     
+		
+	{% for mycategory in myCategories %}	
+	        	<p>category : {{ mycategory }}</p>
+	        	{% endfor %}
  	</div>
       <!-- div right side starts -->
      
