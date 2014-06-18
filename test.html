@@ -38,7 +38,7 @@ layout: home
        			
        			<p>myYear: {{ myYear }}</p>
        			
-						{% for mypage in site.categories.myYear %}
+						{% for mypage in site.categories.{{ myYear }} %}
         	
 	        		{% assign myCategory = mypage.categories %}
 	        		<p>my categories: {{ myCategory }}</p>
