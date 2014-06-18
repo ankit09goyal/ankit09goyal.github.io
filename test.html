@@ -38,7 +38,7 @@ layout: home
        			
        			<p>myYear: {{ myYear }}</p>
        			
-						{% for mypage in site.categories[0] %}
+						{% for mypage in site.categories[myYear] %}
         	
 	        	
 	            {% assign link = mypage.url %}
@@ -50,7 +50,9 @@ layout: home
 		        {% endfor %}	
 		     {% endfor %}
 		     
-		   
+		   	{% for mypage in site.categories %}
+		   		<p>{{ mypage }}</p>
+		   	{% endfor %}
     
 			
  	</div>
