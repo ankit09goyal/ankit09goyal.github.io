@@ -25,7 +25,7 @@ layout: home
      
       	{% for post in site.posts %}
         	{% capture url %}{{ post.url }}{% endcapture %}
-        	{% capture url %}{{ url | split:"-" }}{% endcapture %}
+        	{% capture url %}{{ url | split:"/" }}{% endcapture %}
         	<h1>{{ url[1] }}</h1>
         	<p>{{ url[2] }}</p>
         	
