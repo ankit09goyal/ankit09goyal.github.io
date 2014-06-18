@@ -29,8 +29,12 @@ layout: home
         	{% for urlElements in urlArray limit:1 offset:2 %}
         	<h1>{{ urlElements }}</h1>
         	{% endfor %}
-        	<p>{{ urlArray[2] }}</p>
         	
+        	{% assign i = 0 %}
+        	{% assign myCategories[i] = urlArray[2] %}
+        	
+        	<p>{{ myCategories[i] }}</p>
+        	{% capture i %} {{ i | plus:1 }} {% endcapture %}
 		{% endfor %}     
  	</div>
       <!-- div right side starts -->
