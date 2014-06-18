@@ -32,14 +32,14 @@ layout: home
         		{% endfor %}
 	        	
 	        	{% assign i = 0 %}
-	        	{% assign myCategories[i] = urlArray[2] %}
-	        		<p>category : {{ myCategories[i] }}</p>
+	        	{% assign myCategories{{i}} = urlArray[2] %}
+	        	
 	        	{% capture i %} {{ i | plus:1 }} {% endcapture %}
 		{% endfor %}     
 		
-	{% for mycategory in myCategories %}	
-	        	<p>category : {{ mycategory }}</p>
-	        	{% endfor %}
+	
+	        	<p>category : {{ myCategories1 }}</p>
+	        	
  	</div>
       <!-- div right side starts -->
      
