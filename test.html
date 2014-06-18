@@ -38,12 +38,9 @@ layout: home
        			
        			<p>myYear: {{ myYear }}</p>
        			
-						{% for mypage in site.categories.{{ myYear }} %}
+						{% for mypage in site.categories.2014 %}
         	
-	        		{% assign myCategory = mypage.categories %}
-	        		<p>my categories: {{ myCategory }}</p>
-	        		{% assign myYear = myCategory[1] %}
-	        		<p>my year: {{ myYear }}</p>
+	        	
 	            {% assign link = mypage.url %}
 	            <p>my link: {{ link }}</p>
 	            {% assign teamName = link | split:"/" %}
