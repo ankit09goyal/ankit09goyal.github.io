@@ -51,7 +51,8 @@ layout: home
 		     {% endfor %}
 		     
 		   
-		     	{% for myCategory in site.categories %}
+		     	{% for myCategories in site.categories %}
+		     	{% for myCategory in myCategories %}
 		     		<h2>myCategory: {{myCategory}}</h2>
 		     		{% for myPosts in myCategory %}
 		     			<p>my posts links: {{ myPosts.url }}</p>
