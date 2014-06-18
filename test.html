@@ -34,15 +34,17 @@ layout: home
 		{% endfor %}     
 		
 	
-	        {% for year in (2012..2014) reversed %}
-       
-						{% for page in site.categories.year %}
+	        {% for myYear in (2012..2014) reversed %}
+       			
+       			<p>myYear: {{ myYear }}</p>
+       			
+						{% for mypage in site.categories.myYear %}
         	
-	        		{% assign myCategory = page.categories %}
+	        		{% assign myCategory = mypage.categories %}
 	        		<p>my categories: {{ myCategory }}</p>
 	        		{% assign myYear = myCategory[1] %}
 	        		<p>my year: {{ myYear }}</p>
-	            {% assign link = page.url %}
+	            {% assign link = mypage.url %}
 	            <p>my link: {{ link }}</p>
 	            {% assign teamName = link | split:"/" %}
 	            <p>my link split: {{ teamName }}</p>
