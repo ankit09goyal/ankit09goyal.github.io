@@ -5,14 +5,25 @@ layout: default
 <!-- template of the right side of the page for template based teams -->
 <div class="post">
 
+<!-- get the link to the folders inside the categories starts -->
+{% assign splittedLink = page.url | split:"/" %}
+{% assign folderLink = "/" | append:splittedLink[1] | append:'/' | append:splittedLink[2] | append:'/' %}
+<!-- get the link to the folders inside the categories ends -->
+                
+<!-- get the category and hence year starts -->
+{% assign myCategory = page.categories %}
+{% assign year = myCategory[2] %}
+<!-- get the category and hence year ends -->
+                
+                    
 <!-- Team Name -->
     <h1>{{ page.title }}</h1>
 
 <!-- year -->
-<h2>{{ page.year }}</h2>
+<h2>{{ year }}</h2>
 
 <!-- description -->
-<p>{% if page.description %} {{ page.description }} {% endif  %}</p>
+<p>{{ content }}</p>
 
 <!-- images -->
 {% for i in (1..page.nrOfImages) %} 
