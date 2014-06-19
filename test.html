@@ -52,9 +52,6 @@ layout: home
 		     
 		   	{% for mypage in site.categories %}
 		   	{% assign a = mypage | first %}
-		   	<h1>a: {{a}}</h1>
-		   	<h1>b: {{b}}</h1>
-		   	{% assign b = mypage | last %}
 		   	{% if a != 'projects' %}	<p>{{ mypage }}</p>{% endif %}
 		   	{% endfor %}
     
