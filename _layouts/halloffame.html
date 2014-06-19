@@ -51,7 +51,7 @@ layout: home
                     
                     <!-- get the link to the folders inside the categories starts -->
                     {% assign splittedLink = link | split:"/" %}
-                    {% assign folderLink = splittedLink[0] | append:'/' | append:splittedLink[1] | append:'/' %}
+                    {% assign folderLink = splittedLink[1] | append:'/' | append:splittedLink[1] | append:'/' %}
                     <p>folderLink: {{folderLink}}</p>
                     <p>{{splittedLink[0]}}</p>
                     <p>{{splittedLink[1]}}</p>
