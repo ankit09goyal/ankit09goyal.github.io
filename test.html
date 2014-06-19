@@ -52,7 +52,7 @@ layout: home
 		     
 		   	{% for mypages in site.categories %}
 		   	{% assign a = mypages | first %}
-		   	{% if a != 'projects' %}	<p>{{ mypages }}</p>{% endif %}
+		   	<p>{{ mypages }}</p>
 		   	{% endfor %}
     
 			
