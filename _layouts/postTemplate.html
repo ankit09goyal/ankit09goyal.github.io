@@ -7,11 +7,13 @@ layout: default
 
 <!-- get the link to the folders inside the categories starts -->
 {% assign splittedLink = page.url | split:"/" %}
+{{page.url}}
 {% assign folderLink = "/" | append:splittedLink[1] | append:'/' | append:splittedLink[2] | append:'/' %}
 <!-- get the link to the folders inside the categories ends -->
                 
 <!-- get the category and hence year starts -->
 {% assign myCategory = page.categories %}
+{{ page.categories}}
 {% assign year = myCategory[2] %}
 <!-- get the category and hence year ends -->
                 
