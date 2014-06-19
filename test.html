@@ -36,12 +36,20 @@ layout: home
 	
 	      
 		     
-		   	{% for mypages in site.categories %}
-		   	{% assign a = mypages %}
-		   	<h2>a: {{a}}</h2>
-		   	<h4>a[1]: {{a[1]}}</h4>
-		   	<p>{{ mypages }}</p>
-		   	{% endfor %}
+		   {% for category in site.categories %}
+  <li><a name="{{ category | first }}">{{ category | first }}</a>
+    <ul>
+    {% assign a = category | first %}
+    {%if a != 'porjects' %}
+    {% for posts in category %}
+      {% for post in posts %}
+        <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+      {% endfor %}
+    {% endfor %}
+    {% endif %}
+    </ul>
+  </li>
+{% endfor %}
     
 			
  	</div>
