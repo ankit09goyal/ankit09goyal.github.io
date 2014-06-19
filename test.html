@@ -37,16 +37,17 @@ layout: home
 	      
 		     
 		   {% for category in site.categories %}
-  <li><a name="{{ category | first }}">{{ category | first }}</a>
+  <li>
     <ul>
     {% assign myCategory = category | first %}
+    
     {% if myCategory != 'projects' %}
+    	
+    	{% assign year = myCategory %}
+	    <h2>{{year}}</h2>
 	    {% for posts in category %}
 	      {% for post in posts %}
-	      	{%  %}
-	     		{% assign year = myCategory %}
 	        {% assign link = post.url %}
-	        
 	        {% assign teamName = post.title %}
 	        <li><a href="{{ link }}">{{ teamName }}</a></li>
 	      {% endfor %}
