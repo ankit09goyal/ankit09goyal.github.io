@@ -23,15 +23,7 @@ layout: home
 <!-- div right side starts -->
     <div class="right-body">
      
-      	{% for post in site.posts %}
-        	
-  			{% assign urlArray = post.url | split:"/" %}
-        	
-        		{% for urlElements in urlArray limit:1 offset:2 %}
-        			<h1>{{ urlElements }}</h1>
-        		{% endfor %}
-	        	
-		{% endfor %}     
+     
 		
 	
 	      
