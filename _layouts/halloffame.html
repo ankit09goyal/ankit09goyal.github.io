@@ -51,10 +51,10 @@ layout: home
                     
                     <!-- get the link to the folders inside the categories starts -->
                     {% assign splittedLink = link | split:"/" %}
-                    {% assign folderLink = splittedLink[1] | append:'/' | append:splittedLink[1] | append:'/' %}
+                    {% assign folderLink = splittedLink[1] | append:'/' | append:splittedLink[2] | append:'/' %}
                     <p>folderLink: {{folderLink}}</p>
-                    <p>{{splittedLink[0]}}</p>
-                    <p>{{splittedLink[1]}}</p>
+                    <p>0: {{splittedLink[0]}}</p>
+                    <p>1: {{splittedLink[1]}}</p>
                     <!-- get the link to the folders inside the categories ends -->
                     
                     <!-- Team name starts -->    
