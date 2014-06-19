@@ -40,9 +40,10 @@ layout: home
               
 									{% for posts in category %}
 										{% for page in posts %}
-											{% assign link = page.url %}
-											{% assign teamName = page.title %}
-
+											{% if page.url %}
+												{% assign link = page.url %}
+												{% assign teamName = page.title %}
+												
                 <!-- single team contatiner starts -->
                 <div class="team">
                     <div class="headContainer">
@@ -86,7 +87,7 @@ layout: home
                     
                 </div>
                 <!-- single team contatiner ends -->
-              
+              {% endif %}
 						{% endfor %}
 					{% endfor %}
     
