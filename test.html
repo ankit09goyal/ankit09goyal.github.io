@@ -55,7 +55,7 @@ layout: home
 		   	<h1>a: {{a}}</h1>
 		   	<h1>b: {{b}}</h1>
 		   	{% assign b = mypage | last %}
-		   	{% if mypage | first != 'projects' %}	<p>{{ mypage }}</p>{% endif %}
+		   	{% if a != 'projects' %}	<p>{{ mypage }}</p>{% endif %}
 		   	{% endfor %}
     
 			
