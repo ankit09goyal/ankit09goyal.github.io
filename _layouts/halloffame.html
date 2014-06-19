@@ -26,7 +26,7 @@ layout: home
         <h1>Hall Of Fame</h1>
 			
 			{% assign baseURL = site.baseurl %}
-			<p>baseURL: {{baseURL}}</p>
+			<p>baseURL: {{site.baseurl}}</p>
 				{% for category in site.categories reversed %}
 				
     		{% assign myCategory = category | first %}
