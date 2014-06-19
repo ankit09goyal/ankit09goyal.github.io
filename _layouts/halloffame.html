@@ -24,9 +24,7 @@ layout: home
       <div class="right-body">
       
         <h1>Hall Of Fame</h1>
-			
-			{% assign baseURL = site.baseurl %}
-			<p>baseURL: {{site.baseurl}}</p>
+		
 				{% for category in site.categories reversed %}
 				
     		{% assign myCategory = category | first %}
@@ -59,7 +57,7 @@ layout: home
                     <!-- Team name starts -->    
                           {% if page.url %}
                           <p>baseURL: {{baseURL}}</p>
-                             <a href="{{ link }}"><h2>{{ teamName }}</h2></a>
+                             <a href="{{ link | prepend:site.baseurl }}"><h2>{{ teamName }}</h2></a>
                           {% else %}
                             <a><h2>{{ teamName }}</h2></a>
                           {% endif %}
@@ -69,7 +67,7 @@ layout: home
                         
                     <!--team logo-->
                         <div class="logoDiv">
-                            {% if page.logo %} <img class="teamLogo" src="{{ page.logo | prepend:'img/' | prepend:folderLink | prepend:baseURL }}"> {% endif %}
+                            {% if page.logo %} <img class="teamLogo" src="{{ page.logo | prepend:'img/' | prepend:folderLink | prepend:site.baseurl }}"> {% endif %}
                         </div>
                     <!--team logo ends -->      
                     
@@ -87,7 +85,7 @@ layout: home
                         
                         <div class="logoDiv">
                           <!--industry partner logo-->
-                          {% if page.partnerIndustryLogo %} <img class="teamLogo" src="{{ page.partnerIndustryLogo | prepend:'img/' | prepend:folderLink | prepend:baseURL }}">  {% endif %}
+                          {% if page.partnerIndustryLogo %} <img class="teamLogo" src="{{ page.partnerIndustryLogo | prepend:'img/' | prepend:folderLink | prepend:site.baseurl }}">  {% endif %}
                         </div>
                         
                         <div class="clear"></div>
