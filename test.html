@@ -50,9 +50,9 @@ layout: home
 		        {% endfor %}	
 		     {% endfor %}
 		     
-		   	{% for mypage in site.categories %}
-		   	{% assign a = mypage | first %}
-		   	{% if a != 'projects' %}	<p>{{ mypage }}</p>{% endif %}
+		   	{% for mypages in site.categories %}
+		   	{% assign a = mypages | first %}
+		   	{% if a != 'projects' %}	<p>{{ mypages }}</p>{% endif %}
 		   	{% endfor %}
     
 			
