@@ -24,30 +24,25 @@ layout: home
       <div class="right-body">
       
         <h1>Hall Of Fame</h1>
-      {% for weight in (page.startingYear..page.currentYear) reversed %}
-       {% assign i = 1 %}
-       
-        {% for page in site.pages %}
-        	var year = getYearFromUrl(page.url)
-        
-          {% if weight == year %}   
-            {% if page.identifier == TEAM %}
-            
-				var link = page.getLinkSomehow
-				var parts = link.split('/')
-				var year = parts[0]
-				var teamName = parts[1]
-				...
-            
-              {% if i == 1 %}
-               {% capture i %} {{ i | plus:1 }} {% endcapture %}
+			
+				{% for category in site.categories %}
+				
+    		{% assign myCategory = category | first %}
+    
+    		{% if myCategory != 'projects' %}
+     			{% assign year = myCategory %}
+
                <!-- div year starts -->
                <div class="year">
-                  <h2>Year: {{ page.year }}</h2>
+                  <h2>Year: {{ year }}</h2>
                   <!-- div added only to add dotted line -->
                   <div class="dottedLineDiv">
-              {% endif %}
-            
+              
+									{% for posts in category %}
+										{% for page in posts %}
+											{% assign link = page.url %}
+											{% assign teamName = page.title %}
+
                 <!-- single team contatiner starts -->
                 <div class="team">
                     <div class="headContainer">
@@ -55,9 +50,9 @@ layout: home
                     
                     <!-- Team name starts -->    
                           {% if page.url %}
-                             <a href="{{ site.baseurl }}/{{ page.link }}"><h2>{{ page.name }}</h2></a>
+                             <a href="{{ site.baseurl }}/{{ link }}"><h2>{{ teamName }}</h2></a>
                           {% else %}
-                            <a><h2>{{ page.name }}</h2></a>
+                            <a><h2>{{ teamName }}</h2></a>
                           {% endif %}
                     <!-- Team name ends -->
                     
@@ -91,17 +86,17 @@ layout: home
                     
                 </div>
                 <!-- single team contatiner ends -->
-                
-               
-          {% endif %}
-        {% endif %}
-      {% endfor %}
+              
+						{% endfor %}
+					{% endfor %}
+    
     </div>
     <!--div dotted line ends-->
     </div>
     <!-- div year ends -->
-    {% endfor %}
-           
+    {% endif %}
+{% endfor %}
+        
  </div>
       <!-- div right side starts -->
      
