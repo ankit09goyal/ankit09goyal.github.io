@@ -49,6 +49,13 @@ layout: home
                     <div class="headContainer">
                         <div class="teamNameDiv">
                     
+                    <!-- get the link to the folders inside the categories starts -->
+                    {% assign splittedLink = link | split:"/" %}
+                    {% assign folderLink = "/" | append:splittedLink[0] | append:'/' | append:splittedLink[1] | append:'/' %}
+                    <p>folderLink: {{folderLink}}</p>
+                    <p>splittedLink[0]</p>
+                    <!-- get the link to the folders inside the categories ends -->
+                    
                     <!-- Team name starts -->    
                           {% if page.url %}
                              <a href="{{ site.baseurl }}/{{ link }}"><h2>{{ teamName }}</h2></a>
@@ -69,7 +76,7 @@ layout: home
                     <div class="clear"></div>
                     
                     <!-- description -->
-                     {% if page.description %} <p>{{ page.description }}</p> {% endif %}
+                     {% if page.shortDescription %} <p>{{ page.shortDescription }}</p> {% endif %}
                     
                     <div class="headContainer">
                         <div class="industryDiv">
