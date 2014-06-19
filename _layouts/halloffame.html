@@ -66,7 +66,7 @@ layout: home
                         
                     <!--team logo-->
                         <div class="logoDiv">
-                            {% if page.logo %} <img class="teamLogo" src="{{ page.logo | prepend:folderLink | prepend:base.url }}"> {% endif %}
+                            {% if page.logo %} <img class="teamLogo" src="{{ page.logo | prepend:'img' | prepend:folderLink | prepend:site.baseurl }}"> {% endif %}
                         </div>
                     <!--team logo ends -->      
                     
@@ -84,7 +84,7 @@ layout: home
                         
                         <div class="logoDiv">
                           <!--industry partner logo-->
-                          {% if page.partnerIndustryLogo %} <img class="teamLogo" src="{{ page.partnerIndustryLogo }}">  {% endif %}
+                          {% if page.partnerIndustryLogo %} <img class="teamLogo" src="{{ page.partnerIndustryLogo | prepend:'img' | prepend:folderLink | prepend:site.baseurl }}">  {% endif %}
                         </div>
                         
                         <div class="clear"></div>
