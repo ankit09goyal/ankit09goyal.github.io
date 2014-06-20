@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+
+ <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="{{ site.description }}">
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+
+
+    <!-- Custom CSS -->
+    <!-- <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}"> -->
+ 
+    <!-- my CSS -->
+    <link rel="stylesheet" href="css/mycss2.css">
+    <link rel="stylesheet" href="css/css_postTemplate.css">
+
+	<!-- light box css -->
+    <link href="lightbox/css/lightbox.css" rel="stylesheet" />
+    
+	<!-- jquery -->
+	<script src="lightbox/js/jquery-1.11.0.min.js"></script>
+	<!-- lightbox -->
+	<script src="lightbox/js/lightbox.min.js"></script>
+
+</head>
+
+
+    <body>
+
+      <div class="mainBody">
+
+
+
+
+<!-- backward navigation starts -->
+<div class="right-header">
+	<a href="{{ site.baseurl }}/">Home</a><span> << </span><a href="{{ site.baseurl }}/hof">Hall of Fame</a><span> << Name of the Team {{ page.title }}</span>
+</div>
+        
+<div class="clear"></div>
+<!-- backward navigation starts -->            
+
+<!-- div left side starts -->
+<div class="left-body">
+          
+	<ul>
+       <a href="{{ site.baseurl }}/"><li>Home</li></a>
+       <a href="{{ site.baseurl }}/hof"><li>Hall Of Fame</li></a>
+       <a href="{{ site.baseurl }}/info"><li>Information</li></a>
+    </ul>
+    
+</div>
+<!-- div left side ends -->
+
+<!-- div right side starts -->
+<div class="right-body">
+      
+    <!-- title div starts -->  
+	<div class="title">
+		<!-- Team Name -->
+		<div class="name">
+		    <h1>Name of the Team{{ page.title }}</h1>
+		</div>
+		<!-- Logo -->
+		<div class="logo">	
+			<img src="projects/2012/img/logo.jpg" />
+		</div>
+	</div>
+    <!-- title div ends -->	
+    
+     <div class="clear"></div>
+    
+    <!-- desc div starts -->  
+	<div class="description">
+		<p> here comes the descrption {{ content }}here comes the descrption {{ content }}
+		here comes the descrption {{ content }}here comes the descrption {{ content }}
+		here comes the descrption {{ content }}here comes the descrption {{ content }}
+		here comes the descrption {{ content }}here comes the descrption {{ content }}
+		here comes the descrption {{ content }}here comes the descrption {{ content }}
+		here comes the descrption {{ content }}here comes the descrption {{ content }}
+		here comes the descrption {{ content }}here comes the descrption {{ content }}</p>
+	</div>
+    <!-- desc div ends -->	
+
+     <div class="clear"></div>
+    
+    <!-- partner industry div starts -->  
+    <div class="title">
+		<!-- Team Name -->
+		<div class="name">
+		    <h2>Partner Industry</h2>
+		    <h3>SAP Solutions {{ page.title }}</h3>
+		</div>
+		<!-- Logo -->
+		<div class="logo">	
+			<img src="projects/2012/img/logo.jpg" />
+		</div>
+	</div>
+    <!-- partner industry div ends -->	
+
+     <div class="clear"></div>
+    
+    <!-- Team Members and mentors div starts -->  
+	<div class="teamMemMentor">
+		<!-- team member div -->
+		<div class="teamMember">
+		    <h2>Team Members</h2>
+		    <h3>Ankit Goyal</h3>
+		    <h3>Philipp</h3>
+		</div>
+		<!-- mentor div -->
+		<div class="mentor">
+		    <h2>Mentors</h2>
+		    <h3>Prof. abc</h3>
+		    <h3>Prof. Dr. Ing. X</h3>
+		</div>
+	</div>
+    <!-- Team Members and mentors div ends -->	
+
+    <div class="clear"></div>
+
+    <!-- img div starts -->  
+	<div class="images">
+		<h2 class="classH2">Images</h2>
+		<a href="projects/2012/img/myImage.jpg" data-lightbox="roadtrip"><img src="projects/2012/img/myImage_small.jpg"/></a>
+		<a href="projects/2012/img/urImage.jpg" data-lightbox="roadtrip"><img src="projects/2012/img/urImage_small.jpg"/></a>
+		<a href="projects/2012/img/randomImage.jpg" data-lightbox="roadtrip"><img src="projects/2012/img/randomImage_small.jpg"/></a>
+		<a href="projects/2012/img/myImage.jpg" data-lightbox="roadtrip"><img src="projects/2012/img/myImage_small.jpg"/></a>
+		<a href="projects/2012/img/urImage.jpg" data-lightbox="roadtrip"><img src="projects/2012/img/urImage_small.jpg"/></a>
+		<a href="projects/2012/img/randomImage.jpg" data-lightbox="roadtrip"><img src="projects/2012/img/randomImage_small.jpg"/></a>
+	
+	</div>
+    <!-- img div ends -->	
+
+	<div class="clear"></div>
+
+    <!-- files div starts -->  
+	<div class="files">
+		<h2 class="classH2">Files</h2>
+		<a href="http://connect.ajaxdocumentviewer.com/?key=KVEKSQ1P7I5062014184821&viewertype=flash&document=http://wwwimages.adobe.com/content/dam/Adobe/en/products/acrobat/pdfs/adobe-acrobat-xi-esign-pdf-file-tutorial-ue.pdf&viewerheight=600&viewerwidth=800&printButton=Yes&toolbarColor=CCCCCC" allowtransparency="true" data-lightbox="pdfFile">
+		pdf File
+		</a>
+	</div>
+    <!-- files div ends -->	
+
+
+</div>
+<!-- div right side ends -->
+
+     <div class="clear"></div>
+       
+</div>
+<!-- div main body ends -->
+
+    </body>
+</html>
+

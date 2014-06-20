@@ -1,0 +1,101 @@
+body{
+    background: none repeat scroll 0 0 #F7F7F7;
+}
+
+.clear {
+    clear: both;
+}
+
+.mainBody{
+  margin:0 auto;
+  width:960px;
+  height:100%;
+  background-color:#fff;
+  border:1px solid #DDD;
+  box-shadow: 1px 0 2px #AAAAAA;
+}
+
+.title{
+	float:left;
+	width:100%;
+	margin-bottom:10px;
+}
+
+.name{
+	float:left;
+	width:75%;
+}
+
+.name h1, .name h2, .name h3, .teamMember h2, .teamMember h3, .mentor h2, .mentor h3, .classH2{
+	margin-top: 30px;
+	margin-bottom: 30px;
+    color: #B90F22;
+    font-size: 22px;
+	text-align: left;
+}
+
+.name h2, .name h3, .teamMember h2, .teamMember h3, .mentor h2, .mentor h3, .classH2{
+	margin: 10px 0px 10px 0px;
+     font-size: 14px;
+}
+
+.name h3, .teamMember h3, .mentor h3{
+	color: #333;
+}
+
+.logo{
+	float:right;
+	width:25%;
+}
+
+.logo img{
+	float: left;
+    margin: 8px;
+    width: 7rem;
+}
+
+.description{
+	margin-top:-10px;
+}
+
+.teamMemMentor, .teamMember{
+	float:left;
+	width:100%;
+}
+
+.teamMember{
+	width:50%;
+}
+
+.mentor{
+	float:right;
+	width:50%;
+}
+
+.images{
+	width:100%;
+	margin-top:10px;
+	float:left;
+}
+
+.images a img{
+	width:7rem;
+	border-radius:6px;
+}
+
+.images a{
+    background-color: #FFFFFF;
+    border-radius: 6px;
+    display: inline-block;
+    line-height: 0;
+    margin: 0 0.5rem 1rem;
+    padding: 4px;
+    transition: background-color 0.5s ease-out 0s;
+}
+
+.images a:hover{
+	background-color:#DD4A4A;
+	outline:0 none;
+}
+
+

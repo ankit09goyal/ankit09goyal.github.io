@@ -1,10 +1,84 @@
 ---
-layout: default
+layout: home
+page: postTemplate
 ---
 
-<!-- template of the right side of the page for template based teams -->
-<div class="post">
+<!-- backward navigation starts -->
+<div class="right-header">
+	<a href="{{ site.baseurl }}/">Home</a><span> << </span><a href="{{ site.baseurl }}/hof">Hall of Fame</a><span> << {{ page.title }}</span>
+</div>
+        
+<div class="clear"></div>
+<!-- backward navigation starts -->            
 
+<!-- div left side starts -->
+<div class="left-body">
+          
+	<ul>
+       <a href="{{ site.baseurl }}/"><li>Home</li></a>
+       <a href="{{ site.baseurl }}/hof"><li>Hall Of Fame</li></a>
+       <a href="{{ site.baseurl }}/info"><li>Information</li></a>
+    </ul>
+    
+</div>
+<!-- div left side ends -->
+
+<!-- div right side starts -->
+<div class="right-body">
+      
+    <!-- title div starts -->  
+	<div class="title">
+		<!-- Team Name -->
+	    <h1>{{ page.title }}</h1>
+		<!-- Logo -->
+		<img href="" />
+	</div>
+    <!-- title div ends -->	
+    
+    <!-- desc div starts -->  
+	<div class="description">
+		{{ content }}
+	</div>
+    <!-- desc div ends -->	
+    
+    <!-- partner industry div starts -->  
+	<div class="partnerIndustry">
+		<!-- Industry Name -->
+	    <h2>SAP Solutions</h2>
+		<!-- Logo -->
+		<img href="" />
+	</div>
+    <!-- partner industry div ends -->	
+    
+    <!-- Team Members and mentors div starts -->  
+	<div class="teamMemMentor">
+		<!-- team member div -->
+		<div class="teamMember">
+		    <h2>Team Members</h2>
+		    <h3>Ankit Goyal</h3>
+		    <h3>Philipp</h3>
+		</div>
+		<!-- mentor div -->
+		<div class="mentor">
+		    <h2>Mentors</h2>
+		    <h3>Prof. abc</h3>
+		    <h3>Prof. Dr. Ing. X</h3>
+		</div>
+	</div>
+    <!-- Team Members and mentors div ends -->	
+    
+    <!-- img div starts -->  
+	<div class="images">
+		<img href="" />
+	</div>
+    <!-- img div ends -->	
+
+    <!-- files div starts -->  
+	<div class="files">
+		<img href="" />
+	</div>
+    <!-- files div ends -->	
+    
 <!-- get the link to the folders inside the categories starts -->
 {% assign splittedLink = page.url | split:"/" %}
 {% assign folderLink = "/" | append:splittedLink[1] | append:'/' | append:splittedLink[2] | append:'/' %}
@@ -16,8 +90,7 @@ layout: default
 <!-- get the category and hence year ends -->
                 
                     
-<!-- Team Name -->
-    <h1>{{ page.title }}</h1>
+
 
 <!-- year -->
 <h2>{{ year }}</h2>
