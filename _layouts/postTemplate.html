@@ -1,5 +1,6 @@
 ---
 layout: home
+page: postTemplate
 ---
 
 
@@ -40,7 +41,7 @@ layout: home
 		<!-- Logo -->
 	
 		<div class="logo">	
-			 <img src="{{ page.logo | prepend:'img/' | prepend:folderLink | prepend:site.baseurl }}"> 
+			{% if page.logo %} <img src="{{ page.logo | prepend:'img/' | prepend:folderLink | prepend:site.baseurl }}"> {% endif %}
 		</div>
 	</div>
     <!-- title div ends -->	
@@ -56,7 +57,7 @@ layout: home
      <div class="clear"></div>
     
     <!-- partner industry div starts -->  
-   	
+   	{% if page.partnerIndustry %} 
     <div class="title">
 		<!-- Team Name -->		
 		<div class="name">
@@ -68,18 +69,18 @@ layout: home
 			<img src="{{ page.partnerIndustryLogo | prepend:'img/' | prepend:folderLink | prepend:site.baseurl }}"> 
 		</div>
 	</div>
-	
+	{% endif %}
     <!-- partner industry div ends -->	
 
      <div class="clear"></div>
     
     <!-- Team Members and mentors div starts --> 
-    
+    {% if page.teamMembers %}  
 	<div class="teamMemMentor">
 		<!-- team member div -->
 		<div class="teamMember">
 		    <h2>Team Members</h2>
-		    {% for members in page.teamMembers %}
+		    {% for members in page.teamMembers%}
 		    <h3>{{ members }}</h3>
 		    {% endfor %}
 		</div>
@@ -90,7 +91,7 @@ layout: home
 		    <h3>Prof. Dr. Ing. X</h3>
 		</div>
 	</div>
-	
+	{% endif %}
     <!-- Team Members and mentors div ends -->	
 
     <div class="clear"></div>
