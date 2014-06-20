@@ -80,7 +80,11 @@ page: postTemplate
 		<!-- team member div -->
 		<div class="teamMember">
 		    <h2>Team Members</h2>
-		    
+
+		    {% for members in page.teamMembers%}
+		    <h3>{{ members.member }}</h3>
+
+		    {% endfor %}
 		</div>
 		<!-- mentor div -->
 		<div class="mentor">
