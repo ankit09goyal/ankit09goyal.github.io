@@ -1,0 +1,27 @@
+---
+kind: TEAM
+layout: postTemplate
+name: Hochschule Darmstadt mit TUD
+shortDescription: sample description of the team sample description of the team sample description of the team sample description of the team 
+logo: img/logo.jpg
+partnerIndustry: name of the partner industry (SAP)
+partnerIndustryLogo: http://upload.wikimedia.org/wikipedia/de/thumb/e/ee/Bosch-Logo.svg/800px-Bosch-Logo.svg.png
+nrOfImages: 2
+imgPath: /projects/2012/TeamA/img/
+images:
+  - a: asdasd.jpg
+    b:
+      - small: asdasd
+        large: dfadf
+files:
+  - file1: /path/of/the/file
+    file2: /projects/2012/TeamA/files/fileName.pdf
+teamMembers:
+  - member1: member name
+    member2: Ankit
+    member3: Goyal
+projectMentors:
+  - mentor1: mentor name
+    mentor2: Sebastian
+miscellaneous: can add any number of fields as per our need.
+---
