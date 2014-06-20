@@ -80,15 +80,18 @@ page: postTemplate
 		<!-- team member div -->
 		<div class="teamMember">
 		    <h2>Team Members</h2>
+		    {% assign i = 1 %}
 		    {% for members in page.teamMembers%}
-		    <h3>{{ members }}</h3>
+		    <h3>{{ member | append:i }}</h3>
+		    {% assign i | plus:1 %}		    
 		    {% endfor %}
 		</div>
 		<!-- mentor div -->
 		<div class="mentor">
 		    <h2>Mentors</h2>
-		    <h3>Prof. abc</h3>
-		    <h3>Prof. Dr. Ing. X</h3>
+		    {% for mentors in page.projectMentors%}		    
+		    <h3>{{ mentors }}</h3>
+		    {% endfor %}
 		</div>
 	</div>
 	{% endif %}
