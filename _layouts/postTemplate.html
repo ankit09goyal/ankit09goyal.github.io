@@ -3,6 +3,7 @@ layout: home
 page: postTemplate
 ---
 
+
 <!-- backward navigation starts -->
 <div class="right-header">
 	<a href="{{ site.baseurl }}/">Home</a><span> << </span><a href="{{ site.baseurl }}/hof">Hall of Fame</a><span> << {{ page.title }}</span>
@@ -26,37 +27,61 @@ page: postTemplate
 <!-- div right side starts -->
 <div class="right-body">
       
+    <!-- get the link to the folders inside the categories starts -->
+	{% assign splittedLink = page.url | split:"/" %}
+	{% assign folderLink = "/" | append:splittedLink[1] | append:'/' | append:splittedLink[2] | append:'/' %}
+    <!-- get the link to the folders inside the categories ends -->
+                      
     <!-- title div starts -->  
 	<div class="title">
 		<!-- Team Name -->
-	    <h1>{{ page.title }}</h1>
+		<div class="name">
+		    <h1>{{ page.title }}</h1>
+		</div>
 		<!-- Logo -->
-		<img href="" />
+	
+		<div class="logo">	
+			{% if page.logo %} <img src="{{ page.logo | prepend:'img/' | prepend:folderLink | prepend:site.baseurl }}"> {% endif %}
+		</div>
 	</div>
     <!-- title div ends -->	
+    
+     <div class="clear"></div>
     
     <!-- desc div starts -->  
 	<div class="description">
 		{{ content }}
 	</div>
     <!-- desc div ends -->	
+
+     <div class="clear"></div>
     
     <!-- partner industry div starts -->  
-	<div class="partnerIndustry">
-		<!-- Industry Name -->
-	    <h2>SAP Solutions</h2>
+   	{% if page.partnerIndustry %} 
+    <div class="title">
+		<!-- Team Name -->		
+		<div class="name">
+		    <h2>Partner Industry</h2>
+		    <h3>{{ page.partnerIndustry }}</h3>
+		</div>
 		<!-- Logo -->
-		<img href="" />
+		<div class="logo">	
+			<img src="{{ page.partnerIndustryLogo | prepend:'img/' | prepend:folderLink | prepend:site.baseurl }}"> 
+		</div>
 	</div>
+	{% endif %}
     <!-- partner industry div ends -->	
+
+     <div class="clear"></div>
     
-    <!-- Team Members and mentors div starts -->  
+    <!-- Team Members and mentors div starts --> 
+    {% if page.teamMembers %}  
 	<div class="teamMemMentor">
 		<!-- team member div -->
 		<div class="teamMember">
 		    <h2>Team Members</h2>
-		    <h3>Ankit Goyal</h3>
-		    <h3>Philipp</h3>
+		    {% for members in page.teamMembers %}
+		    <h3>{{ members }}</h3>
 		</div>
 		<!-- mentor div -->
 		<div class="mentor">
@@ -65,64 +90,35 @@ page: postTemplate
 		    <h3>Prof. Dr. Ing. X</h3>
 		</div>
 	</div>
+	{% endif %}
     <!-- Team Members and mentors div ends -->	
-    
+
+    <div class="clear"></div>
+
     <!-- img div starts -->  
 	<div class="images">
-		<img href="" />
+		<h2 class="classH2">Images</h2>
+		<a href="projects/2012/img/myImage.jpg" data-lightbox="roadtrip"><img src="projects/2012/img/myImage_small.jpg"/></a>
+		<a href="projects/2012/img/urImage.jpg" data-lightbox="roadtrip"><img src="projects/2012/img/urImage_small.jpg"/></a>
+		<a href="projects/2012/img/randomImage.jpg" data-lightbox="roadtrip"><img src="projects/2012/img/randomImage_small.jpg"/></a>
+		<a href="projects/2012/img/myImage.jpg" data-lightbox="roadtrip"><img src="projects/2012/img/myImage_small.jpg"/></a>
+		<a href="projects/2012/img/urImage.jpg" data-lightbox="roadtrip"><img src="projects/2012/img/urImage_small.jpg"/></a>
+		<a href="projects/2012/img/randomImage.jpg" data-lightbox="roadtrip"><img src="projects/2012/img/randomImage_small.jpg"/></a>
+	
 	</div>
     <!-- img div ends -->	
+    
+	<div class="clear"></div>
 
     <!-- files div starts -->  
 	<div class="files">
-		<img href="" />
+		<h2 class="classH2">Files</h2>
+		<h3 class="classH3"><a class='youtube' href="http://wwwimages.adobe.com/content/dam/Adobe/en/products/acrobat/pdfs/adobe-acrobat-xi-esign-pdf-file-tutorial-ue.pdf">Flash / Video (Iframe/Direct Link To YouTube)</a></h3>
 	</div>
     <!-- files div ends -->	
-    
-<!-- get the link to the folders inside the categories starts -->
-{% assign splittedLink = page.url | split:"/" %}
-{% assign folderLink = "/" | append:splittedLink[1] | append:'/' | append:splittedLink[2] | append:'/' %}
-<!-- get the link to the folders inside the categories ends -->
-                
-<!-- get the category and hence year starts -->
-{% assign myCategory = page.categories %}
-{% assign year = myCategory[1] %}
-<!-- get the category and hence year ends -->
-                
-                    
 
-
-<!-- year -->
-<h2>{{ year }}</h2>
-
-<!-- description -->
-<p>{{ content }}</p>
-
-<!-- images -->
-{% for i in (1..page.nrOfImages) %} 
-<img src="{{ page.imgPath }}{{ i }}.jpg" height="42" width="42" >
-{% endfor %}
-
-<!-- pdf files -->
-{% for i in (1..page.nrOfFiles) %} 
-<img src="{{ page.filePath }}{{ i }}.jpg" height="42" width="42" >
-{% endfor %}
-
-
-<p>
-<a class="youtube cboxElement" href="http://www.youtube.com/embed/VOJyrQa_WR4?rel=0&wmode=transparent">Flash / Video (Iframe/Direct Link To YouTube)</a>
-</p>
-
-<div style='display:none'>
-			<div id='inline_content' style='padding:10px; background:#fff;'>
-			<p><strong>This content comes from a hidden element on this page.</strong></p>
-			<p>The inline option preserves bound JavaScript events and changes, and it puts the content back where it came from when it is closed.</p>
-			<p><a id="click" href="#" style='padding:5px; background:#ccc;'>Click me, it will be preserved!</a></p>
-			
-			<p><strong>If you try to open a new Colorbox while it is already open, it will update itself with the new content.</strong></p>
-			<p>Updating Content Example:<br />
-			<a class="ajax" href="/colorbox-master/content/ajax.html">Click here to load new content</a></p>
-			</div>
-		</div>
 
 </div>
+<!-- div right side ends -->
+
+     <div class="clear"></div>
