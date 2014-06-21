@@ -102,7 +102,7 @@ page: postTemplate
     <!-- img div starts -->  
 	<div class="images">
 		<h2 class="classH2">Images</h2>
-		{% for image in images %}
+		{% for image in page.images %}
 			<!-- get small image link -->
 			{% assign imageLink = image | split:"." %}
 			{% assign newImageLink = imageLink[1] %}
