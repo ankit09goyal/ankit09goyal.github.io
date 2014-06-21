@@ -25,7 +25,7 @@ layout: home
       
         <h1>Hall Of Fame</h1>
 		
-				{% for category in site.categories %}
+				{% for category in site.categories reversed %}
 				
     		{% assign myCategory = category | first %}
     
