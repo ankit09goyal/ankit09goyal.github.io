@@ -105,10 +105,8 @@ page: postTemplate
 		{% for image in page.images %}
 			<!-- get small image link -->
 			{% assign myLinkImage = image %}
-			<p>{{myLinkImage}}</p>
 			{% assign delimiter = '.' %}
 			{% assign newSmallImageLink = myLinkImage | replace:delimiter, '_small.' %}
-			<p>{{newSmallImageLink}}</p>
 			<a href="{{ image | prepend:'img/' | prepend:folderLink | prepend:site.baseurl }}" data-lightbox="roadtrip"><img src="{{ newSmallImageLink | prepend:'img/' | prepend:folderLink | prepend:site.baseurl }}"/></a>
 		{% endfor %}
 	</div>
