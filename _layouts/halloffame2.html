@@ -25,13 +25,20 @@ layout: home
       
         <h1>Hall Of Fame</h1>
 		
-				{% for category in site.categories reversed %}
-					{% for posts in category %}
-										{% for page in posts %}
-											{% if page.url %}
-												{% assign link = page.url %}
-												{% assign teamName = page.title %}
-									
+				
+		{% for page in site.posts %}
+			{% if page.url %}
+				{% assign link = page.url %}
+				{% assign teamName = page.title %}
+
+				<!-- get the link to the folders inside the categories starts -->
+		        {% assign splittedLink = link | split:"/" %}
+		        {% assign folderLink = "/projects/" %}
+		        {% assign year = splittedLink[2] %}
+
+        		<!-- get the link to the folders inside the categories ends -->
+              
+              
                <!-- div year starts -->
                <div class="year">
                   <h2>Year: {{ year }}</h2>
@@ -43,11 +50,6 @@ layout: home
                 <div class="team">
                     <div class="headContainer">
                         <div class="teamNameDiv">
-                    
-                    <!-- get the link to the folders inside the categories starts -->
-	                    {% assign splittedLink = link | split:"/" %}
-	                    {% assign folderLink = "/" | append:splittedLink[1] | append:'/' | append:splittedLink[2] | append:'/' %}
-                    <!-- get the link to the folders inside the categories ends -->
                     
                     <!-- Team name starts -->    
                           {% if page.url %}
@@ -87,9 +89,7 @@ layout: home
                     
                 </div>
                 <!-- single team contatiner ends -->
-              {% endif %}
-						{% endfor %}
-					{% endfor %}
+             
     
     </div>
     <!--div dotted line ends-->
