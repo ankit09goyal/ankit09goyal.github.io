@@ -26,23 +26,18 @@ layout: home
         <h1>Hall Of Fame</h1>
 		
 				{% for category in site.categories reversed %}
-				
-    		{% assign myCategory = category | first %}
-    
-    		{% if myCategory != 'projects' %}
-     			{% assign year = myCategory %}
-
+					{% for posts in category %}
+										{% for page in posts %}
+											{% if page.url %}
+												{% assign link = page.url %}
+												{% assign teamName = page.title %}
+									
                <!-- div year starts -->
                <div class="year">
                   <h2>Year: {{ year }}</h2>
                   <!-- div added only to add dotted line -->
                   <div class="dottedLineDiv">
               
-									{% for posts in category %}
-										{% for page in posts %}
-											{% if page.url %}
-												{% assign link = page.url %}
-												{% assign teamName = page.title %}
 												
                 <!-- single team contatiner starts -->
                 <div class="team">
