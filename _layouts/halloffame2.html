@@ -29,9 +29,10 @@ layout: home
 		 posts of one year in a single div -->
 	{% for years in (page.startingYear..page.lastYear) reversed %}		
 		     
+		     {% assign tempYear = years %}
 		     <!-- div year starts -->
               <div class="year">
-                  	<h2>Year: {{ years }}</h2>
+                  	<h2>Year: {{ tempYear }}</h2>
             	 	<!-- div added only to add dotted line -->
               		<div class="dottedLineDiv">
 	    	     
@@ -44,8 +45,8 @@ layout: home
 		        {% assign splittedLink = link | split:"/" %}
 		        {% assign myYear = splittedLink[2] %}
         		<!-- get the year ends -->
-              	<h1>testing {{myYear}} again {{years}}</h1>
-              	{% if years == myYear %}        
+
+              	{% if tempYear == myYear %}        
 		        	{% assign folderLink = "/projects/" %}													
                 
                 <!-- single team contatiner starts -->
