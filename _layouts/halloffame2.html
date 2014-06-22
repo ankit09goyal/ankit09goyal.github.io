@@ -46,7 +46,7 @@ layout: home
 		        {% assign myYear = splittedLink[2] %}
         		<!-- get the year ends -->
 
-              	{% if tempYear == myYear %}        
+              	{% if tempYear == "{{myYear}}" %}        
 		        	{% assign folderLink = "/projects/" %}													
                 
                 <!-- single team contatiner starts -->
