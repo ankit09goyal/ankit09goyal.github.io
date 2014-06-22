@@ -29,7 +29,9 @@ layout: home
 		 posts of one year in a single div -->
 	{% for years in (page.startingYear..page.lastYear) reversed %}		
 		     
-		     {% assign tempYear = years %}
+		     
+		      {% capture tempYear %}{{ years }}{% endcapture %}
+
 		     <!-- div year starts -->
               <div class="year">
                   	<h2>Year: {{ tempYear }}</h2>
@@ -46,7 +48,7 @@ layout: home
 		        {% assign myYear = splittedLink[2] %}
         		<!-- get the year ends -->
 
-              	{% if myYear == "2014" %}        
+              	{% if myYear == tempYear %}        
 		        	{% assign folderLink = "/projects/" %}													
                 
                 <!-- single team contatiner starts -->
