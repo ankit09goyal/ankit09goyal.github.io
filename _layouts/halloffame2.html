@@ -25,28 +25,29 @@ layout: home
       
         <h1>Hall Of Fame</h1>
 		
-		<h1>{{site.posts.size}}</h1>
-				
+	<!-- double for loop in order to organize all the
+		 posts of one year in a single div -->
+	{% for years in (page.startingYear..page.lastYear) reversed %}		
+		     
+		     <!-- div year starts -->
+              <div class="year">
+                  	<h2>Year: {{ years }}</h2>
+            	 	<!-- div added only to add dotted line -->
+              		<div class="dottedLineDiv">
+	    	     
 		{% for page in site.posts %}
 			{% if page.url %}
 				{% assign link = page.url %}
 				{% assign teamName = page.title %}
 
-				<!-- get the link to the folders inside the categories starts -->
+				<!-- get the year starts -->
 		        {% assign splittedLink = link | split:"/" %}
-		        {% assign folderLink = "/projects/" %}
-		        {% assign year = splittedLink[2] %}
-
-        		<!-- get the link to the folders inside the categories ends -->
+		        {% assign myYear = splittedLink[2] %}
+        		<!-- get the year ends -->
               
-              
-               <!-- div year starts -->
-               <div class="year">
-                  <h2>Year: {{ year }}</h2>
-                  <!-- div added only to add dotted line -->
-                  <div class="dottedLineDiv">
-              
-												
+              	{% if years == myYear %}        
+		        	{% assign folderLink = "/projects/" %}													
+                
                 <!-- single team contatiner starts -->
                 <div class="team">
                     <div class="headContainer">
@@ -90,13 +91,15 @@ layout: home
                     
                 </div>
                 <!-- single team contatiner ends -->
-             
+             {% endif %}  
+    	{% endif %}  
+    {% endfor %}
     
     </div>
     <!--div dotted line ends-->
     </div>
     <!-- div year ends -->
-    {% endif %}
+
 {% endfor %}
         
  </div>
