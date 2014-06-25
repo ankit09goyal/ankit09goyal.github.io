@@ -29,7 +29,7 @@ page: postTemplate
       
     <!-- get the link to the folders inside the categories starts -->
 	{% assign splittedLink = page.url | split:"/" %}
-	{% assign folderLink = "/" | append:splittedLink[1] | append:'/' | append:splittedLink[2] | append:'/' %}
+	{% assign folderLink = "/" | append:splittedLink[1] | append:'/' | append:splittedLink[2] | append:'/' | append:splittedLink[3] | append:'/' %}
  <!--    get the link to the folders inside the categories ends -->
 
 <h1>{{ folderLink }}</h1>          
