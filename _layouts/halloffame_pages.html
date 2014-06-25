@@ -26,7 +26,8 @@ layout: home
         <h1>Hall Of Fame</h1>
       {% for years in (page.startingYear..page.currentYear) reversed %}
        
-	       <!-- div year starts -->
+       	 {% assign theYear = years %}
+	     <!-- div year starts -->
          <div class="year">
 		    <h2>Year: {{ years }}</h2>
             <!-- div added only to add dotted line -->
@@ -45,7 +46,7 @@ layout: home
      		
      			<p>got the year: {{myYear}}</p>
         
-				{% if years == myYear %}   
+				{% if theYear == myYear %}   
     
               
                 <!-- single team contatiner starts -->
