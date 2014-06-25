@@ -45,7 +45,7 @@ layout: home
         
 				{% if theYear == myYear %}   
 
-				 {% if page.ownSite == 'true' %}
+				 {% if page.ownSite == 'yes' %}
 						 	 <p>own site is {{ page.ownSite }}</p>
                  {% endif %}        
                 <!-- single team contatiner starts -->
@@ -54,7 +54,7 @@ layout: home
                         <div class="teamNameDiv">
                     
                     <!-- Team name starts -->    
-						  {% if page.ownSite == 'true' %}
+						  {% if page.ownSite == 'yes' %}
 						 	 <p>own site is {{ page.ownSite }}</p>
                              <a href="{{ page.url | prepend:'/site' | prepend:site.baseurl }}"><h2>{{ page.name }}</h2></a>
                           {% elsif page.url %}
