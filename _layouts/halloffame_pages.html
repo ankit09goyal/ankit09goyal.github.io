@@ -45,6 +45,9 @@ layout: home
         
 				{% if theYear == myYear %}   
 
+				 {% if page.ownSite == 'true' %}
+						 	 <p>own site is {{ page.ownSite }}</p>
+                 {% endif %}        
                 <!-- single team contatiner starts -->
                 <div class="team">
                     <div class="headContainer">
