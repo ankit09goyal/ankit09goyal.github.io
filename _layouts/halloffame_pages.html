@@ -35,7 +35,7 @@ layout: home
             <div class="dottedLineDiv">
               
         {% for page in site.pages %}
-        	{% if page.kind == "team" %}
+        	{% if page.kind == 'team' %}
         	
 	        	 <!-- get the link to the folders inside the categories starts -->
 				{% assign splittedLink = page.url | split:"/" %}
@@ -51,7 +51,7 @@ layout: home
                         <div class="teamNameDiv">
                     
                     <!-- Team name starts -->    
-						  {% if page.ownSite == "true" %}
+						  {% if page.ownSite == 'true' %}
 						 	 <p>own site is {{ page.ownSite }}</p>
                              <a href="{{ page.url | prepend:'/site' | prepend:site.baseurl }}"><h2>{{ page.name }}</h2></a>
                           {% elsif page.url %}
