@@ -24,30 +24,30 @@ layout: home
       <div class="right-body">
       
         <h1>Hall Of Fame</h1>
-      {% for weight in (page.startingYear..page.currentYear) reversed %}
-       {% assign i = 1 %}
+      {% for years in (page.startingYear..page.currentYear) reversed %}
        
+	       <!-- div year starts -->
+         <div class="year">
+		    <h2>Year: {{ years }}</h2>
+            <!-- div added only to add dotted line -->
+            <div class="dottedLineDiv">
+              
         {% for page in site.pages %}
-        	var year = getYearFromUrl(page.url)
+        	{% if page.kind == "team" %}
+        	
+        		<p>I am inside the kind team</p>
+        	
+	        	 <!-- get the link to the folders inside the categories starts -->
+				{% assign splittedLink = page.url | split:"/" %}
+				{% assign folderLink = "/" | append:splittedLink[1] | append:'/' | append:splittedLink[2] | append:'/' | append:splittedLink[3] | append:'/' %}
+ 				{% assign myYear = splittedLink[2] %}
+	 			<!--    get the link to the folders inside the categories ends -->
+     		
+     			<p>got the year: {{myYear}}</p>
         
-          {% if weight == year %}   
-            {% if page.identifier == TEAM %}
-            
-				var link = page.getLinkSomehow
-				var parts = link.split('/')
-				var year = parts[0]
-				var teamName = parts[1]
-				...
-            
-              {% if i == 1 %}
-               {% capture i %} {{ i | plus:1 }} {% endcapture %}
-               <!-- div year starts -->
-               <div class="year">
-                  <h2>Year: {{ page.year }}</h2>
-                  <!-- div added only to add dotted line -->
-                  <div class="dottedLineDiv">
-              {% endif %}
-            
+				{% if years == myYear %}   
+    
+              
                 <!-- single team contatiner starts -->
                 <div class="team">
                     <div class="headContainer">
@@ -55,7 +55,7 @@ layout: home
                     
                     <!-- Team name starts -->    
                           {% if page.url %}
-                             <a href="{{ site.baseurl }}/{{ page.link }}"><h2>{{ page.name }}</h2></a>
+                             <a href="{{ site.baseurl }}/{{ page.url }}"><h2>{{ page.name }}</h2></a>
                           {% else %}
                             <a><h2>{{ page.name }}</h2></a>
                           {% endif %}
@@ -65,7 +65,7 @@ layout: home
                         
                     <!--team logo-->
                         <div class="logoDiv">
-                            {% if page.logo %} <img class="teamLogo" src="{{ page.logo }}"> {% endif %}
+                            {% if page.logo %} <img class="teamLogo" src="{{ page.logo | prepend:'img/' | prepend:folderLink | prepend:site.baseurl }}"> {% endif %}
                         </div>
                     <!--team logo ends -->      
                     
@@ -73,7 +73,7 @@ layout: home
                     <div class="clear"></div>
                     
                     <!-- description -->
-                     {% if page.description %} <p>{{ page.description }}</p> {% endif %}
+                     {% if page.shortDescription %} <p>{{ page.shortDescription }}</p> {% endif %}
                     
                     <div class="headContainer">
                         <div class="industryDiv">
@@ -83,7 +83,7 @@ layout: home
                         
                         <div class="logoDiv">
                           <!--industry partner logo-->
-                          {% if page.partnerIndustryLogo %} <img class="teamLogo" src="{{ page.partnerIndustryLogo }}">  {% endif %}
+                          {% if page.partnerIndustryLogo %} <img class="teamLogo" src="{{ page.partnerIndustryLogo | prepend:'img/' | prepend:folderLink | prepend:site.baseurl }}">  {% endif %}
                         </div>
                         
                         <div class="clear"></div>
