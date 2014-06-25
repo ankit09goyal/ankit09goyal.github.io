@@ -54,7 +54,7 @@ layout: home
                         <div class="teamNameDiv">
                     
                     <!-- Team name starts -->    
-						  {% if page.ownSite == 'yes' %}
+						  {% if page.ownSite == 'ye' %}
 						 	 <p>own site is {{ page.ownSite }}</p>
                              <a href="{{ page.url | prepend:'/site' | prepend:site.baseurl }}"><h2>{{ page.name }}</h2></a>
                           {% elsif page.url %}
