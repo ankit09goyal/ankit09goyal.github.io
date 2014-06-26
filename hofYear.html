@@ -1,0 +1,121 @@
+---
+layout: home
+---
+
+<script>
+function getURLParameter(name) {
+  return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search)||[,""])[1].replace(/\+/g, '%20'))||null
+}
+alert(getURLParameter(year));
+{% capture yearFrmJS %}getURLParameter(year){% endcapture %}
+</script>
+
+<h1>{{ yearFrmJS }}</h1>
+ <div class="right-header">
+                <a href="{{ site.baseurl }}/">Home</a><span> << Hall of Fame</span>
+        </div>
+        
+        <div class="clear"></div>
+            
+
+<!-- div left side starts -->
+         <div class="left-body">
+          
+                        <ul>
+                            <a href="{{ site.baseurl }}/"><li>Home</li></a>
+                            <a href="{{ site.baseurl }}/hof" id="clicked"><li>Hall Of Fame</li></a>
+                            <ul>
+	                            {% for years in (page.startingYear..page.currentYear) reversed %}
+		                            <a href="{{ site.baseurl }}/hof_year.html?year={{years}}" id="clicked"><li>years</li></a>
+		                        {% endfor %}
+                            </ul>
+                            <a href="{{ site.baseurl }}/info"><li>Information</li></a>
+                        </ul>
+        </div>
+<!-- div left side ends -->
+
+<!-- div right side starts -->
+      <div class="right-body">
+      
+        <h1>Hall Of Fame</h1>
+      {% for years in (page.startingYear..page.currentYear) reversed %}
+       
+       	 {% capture theYear %}{{ years }}{% endcapture %}
+       	 
+	     <!-- div year starts -->
+         <div class="year">
+		    <h2>Year: {{ theYear }}</h2>
+            <!-- div added only to add dotted line -->
+            <div class="dottedLineDiv">
+              
+        {% for page in site.pages %}
+        	{% if page.kind == 'team' %}
+        	
+	        	 <!-- get the link to the folders inside the categories starts -->
+				{% assign splittedLink = page.url | split:"/" %}
+				{% assign folderLink = "/" | append:splittedLink[1] | append:'/' | append:splittedLink[2] | append:'/' | append:splittedLink[3] | append:'/' %}
+ 				{% capture myYear %}{{ splittedLink[2] }}{% endcapture %}
+	 			<!--    get the link to the folders inside the categories ends -->
+        
+				{% if theYear == myYear %}   
+
+                <!-- single team contatiner starts -->
+                <div class="team">
+                    <div class="headContainer">
+                        <div class="teamNameDiv">
+                    
+                    <!-- Team name starts -->    
+						  {% if page.ownSite == 'ye' %}
+                             <a href="{{ site.baseurl }}/site/"><h2>{{ page.name }}</h2></a>
+                          {% elsif page.url %}
+                             <a href="{{ page.url | prepend:site.baseurl }}"><h2>{{ page.name }}</h2></a>
+                          {% else %}
+                            <a><h2>{{ page.name }}</h2></a>
+                          {% endif %}
+                    <!-- Team name ends -->
+                    
+                        </div>
+                        
+                    <!--team logo-->
+                        <div class="logoDiv">
+                            {% if page.logo %} <img class="teamLogo" src="{{ page.logo | prepend:'img/' | prepend:folderLink | prepend:site.baseurl }}"> {% endif %}
+                        </div>
+                    <!--team logo ends -->      
+                    
+                    </div>
+                    <div class="clear"></div>
+                    
+                    <!-- description -->
+                     {% if page.shortDescription %} <p>{{ page.shortDescription }}</p> {% endif %}
+                    
+                    <div class="headContainer">
+                        <div class="industryDiv">
+                          <!--industry partner-->
+                          {% if page.partnerIndustry %} <h3>Industry Partner: {{ page.partnerIndustry }}</h3> {% endif %}
+                        </div>
+                        
+                        <div class="logoDiv">
+                          <!--industry partner logo-->
+                          {% if page.partnerIndustryLogo %} <img class="teamLogo" src="{{ page.partnerIndustryLogo | prepend:'img/' | prepend:folderLink | prepend:site.baseurl }}">  {% endif %}
+                        </div>
+                        
+                        <div class="clear"></div>
+                    </div>
+                    
+                </div>
+                <!-- single team contatiner ends -->
+                
+               
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+    </div>
+    <!--div dotted line ends-->
+    </div>
+    <!-- div year ends -->
+    {% endfor %}
+           
+ </div>
+      <!-- div right side starts -->
+     
+       <div class="clear"></div>
