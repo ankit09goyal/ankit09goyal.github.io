@@ -31,11 +31,12 @@ layout: home
       
         <h1>Hall Of Fame</h1>
         
+        <p>{{page.url}}</p>
          <!-- get the link to the folders inside the categories starts -->
 				{% assign splittedLink1 = page.url | split:"/" %}
 				{% capture myYear1 %}{{ splittedLink1[2] }}{% endcapture %}
 	 			<!--    get the link to the folders inside the categories ends -->
-        
+        <p>{{myYear1}}</p>
         
       	     <!-- div year starts -->
          <div class="year">
