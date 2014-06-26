@@ -30,13 +30,16 @@ layout: home
       <div class="right-body">
       
         <h1>Hall Of Fame</h1>
-      {% for years in (page.startingYear..page.currentYear) reversed %}
-       
-       	 {% capture theYear %}{{ years }}{% endcapture %}
-       	 
-	     <!-- div year starts -->
+        
+         <!-- get the link to the folders inside the categories starts -->
+				{% assign splittedLink1 = page.url | split:"/" %}
+				{% capture myYear1 %}{{ splittedLink1[2] }}{% endcapture %}
+	 			<!--    get the link to the folders inside the categories ends -->
+        
+        
+      	     <!-- div year starts -->
          <div class="year">
-		    <h2>Year: {{ theYear }}</h2>
+		    <h2>Year: {{ myYear1 }}</h2>
             <!-- div added only to add dotted line -->
             <div class="dottedLineDiv">
               
@@ -49,7 +52,7 @@ layout: home
  				{% capture myYear %}{{ splittedLink[2] }}{% endcapture %}
 	 			<!--    get the link to the folders inside the categories ends -->
         
-				{% if theYear == myYear %}   
+				{% if myYear1 == myYear %}   
 
                 <!-- single team contatiner starts -->
                 <div class="team">
