@@ -2,17 +2,6 @@
 layout: home
 ---
 
-<script type="text/javascript">
-function get(name){
-   if(name=(new RegExp('[?&]'+encodeURIComponent(name)+'=([^&]*)')).exec(location.search))
-      return decodeURIComponent(name[1]);
-}
-alert(get(year));
-{% capture yearFrmJS %}get(year){% endcapture %}
-</script>
-
-<h1>{{ yearFrmJS }}</h1>
-<h2>{{ page.url }}</h2>
 
  <div class="right-header">
                 <a href="{{ site.baseurl }}/">Home</a><span> << Hall of Fame</span>
