@@ -15,6 +15,11 @@ layout: home
                         <ul>
                             <a href="{{ site.baseurl }}/"><li>Home</li></a>
                             <a href="{{ site.baseurl }}/hof" id="clicked"><li>Hall Of Fame</li></a>
+                            <ul>
+	                            {% for years in (page.startingYear..page.currentYear) reversed %}
+		                            <a href="{{ site.baseurl }}/hof_year.html?year={{years}}" id="clicked"><li>Hall Of Fame</li></a>
+		                        {% endfor %}
+                            </ul>
                             <a href="{{ site.baseurl }}/info"><li>Information</li></a>
                         </ul>
         </div>
