@@ -27,14 +27,11 @@ var QueryString = function () {
 } ();
 
 //alert(QueryString.year);
-
-{% assign yearFrmJS = QueryString.year %}
+document.getElementById('myJSYear').innerHTML = QueryString.year;
 </script>
 
-<h1>{{ yearFrmJS }}</h1>
-<h2>{{ page.url }}</h2>
-<h2>{{ page.path }}</h2>
-<h2>{{ page.dir }}</h2>
+<h1 id="myJSYear">{% capture yearFrmJS %}{% endcapture %}</h1>
+<h2>{{ yearFrmJS }}</h2>
 
  <div class="right-header">
                 <a href="{{ site.baseurl }}/">Home</a><span> << Hall of Fame</span>
