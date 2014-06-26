@@ -28,7 +28,7 @@ var QueryString = function () {
 
 alert(QueryString.year);
 
-{% capture yearFrmJS %}QueryString.year{% endcapture %}
+{% assign yearFrmJS = QueryString.year %}
 </script>
 
 <h1>{{ yearFrmJS }}</h1>
