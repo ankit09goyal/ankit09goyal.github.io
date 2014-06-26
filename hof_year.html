@@ -32,7 +32,9 @@ window.onload = function() {
 </script>
 
 
-<h1 id="myJSYear">hello</h1>
+<h1 id="myJSYear">{% capture myYearJS %}{% endcapture %}</h1>
+
+<h2>{{myYearJS}}</h2>
 
  <div class="right-header">
                 <a href="{{ site.baseurl }}/">Home</a><span> << Hall of Fame</span>
