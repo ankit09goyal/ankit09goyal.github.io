@@ -17,7 +17,7 @@ layout: home
                             <a href="{{ site.baseurl }}/hof" id="clicked"><li>Hall Of Fame</li></a>
                             <ul>
 	                            {% for years in (page.startingYear..page.currentYear) reversed %}
-		                            <a href="{{ site.baseurl }}/projects/{{years}}/hof-year" id="clicked"><li>years</li></a>
+		                            <a href="{{ site.baseurl }}/projects/{{years}}/hof-year" id="clicked"><li>{{years}}</li></a>
 		                        {% endfor %}
                             </ul>
                             <a href="{{ site.baseurl }}/info"><li>Information</li></a>
