@@ -755,12 +755,13 @@ color:#666;
 .doppelpfeil{
 background:url(http://www.stg.tu-darmstadt.de/media/corporate_design/cd_grafiken/css-sprite_v02.png) no-repeat 0 -3110px;
 height:6px;
-margin-top:4px;
+margin-top:7px;
 width:5px;
 }
 .main{
 clear:both;
 z-index:0;
+margin-top:-10px;
 }
 .navigationsspalte{
 border-top-style:solid;
