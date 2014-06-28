@@ -73,11 +73,13 @@ body{
 
 /* css of right body starts */
 
+/*
 .right-body{
   width:78%;
   height:100%;
   float:right;
 }
+*/
 
 h1,h2, h3, h4, h5, h6 {
     font-family: 'Century Gothic', sans-serif;
@@ -89,12 +91,12 @@ h1,h2, h3, h4, h5, h6 {
     text-align: center;
 margin-top: 30px;
 margin-bottom: 30px;
-     color: #B90F22;
-     font-size: 22px;
+     color: #EC6500;
+     font-size: 20px;
 }
 
 .year h2{
-    color: #B90F22;
+    color: #EC6500;
     font-size: 16px;
     margin-bottom: 20px;
     margin-left: 10px;
@@ -104,7 +106,7 @@ margin-bottom: 30px;
 
 .dottedLineDiv{
     border-left:1px dotted #333;
-    margin-left:35px;
+    /*margin-left:35px;*/
     margin-bottom:30px;
 }
 
@@ -117,10 +119,11 @@ margin-bottom: 30px;
 
 .headContainer{
     width:100%;
+    margin-bottom:10px;
 }
 
 .teamNameDiv{
-    width:80%;
+    width:75%;
     float:left;
     border-bottom:1px dotted #999;
 }
@@ -130,7 +133,7 @@ margin-bottom: 30px;
 }
 
 .teamNameDiv a h2:hover{
-    color:#B90F22;
+    color:#EC6500;
 }
 
 .teamNameDiv a h2{
@@ -143,8 +146,6 @@ margin-bottom: 30px;
 
 
 .logoDiv{
-
-    width:15%;
     float:right;
 }
 
@@ -158,6 +159,7 @@ margin-bottom: 30px;
 .team p{
     margin-left:20px;
     margin-right:20px;
+    margin-top:10px;
     color: #333333;
     font-family: Tahoma,Arial,Helvetica,sans-serif;
     font-size: 11px;
