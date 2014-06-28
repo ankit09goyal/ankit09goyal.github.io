@@ -2,6 +2,10 @@ body{
     background: none repeat scroll 0 0 #F7F7F7;
 }
 
+a{
+text-decoration: none;
+}
+
 .clear {
     clear: both;
 }
@@ -73,13 +77,15 @@ body{
 
 /* css of right body starts */
 
-/*
+
 .right-body{
+margin-top: -30px;
+/*
   width:78%;
   height:100%;
-  float:right;
+  float:right;*/
 }
-*/
+
 
 h1,h2, h3, h4, h5, h6 {
     font-family: 'Century Gothic', sans-serif;
@@ -88,7 +94,7 @@ h1,h2, h3, h4, h5, h6 {
 }
 
 .right-body h1{
-    text-align: center;
+/*    text-align: center;*/
 margin-top: 30px;
 margin-bottom: 30px;
      color: #EC6500;
