@@ -1,15 +1,8 @@
- <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
-    <meta name="viewport" content="width=device-width">
-    <meta name="description" content="{{ site.description }}">
-    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+<head>
 
-
-    <!-- Custom CSS -->
-    <!-- <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}"> -->
- 
+<!-- my stuff default starts -->
+	 <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+  
     <!-- my CSS -->
     <link rel="stylesheet" href="{{ "/css/mycss2.css" | prepend: site.baseurl }}">
     <link rel="stylesheet" href="{{ "/css/css_postTemplate.css" | prepend: site.baseurl }}">
@@ -29,33 +22,34 @@
 			$(".youtube").colorbox({iframe:true, innerWidth:940, innerHeight:600});			
 		});
 	</script>
+
+<!-- my stuff default ends -->
+
+<!-- tu stuff default starts -->	
+   
+	<link rel="stylesheet" href="css/tudarmstadt_v11.css"/>
+
+	<style media="screen">
+.topnavigation,.navigationsspalte,.rechte_marginalienspalte,input[type=text]:focus,input[type=email]:focus,input[type=number]:focus,input[type=password]:focus,input[type=search]:focus,input[type=tel]:focus,input[type=url]:focus,textarea:focus,select:focus{border-color:#EC6500;}
+h1,h2,h3,.zurueck{color:#EC6500}
+h1 a,h2 a,h3 a,a:focus,a:hover,a:active,.weiter,a.aktiv,a.farbig,.farbig a,.bewertet{color:#EC6500 !important;}
+.klappbox a,.navigationsspalte a,.tabs a,.ep_toolbox{background-color:#FBE0CC !important;}
+.navi_pfeil,.navi_pfeil_links{background-color:#EC6500}
+	</style>
+
+	<style>
+.farbig,.formular legend,.zwischenueberschrift_2 td,.zwischenueberschrift_3 td{color:#EC6500}
+.hg_farbig,.unterlegt,.raquo,.laquo,.nach_oben{background-color:#EC6500}
+.highlighted{background-color:#FBE0CC}
+	</style>
 	
-	<script type="text/javascript">
-var QueryString = function () {
-  // This function is anonymous, is executed immediately and 
-  // the return value is assigned to QueryString!
-  var query_string = {};
-  var query = window.location.search.substring(1);
-  var vars = query.split("&");
-  for (var i=0;i<vars.length;i++) {
-    var pair = vars[i].split("=");
-    	// If first entry with this name
-    if (typeof query_string[pair[0]] === "undefined") {
-      query_string[pair[0]] = pair[1];
-    	// If second entry with this name
-    } else if (typeof query_string[pair[0]] === "string") {
-      var arr = [ query_string[pair[0]], pair[1] ];
-      query_string[pair[0]] = arr;
-    	// If third or later entry with this name
-    } else {
-      query_string[pair[0]].push(pair[1]);
-    }
-  } 
-    return query_string;
-} ();
+	<style media="print">
+.page{border-top-color:#EC6500;}
+	</style>
 
-//alert(QueryString.year);
-document.getElementById('myJSYear').innerHTML = "hiiii";
-</script>
+<!--[if lt IE 9]>
+<script src="/media/corporate_design/gc_skripte/html5.js"></script>
+<![endif]-->
 
+<!-- tu stuff default ends -->
 </head>

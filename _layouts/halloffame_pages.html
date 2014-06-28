@@ -2,33 +2,45 @@
 layout: home
 ---
 
+
+<!-- backlinking starts -->
  <div class="right-header">
-                <a href="{{ site.baseurl }}/">Home</a><span> << Hall of Fame</span>
-        </div>
-        
-        <div class="clear"></div>
-            
+    <a href="{{ site.baseurl }}/">Home</a><span> << Hall of Fame</span>
+ </div>
+<div class="clear"></div>
+<!-- backlinking ends -->
 
-<!-- div left side starts -->
-         <div class="left-body">
-          
-                        <ul>
-                            <a href="{{ site.baseurl }}/"><li>Home</li></a>
-                            <a href="{{ site.baseurl }}/hof" id="clicked"><li>Hall Of Fame</li></a>
-                            <ul>
-	                            {% for years in (page.startingYear..page.currentYear) reversed %}
-		                            <a href="{{ site.baseurl }}/projects/{{years}}/hof-year" id="clicked"><li>{{years}}</li></a>
-		                        {% endfor %}
-                            </ul>
-                            <a href="{{ site.baseurl }}/info"><li>Information</li></a>
-                        </ul>
-        </div>
-<!-- div left side ends -->
+<!-- left navigation bar start-->
+<nav class="navigationsspalte float-left margin-right-normal">
+	<h1><a class="aktiv ohne_abstand" href="../../../teaching_iverview.en.jsp">Software Projects</a></h1>
+	<ul class="rahmenlinie_unten">
+		<li><a href="{{ site.baseurl }}/" class="ebene1">Home</a></li>
+		<li><a href="{{ site.baseurl }}/hof" class="ebene1">Hall of Fame</a></li>
+			<ul>
+				 {% for years in (page.startingYear..page.currentYear) reversed %}
+					<li><a href="{{ site.baseurl }}/projects/{{years}}/hof-year" class="ebene2">{{years}}</a></li>
+				 {% endfor %}	
+			</ul>
+		<li><a href="{{ site.baseurl }}/information" class="ebene1">Information</a></li>
+	</ul>
+</nav>
+<!-- left navigation bar ends-->
 
-<!-- div right side starts -->
+
+<!-- right content div starts -->
+<div id="content" class="content">
+
+	<!-- add our content in this div -->
+	<div class="zentrale_spalte eine_spalte float-left margin-right-normal">
+		<section id="intro">
+			
+		
+	<!-- my code starts -->		
+	
+	<!-- div right side starts -->
       <div class="right-body">
       
-        <h1>Hall Of Fame</h1>
+        <h1 class="erste_ueberschrift">Hall Of Fame</h1>
       {% for years in (page.startingYear..page.currentYear) reversed %}
        
        	 {% capture theYear %}{{ years }}{% endcapture %}
@@ -107,6 +119,22 @@ layout: home
     {% endfor %}
            
  </div>
-      <!-- div right side starts -->
-     
-       <div class="clear"></div>
+<!-- div right side starts -->
+<div class="clear"></div>
+
+<!-- my code ends -->		
+		
+</section>
+</div>
+<!-- add our content in this div ends-->
+
+
+
+
+            
+
+
+
+
+
+

@@ -1,24 +1,28 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
   {% include head.html %}
 
-    <body>
+  <body>
+  	<!-- div page starts -->
+	<div class="page">
 
-      <div class="mainBody">
-
-   
-
+   		<!-- tu header -->
+		{% include tuHeader.html %}
       
-      
+      	
+		<div class="main">
+
           
             {{ content }}
      
        
-    </div>
-  <!-- div main body ends -->
+	    </div>
+  		<!-- div main body ends -->
  
     {% include footer.html %}
 
-    </body>
+	</div>
+	<!-- div page ends -->
+</body>
 </html>
