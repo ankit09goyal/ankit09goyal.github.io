@@ -41,7 +41,6 @@ layout: home
 
 
 
-
 <!-- right content div starts -->
 <div id="content" class="content">
 
@@ -69,8 +68,8 @@ layout: home
 		</div>
 		<!-- Logo -->
 	
-		<div class="logoDiv">	
-			{% if page.logo %} <img class="teamLogo" src="{{ page.logo | prepend:'img/' | prepend:folderLink | prepend:site.baseurl }}"> {% endif %}
+		<div class="logoDivPostTemplate">	
+			{% if page.logo %} <img src="{{ page.logo | prepend:'img/' | prepend:folderLink | prepend:site.baseurl }}"> {% endif %}
 		</div>
 	</div>
     <!-- title div ends -->	
@@ -94,8 +93,8 @@ layout: home
 		    <h3>{{ page.partnerIndustry }}</h3>
 		</div>
 		<!-- Logo -->
-		<div class="logoDiv">	
-			<img class="teamLogo" src="{{ page.partnerIndustryLogo | prepend:'img/' | prepend:folderLink | prepend:site.baseurl }}"> 
+		<div class="logoDivPostTemplate">	
+			<img src="{{ page.partnerIndustryLogo | prepend:'img/' | prepend:folderLink | prepend:site.baseurl }}"> 
 		</div>
 	</div>
 	{% endif %}

@@ -48,12 +48,12 @@ body{
 	color:#EC6500;
 }
 
-.logo{
+.logoDivPostTemplate{
 	float:right;
 	width:25%;
 }
 
-.logo img{
+.logoDivPostTemplate img{
 	float: left;
     margin: 8px;
     width: 7rem;
