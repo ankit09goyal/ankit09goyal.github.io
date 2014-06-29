@@ -96,8 +96,8 @@ layout: home
 		    <h3>{{ page.partnerIndustry }}</h3>
 		</div>
 		<!-- Logo -->
-		<div class="logo">	
-			<img src="{{ page.partnerIndustryLogo | prepend:'img/' | prepend:folderLink | prepend:site.baseurl }}"> 
+		<div class="logoDiv">	
+			<img class="teamLogo" src="{{ page.partnerIndustryLogo | prepend:'img/' | prepend:folderLink | prepend:site.baseurl }}"> 
 		</div>
 	</div>
 	{% endif %}
