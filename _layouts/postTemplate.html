@@ -43,7 +43,7 @@ layout: home
 
 <ul>
 	 <!-- get the link to the folders inside the categories starts -->
-				{% assign splittedLink = page.url | split:\"/\" %}
+				{% assign splittedLink = page.url | split:"/" %}
 				{% capture myYear %}{{ splittedLink[2] }}{% endcapture %}
 	 			<!--    get the link to the folders inside the categories ends -->
 
