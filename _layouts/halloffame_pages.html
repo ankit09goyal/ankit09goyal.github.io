@@ -49,8 +49,8 @@ left navigation bar ends-->
 	<!-- my script starts to add class aktiv in left navigation bar -->
 	<script>
 		$(document).ready(function(){
-			$("<span>Hello World!</span>").appendTo("#li2");
-//		    $("#2").append("<ul>{% for years in (page.startingYear..page.currentYear) reversed %}<li><a href="{{ site.baseurl }}/projects/{{years}}/hof-year" class="ebene3">{{years}}</a></li>{% endfor %}</ul>");
+			//$("<span>Hello World!</span>").appendTo("#li2");
+		    $("<ul>{% for years in (page.startingYear..page.currentYear) reversed %}<li><a href=\"{{ site.baseurl }}/projects/{{years}}/hof-year\" class=\"ebene3\">{{years}}</a></li>{% endfor %}</ul>").appendTo("#li2");
 		});
 	</script>
 	<!-- my script ends -->
