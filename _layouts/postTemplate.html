@@ -52,11 +52,10 @@ layout: home
 			<a href=\"{{ site.baseurl }}/projects/{{years}}/hof-year\" class=\"ebene3\">{{years}}</a>
 		</li>
 	
-		{% assign theYear = years %}
+		{% capture theYear *}{{years}}{% endcapture %}
 	        {% for page in site.pages %}
         		{% if page.kind == 'team' %}
-        	
-        	<h2>my year: {{myYear}}</h2>
+
 	        	
         
 				{% if theYear == myYear %}  
