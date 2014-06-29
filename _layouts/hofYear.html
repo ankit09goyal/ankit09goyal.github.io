@@ -38,7 +38,8 @@ layout: home
 	<script>
 		$(document).ready(function(){
 			$("#2").addClass("aktiv");
-		    $("<ul>{% for years in (site.startingYear..site.currentYear) reversed %}{% if years==2013 %}<li><a href=\"{{ site.baseurl }}/projects/{{years}}/hof-year\" class=\"ebene3 aktiv\">{{years}}</a></li>{% else %}<li><a href=\"{{ site.baseurl }}/projects/{{years}}/hof-year\" class=\"ebene3\">{{years}}</a></li>{% endif %}{% endfor %}</ul>").appendTo("#li2");
+		    $("<ul>{% for years in (site.startingYear..site.currentYear) reversed %}<li><a href=\"{{ site.baseurl }}/projects/{{years}}/hof-year\" class=\"ebene3\" id=\"{{years}}\">{{years}}</a></li>{% endfor %}</ul>").appendTo("#li2");
+		    $("{% assign splittedLink11 = page.url | split:\"/\" %}{% capture myYear11 %}{{ splittedLink11[2] }}{% endcapture %}#{{myYear11}}").addClass("aktiv");
 		});
 	</script>
 	<!-- my script ends -->
