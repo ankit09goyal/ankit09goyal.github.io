@@ -30,39 +30,15 @@ layout: home
 <!-- left navigation bar ends-->
 
 
+	<!-- my script starts to add class aktiv in left navigation bar -->
+	<script>
+		$(document).ready(function(){
+			$("#2").addClass("aktiv");
+		    $("<ul>{% assign myName = page.name %}{% assign splittedLink = page.url | split:\"/\" %}{% capture myYear %}{{ splittedLink[2] }}{% endcapture %}{% for years in (site.startingYear..site.currentYear) reversed %}<li><a href=\"{{ site.baseurl }}/projects/{{years}}/hof-year\" class=\"ebene3\">{{years}}</a></li>{% capture theYear %}{{years}}{% endcapture %}{% for page in site.pages %}{% if page.kind == 'team' %}{% if theYear == myYear %} {% assign splittedLink1 = page.url | split:\"/\" %}{% capture myYearPage %}{{ splittedLink1[2] }}{% endcapture %}{% if myYearPage == myYear %}{% if myName == page.name %}<ul><li><a href=\"{{ site.baseurl }}/{{page.url}}\" class=\"ebene4 aktiv\">{{page.name}}</a></li></ul>{% else %}<ul><li><a href=\"{{ site.baseurl }}/{{page.url}}\" class=\"ebene4\">{{page.name}}</a></li></ul>{% endif %}{% endif %}{% endif %}{% endif %}{% endfor %}{% endfor %}</ul>").appendTo("#li2");
+		});
+	</script>
+	<!-- my script ends -->
 
-
-
-<ul>
-	 <!-- get the link to the folders inside the categories starts -->
-				{% assign splittedLink = page.url | split:"/" %}
-				{% capture myYear %}{{ splittedLink[2] }}{% endcapture %}
-	 			<!--    get the link to the folders inside the categories ends -->
-
-	{% for years in (site.startingYear..site.currentYear) reversed %}
-		<li>
-			<a href=\"{{ site.baseurl }}/projects/{{years}}/hof-year\" class=\"ebene3\">{{years}}</a>
-		</li>
-	
-		{% capture theYear %}{{years}}{% endcapture %}
-		
-	        {% for page in site.pages %}
-        		{% if page.kind == 'team' %}
-					{% if theYear == myYear %} 
-						{% assign splittedLink1 = page.url | split:"/" %}
-						{% capture myYearPage %}{{ splittedLink1[2] }}{% endcapture %}			 
-						
-						{% if myYearPage == myYear %} 
-					<ul>
-						<li><a href=\"{{ site.baseurl }}/{{page.url}}\" class=\"ebene4\">{{page.name}}</a></li>
-					</ul>
-					{% endif %}		
-				{% endif %}
-			{% endif %}
-		{% endfor %}
-				 
-	{% endfor %}
-</ul>
 
 
 
