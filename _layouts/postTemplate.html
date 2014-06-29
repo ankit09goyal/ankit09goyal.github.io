@@ -1,6 +1,5 @@
 ---
 layout: home
-page: postTemplate
 ---
 <!-- backlinking starts -->
  <div class="right-header">
@@ -41,7 +40,7 @@ page: postTemplate
 	</script>
 	<!-- my script ends -->
 
-<!--
+
 <ul>
 	 <!-- get the link to the folders inside the categories starts -->
 				{% assign splittedLink = page.url | split:\"/\" %}
@@ -57,6 +56,7 @@ page: postTemplate
 	        {% for page in site.pages %}
         		{% if page.kind == 'team' %}
         	
+        	<h2>my year: {{myYear}}</h2>
 	        	
         
 				{% if theYear == myYear %}  
@@ -69,7 +69,7 @@ page: postTemplate
 				 
 	{% endfor %}
 </ul>
--->
+
 
 
 <!-- right content div starts -->
