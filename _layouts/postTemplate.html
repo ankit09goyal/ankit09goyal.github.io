@@ -55,17 +55,13 @@ layout: home
 		{% capture theYear %}{{years}}{% endcapture %}
 	        {% for page in site.pages %}
         		{% if page.kind == 'team' %}
-				
-</h2>				{{page.name}}<h2>
-	        	
-        
-				{% if theYear == myYear %}  
-				<ul>
-					<li><a href=\"{{ site.baseurl }}/{{page.url}}\" class=\"ebene4\">{{page.name}}</a></li>
-				</ul>
+					{% if theYear == myYear %}  
+					<ul>
+						<li><a href=\"{{ site.baseurl }}/{{page.url}}\" class=\"ebene4\">{{page.name}}</a></li>
+					</ul>
+					{% endif %}
 				{% endif %}
-				{% endif %}
-				{% endfor %}
+			{% endfor %}
 				 
 	{% endfor %}
 </ul>
