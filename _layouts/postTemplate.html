@@ -51,14 +51,15 @@ layout: home
 					{% if theYear == myYear %} 
 						{% assign splittedLink1 = page.url | split:"/" %}
 						{% capture myYearPage %}{{ splittedLink1[2] }}{% endcapture %}			 
+						
 						{% if myYearPage == myYear %} 
 					<ul>
 						<li><a href=\"{{ site.baseurl }}/{{page.url}}\" class=\"ebene4\">{{page.name}}</a></li>
 					</ul>
-		
-					{% endif %}
+					{% endif %}		
 				{% endif %}
-			{% endfor %}
+			{% endif %}
+		{% endfor %}
 				 
 	{% endfor %}
 </ul>
