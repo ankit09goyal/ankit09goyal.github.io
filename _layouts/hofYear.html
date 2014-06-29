@@ -38,7 +38,7 @@ layout: home
 	<script>
 		$(document).ready(function(){
 			$("#2").addClass("aktiv");
-		    $("<ul>{% for years in (site.startingYear..site.currentYear) reversed %}{% if years == myYear11 %}<li><a href=\"{{ site.baseurl }}/projects/{{years}}/hof-year\" class=\"ebene3 aktiv\">{{years}}</a></li>{% else %}<li><a href=\"{{ site.baseurl }}/projects/{{years}}/hof-year\" class=\"ebene3\">{{years}}</a></li>{% endif %}{% endfor %}</ul>").appendTo("#li2");
+		    $("<ul>{% for years in (site.startingYear..site.currentYear) reversed %}{% if myYear11==\"2013\" %}<li><a href=\"{{ site.baseurl }}/projects/{{years}}/hof-year\" class=\"ebene3 aktiv\">{{years}}</a></li>{% else %}<li><a href=\"{{ site.baseurl }}/projects/{{years}}/hof-year\" class=\"ebene3\">{{years}}</a></li>{% endif %}{% endfor %}</ul>").appendTo("#li2");
 		});
 	</script>
 	<!-- my script ends -->
