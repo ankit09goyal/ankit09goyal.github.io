@@ -2,29 +2,56 @@
 layout: home
 ---
 
+ <!-- get the link to the folders inside the categories starts -->
+				{% assign splittedLink1 = page.url | split:"/" %}
+				{% assign myYear11 = splittedLink1[2] %}
+	 			<!--    get the link to the folders inside the categories ends -->
 
+<!-- backlinking starts -->
  <div class="right-header">
-                <a href="{{ site.baseurl }}/">Home</a><span> << Hall of Fame</span>
-        </div>
-        
-        <div class="clear"></div>
+ </div>
+<div class="clear"></div> 
+<nav class="breadcrumbs">
+	<ol>
+		<li>
+			<a href="{{ site.baseurl }}/">Home</a>
+		</li>
+		<li class="doppelpfeil"></li>
+		<li>
+			<a href="{{ site.baseurl }}/hof">Hall of Fame</a>
+		</li>
+		<li class="doppelpfeil"></li>
+		<li>
+			<span class="grau">{{ myYear1 }}</span>
+		</li>
+		<div class="clear"></div>
+	</ol>		
+</nav>
+<!-- backlinking ends -->
             
 
-<!-- div left side starts -->
-         <div class="left-body">
-          
-                        <ul>
-                            <a href="{{ site.baseurl }}/"><li>Home</li></a>
-                            <a href="{{ site.baseurl }}/hof" id="clicked"><li>Hall Of Fame</li></a>
-                            <ul>
-	                            {% for years in (page.startingYear..page.currentYear) reversed %}
-		                            <a href="{{ site.baseurl }}/hof_year.html?year={{years}}" id="clicked"><li>years</li></a>
-		                        {% endfor %}
-                            </ul>
-                            <a href="{{ site.baseurl }}/info"><li>Information</li></a>
-                        </ul>
-        </div>
-<!-- div left side ends -->
+<!-- left navigation bar start-->
+{% include left-part-body.html %}
+<!-- left navigation bar ends-->
+
+	<!-- my script starts to add class aktiv in left navigation bar -->
+	<script>
+		$(document).ready(function(){
+			$("#2").addClass("aktiv");
+		    $("<ul>{% for years in (page.startingYear..page.currentYear) reversed %}{% if years == myYear11 %}<li><a href=\"{{ site.baseurl }}/projects/{{years}}/hof-year\" class=\"ebene3 aktiv\">{{years}}</a></li>{% else %}<li><a href=\"{{ site.baseurl }}/projects/{{years}}/hof-year\" class=\"ebene3\">{{years}}</a></li>{% endif %}{% endfor %}</ul>").appendTo("#li2");
+		});
+	</script>
+	<!-- my script ends -->
+	
+	<!-- right content div starts -->
+<div id="content" class="content">
+
+	<!-- add our content in this div -->
+	<div class="zentrale_spalte eine_spalte float-left margin-right-normal">
+		<section id="intro">
+			
+		
+	<!-- my code starts -->	
 
 <!-- div right side starts -->
       <div class="right-body">
@@ -114,3 +141,10 @@ layout: home
       <!-- div right side starts -->
      
        <div class="clear"></div>
+       
+<!-- my code ends -->		
+		
+</section>
+</div>
+<!-- add our content in this div ends-->
+
