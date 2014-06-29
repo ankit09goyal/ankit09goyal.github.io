@@ -2,27 +2,85 @@
 layout: home
 page: postTemplate
 ---
+<!-- backlinking starts -->
+ <div class="right-header">
+ </div>
+<div class="clear"></div> 
+<nav class="breadcrumbs">
+	<ol>
+		<li>
+			<a href="{{ site.baseurl }}/">Home</a>
+		</li>
+		<li class="doppelpfeil"></li>
+		<li>
+			<a href="{{ site.baseurl }}/hof">Hall of Fame</a>
+		</li>
+		<li class="doppelpfeil"></li>
+		<li>
+			<span class="grau">{{ page.name }}</span>
+		</li>
+		<div class="clear"></div>
+	</ol>		
+</nav>
+<!-- backlinking ends -->
+           
 
 
-<!-- backward navigation starts -->
-<div class="right-header">
-	<a href="{{ site.baseurl }}/">Home</a><span> << </span><a href="{{ site.baseurl }}/hof">Hall of Fame</a><span> << {{ page.name }}</span>
-</div>
+<!-- left navigation bar start-->
+{% include left-part-body.html %}
+<!-- left navigation bar ends-->
+
+
+	<!-- my script starts to add class aktiv in left navigation bar -->
+	<script>
+		$(document).ready(function(){
+			$("#2").addClass("aktiv");
+		    //$("<ul>{% for years in (site.startingYear..site.currentYear) reversed %}<li><a href=\"{{ site.baseurl }}/projects/{{years}}/hof-year\" class=\"ebene3\">{{years}}</a></li>{% endfor %}</ul>").appendTo("#li2");
+		    $("<ul><!-- get the link to the folders inside the categories starts -->{% assign splittedLink = page.url | split:\"/\" %}{% capture myYear %}{{ splittedLink[2] }}{% endcapture %}	<!--    get the link to the folders inside the categories ends -->	{% for years in (site.startingYear..site.currentYear) reversed %}<li><a href=\"{{ site.baseurl }}/projects/{{years}}/hof-year\" class=\"ebene3\">{{years}}</a></li>{% assign theYear = years %}{% for page in site.pages %}{% if page.kind == 'team' %}{% if theYear == myYear %}<ul>		<li><a href=\"{{ site.baseurl }}/{{page.url}}\" class=\"ebene4\">{{page.name}}</a></li></ul>{% endif %}{% endif %}{% endfor %}{% endfor %}</ul>").appendTo("#li2");
+		});
+	</script>
+	<!-- my script ends -->
+
+<!--
+<ul>
+	 <!-- get the link to the folders inside the categories starts -->
+				{% assign splittedLink = page.url | split:\"/\" %}
+				{% capture myYear %}{{ splittedLink[2] }}{% endcapture %}
+	 			<!--    get the link to the folders inside the categories ends -->
+
+	{% for years in (site.startingYear..site.currentYear) reversed %}
+		<li>
+			<a href=\"{{ site.baseurl }}/projects/{{years}}/hof-year\" class=\"ebene3\">{{years}}</a>
+		</li>
+	
+		{% assign theYear = years %}
+	        {% for page in site.pages %}
+        		{% if page.kind == 'team' %}
+        	
+	        	
         
-<div class="clear"></div>
-<!-- backward navigation starts -->            
+				{% if theYear == myYear %}  
+				<ul>
+					<li><a href=\"{{ site.baseurl }}/{{page.url}}\" class=\"ebene4\">{{page.name}}</a></li>
+				</ul>
+				{% endif %}
+				{% endif %}
+				{% endfor %}
+				 
+	{% endfor %}
+</ul>
+-->
 
-<!-- div left side starts -->
-<div class="left-body">
-          
-	<ul>
-       <a href="{{ site.baseurl }}/"><li>Home</li></a>
-       <a href="{{ site.baseurl }}/hof"><li>Hall Of Fame</li></a>
-       <a href="{{ site.baseurl }}/info"><li>Information</li></a>
-    </ul>
-    
-</div>
-<!-- div left side ends -->
+
+<!-- right content div starts -->
+<div id="content" class="content">
+
+	<!-- add our content in this div -->
+	<div class="zentrale_spalte eine_spalte float-left margin-right-normal">
+		<section id="intro">
+			
+		
+	<!-- my code starts -->	
 
 <!-- div right side starts -->
 <div class="right-body">
@@ -132,3 +190,9 @@ page: postTemplate
 <!-- div right side ends -->
 
      <div class="clear"></div>
+<!-- my code ends -->		
+
+		
+</section>
+</div>
+<!-- add our content in this div ends-->
