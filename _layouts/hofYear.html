@@ -130,7 +130,7 @@ layout: home
                     
                     <!-- Team name starts -->    
 						  {% if page.ownSite == 'own' %}
-                             <a href="{{ site.baseurl }}/site/"><h2>{{ page.name }}</h2></a>
+                             <a href="{{ site.baseurl }}{{ folderLink }}site/"><h2>{{ page.name }}</h2></a>
                           {% elsif page.ownSite == 'legacy' %}
                              <a><h2>{{ page.name }}</h2></a>
                           {% else %}
