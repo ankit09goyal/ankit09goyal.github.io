@@ -42,14 +42,14 @@ layout: home
 				 {% for years in (site.startingYear..site.currentYear) reversed %}
 				 <p>newmyyear11: {{myYear11}}</p>
 				
-				{% if myYear211==years %}
+				{% if years==myYear211 %}
 					<p>yes year: {{years}}, {{myYear211}}</p> 
 				{%endif%}
 				
-				{% if myYear11==years %}
+				{% if years==myYear11 %}
 				<p>myyear: {{myYear11}}</p>
 				<li>
-					<a href=\"{{ site.baseurl }}/projects/{{years}}/hof-year\" class=\"ebene3 aktiv\" id=\"{{years}}\">{{years}}</a>
+					<a href="{{ site.baseurl }}/projects/{{years}}/hof-year" class="ebene3 aktiv" id="{{years}}">{{years}}</a>
 				</li>
 					<ul>
 						{% for page in site.pages %}
@@ -64,7 +64,7 @@ layout: home
 
 						
 						<li>
-							<a href=\"{{ site.baseurl }}/projects/{{years}}/hof-year\" class=\"ebene3\" id=\"{{years}}\">{{years}}</a>
+							<a href="{{ site.baseurl }}/projects/{{years}}/hof-year" class="ebene3" id="{{years}}">{{years}}</a>
 						</li>
 							{% endif %}
 							{% endif %}							
