@@ -2,8 +2,8 @@
 kind: team
 name: tech crunch
 shortDescription: sample description of the team sample description of the team sample description of the team sample description of the team 
-logo: logo.jpg
+logo: doqumentors.png
 partnerIndustry: name of the partner industry (SAP my company name)
-partnerIndustryLogo: logo.jpg
+partnerIndustryLogo: hrz_logo_rot_9c_182x0.png
 ownSite: ye
 ---
