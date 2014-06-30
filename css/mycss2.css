@@ -114,10 +114,9 @@ margin-bottom: 20px;
 }
 
 .team{
-   background: none repeat scroll 0 0 #FDFDFD;
-    border: 1px solid #DDDDDD;
-    box-shadow: 0 0 2px #DDDDDD;
-    margin: 10px 10px 10px 10px;
+    background: none repeat scroll 0 0 #FDFDFD;
+    border-bottom: 1px solid #DDDDDD;
+    margin: 3px 0 3px 9px;
 }
 
 .headContainer{
@@ -140,11 +139,11 @@ margin-bottom: 20px;
 }
 
 .teamNameDiv a h2{
-    color: #333;
-    font-size: 14px;
-    margin-bottom: 20px;
-    margin-top:20px;
-    margin-left: 20px;
+    color: #333333;
+    font-size: 12px;
+    margin-bottom: 10px;
+    margin-left: 5px;
+    margin-top: 10px;
 }
 
 
@@ -153,27 +152,23 @@ margin-bottom: 20px;
 }
 
 .logoDiv img{
-    width:80px;
-    height:40px;
-    margin-right:20px;
-    margin-top:10px;
+    width:4rem;
 }
 
 .team p{
-    margin-left:20px;
-    margin-right:20px;
-    margin-top:10px;
     color: #333333;
     font-family: Tahoma,Arial,Helvetica,sans-serif;
     font-size: 11px;
     line-height: 1.6em;
+    margin-left: 5px;
+    margin-top: 5px;
 }
 
 .industryDiv h3{
-    color: #333;
-    font-size: 12px;
-    margin-top:20px;
-    margin-left: 20px;
+    color: #333333;
+    font-size: 11px;
+    margin-left: 5px;
+    margin-top: 10px;
 
 }
 
