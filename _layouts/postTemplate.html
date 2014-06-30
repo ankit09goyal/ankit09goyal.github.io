@@ -55,6 +55,7 @@ layout: home
 		        			 <!-- get the link to the folders inside the categories starts -->
 							{% assign splittedLink12 = page.url | split:"/" %}
  							{% capture myYear12 %}{{ splittedLink12[2] }}{% endcapture %}
+				 			{% assign folderLink = "/" | append:splittedLink12[1] | append:'/' | append:splittedLink12[2] | append:'/' | append:splittedLink12[3] | append:'/' %}
 				 			<!--    get the link to the folders inside the categories ends -->
         
 							{% if myYear12 == myYear11 %} 
