@@ -30,7 +30,7 @@ layout: home
 	<script>
 		$(document).ready(function(){
 			$("#2").addClass("aktiv");
-		    $("<ul>{% for years in (page.startingYear..page.currentYear) reversed %}<li><a href=\"{{ site.baseurl }}/projects/{{years}}/hof-year\" class=\"ebene3\">{{years}}</a></li>{% endfor %}</ul>").appendTo("#li2");
+		    $("<ul>{% for years in (page.startingYear..page.currentYear) reversed %}<li><a href=\"{{ site.baseurl }}/projects/{{years}}/hof-year\" class=\"ebene3\" id=\"{{years}}\">{{years}}</a></li>{% endfor %}</ul>").appendTo("#li2");
 		});
 	</script>
 	<!-- my script ends -->

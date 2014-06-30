@@ -29,19 +29,49 @@ layout: home
 </nav>
 <!-- backlinking ends -->
             
-
+	
 <!-- left navigation bar start-->
-{% include left-part-body.html %}
-<!-- left navigation bar ends-->
+<nav class="navigationsspalte float-left margin-right-normal">
+	<h1><a class="aktiv ohne_abstand" href="../../../teaching_iverview.en.jsp">Software Projects</a></h1>
+	<ul id="ul1" class="rahmenlinie_unten">
+		<li id="li1"><a href="{{ site.baseurl }}/" class="ebene1" id="1">Home</a></li>
+		<li id="li2"><a href="{{ site.baseurl }}/hof" class="ebene1" id="2">Hall of Fame</a></li>
+			<ul>
+				{% for site.startingYear..site.currentYear reversed %}
+				{% if myYear11==years %}
+				<li>
+					<a href=\"{{ site.baseurl }}/projects/{{years}}/hof-year\" class=\"ebene3 aktiv\" id=\"{{years}}\">{{years}}</a>
+				</li>
+					<ul>
+						{% for page in site.pages %}
+							{% if page.kind == 'team' %}
+        	
+		        			 <!-- get the link to the folders inside the categories starts -->
+							{% assign splittedLink12 = page.url | split:"/" %}
+ 							{% capture myYear12 %}{{ splittedLink12[2] }}{% endcapture %}
+				 			<!--    get the link to the folders inside the categories ends -->
+        
+							{% if myYear11 == myYear12 %}   
 
-	<!-- my script starts to add class aktiv in left navigation bar -->
-	<script>
-		$(document).ready(function(){
-			$("#2").addClass("aktiv");
-		    $("<ul>{% for years in (site.startingYear..site.currentYear) reversed %}<li><a href=\"{{ site.baseurl }}/projects/{{years}}/hof-year\" class=\"ebene3\" id=\"{{years}}\">{{years}}</a></li>{% endfor %}</ul>").appendTo("#li2");
-		});
-	</script>
-	<!-- my script ends -->
+						
+						<li>
+							<a href=\"{{ site.baseurl }}/projects/{{years}}/hof-year\" class=\"ebene3\" id=\"{{years}}\">{{years}}</a>
+						</li>
+							{% endif %}
+							{% endif %}							
+						{% endfor %}
+					</ul>
+				{% else %}
+				<li>
+					<a href=\"{{ site.baseurl }}/projects/{{years}}/hof-year\" class=\"ebene3\" id=\"{{years}}\">{{years}}</a>
+				</li>
+				{% endif %}	
+				{% endfor %}
+			</ul>
+		<li id="li3"><a href="{{ site.baseurl }}/information" class="ebene1" id="3">Information</a></li>
+	</ul>
+</nav>
+<!-- left navigation bar ends-->	
 	
 	<!-- right content div starts -->
 <div id="content" class="content">
