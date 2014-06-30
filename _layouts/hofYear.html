@@ -41,10 +41,6 @@ layout: home
 			<ul>
 				 {% for years in (site.startingYear..site.currentYear) reversed %}
 				 <p>newmyyear11: {{myYear11}}</p>
-				
-				{% if years == 2014 %}
-					<p>yes year: {{years}}, {{myYear211}}</p> 
-				{%endif%}
 
 				{% if years == 2013 %}
 				<p>myyear: {{myYear11}}</p>
@@ -61,7 +57,7 @@ layout: home
 				 			<!--    get the link to the folders inside the categories ends -->
         
 							{% if myYear12 == 2013 %}   
-
+							<p>further inside {{page.name}}</p>
 						
 						<li>
 							<a href="{{ site.baseurl }}/projects/{{years}}/hof-year" class="ebene3" id="{{years}}">{{ page.name }}</a>
