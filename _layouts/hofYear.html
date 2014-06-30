@@ -57,7 +57,7 @@ layout: home
 							{% if myYear12 == myYear11 %}   
 						
 						<li>
-							<a href="{{ site.baseurl }}/projects/{{years}}/hof-year" class="ebene4" id="{{years}}">{{ page.name }}</a>
+							<a href="{{ page.url | prepend:site.baseurl }}" class="ebene4" id="{{years}}">{{ page.name }}</a>
 						</li>
 							{% endif %}
 							{% endif %}							

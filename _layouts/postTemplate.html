@@ -24,20 +24,67 @@ layout: home
 <!-- backlinking ends -->
            
 
-
 <!-- left navigation bar start-->
-{% include left-part-body.html %}
-<!-- left navigation bar ends-->
 
+<!-- get the link to the folders inside the categories starts -->
+{% assign splittedLink11 = page.url | split:"/" %}
+{% capture myYear11 %}{{ splittedLink11[2] }}{% endcapture %}
+{% assign thePageName = page.name %}
+<!--    get the link to the folders inside the categories ends -->
 
-	<!-- my script starts to add class aktiv in left navigation bar -->
-	<script>
-		$(document).ready(function(){
-			$("#2").addClass("aktiv");
-		    $("<ul>{% assign myName = page.name %}{% assign splittedLink = page.url | split:\"/\" %}{% capture myYear %}{{ splittedLink[2] }}{% endcapture %}{% for years in (site.startingYear..site.currentYear) reversed %}<li><a href=\"{{ site.baseurl }}/projects/{{years}}/hof-year\" class=\"ebene3\">{{years}}</a></li>{% capture theYear %}{{years}}{% endcapture %}{% for page in site.pages %}{% if page.kind == \'team\' %}{% if theYear == myYear %} {% assign splittedLink1 = page.url | split:\"/\" %}{% capture myYearPage %}{{ splittedLink1[2] }}{% endcapture %}{% if myYearPage == myYear %}{% if myName == page.name %}<ul><li><a href=\"{{ site.baseurl }}/{{page.url}}\" class=\"ebene4 aktiv\">{{page.name}}</a></li></ul>{% else %}<ul><li><a href=\"{{ site.baseurl }}/{{page.url}}\" class=\"ebene4\">{{page.name}}</a></li></ul>{% endif %}{% endif %}{% endif %}{% endif %}{% endfor %}{% endfor %}</ul>").appendTo("#li2");
-		});
-	</script>
-	<!-- my script ends -->
+<nav class="navigationsspalte float-left margin-right-normal">
+	<h1><a class="aktiv ohne_abstand" href="../../../teaching_iverview.en.jsp">Software Projects</a></h1>
+	<ul id="ul1" class="rahmenlinie_unten">
+		<li id="li1"><a href="{{ site.baseurl }}/" class="ebene1" id="1">Home</a></li>
+		<li id="li2"><a href="{{ site.baseurl }}/hof" class="ebene1 aktiv" id="2">Hall of Fame</a></li>
+			<ul>
+			 {% for years in (site.startingYear..site.currentYear) reversed %}
+				{% capture yearCapturing %}{{ years }}{% endcapture %}
+				
+
+	 			
+				{% if myYear11 == yearCapturing %}
+
+				<li>
+					<a href="{{ site.baseurl }}/projects/{{years}}/hof-year" class="ebene3 aktiv" id="{{years}}">{{years}}</a>
+				</li>
+					<ul>
+						{% for page in site.pages %}
+							{% if page.kind == 'team' %}
+        	
+		        			 <!-- get the link to the folders inside the categories starts -->
+							{% assign splittedLink12 = page.url | split:"/" %}
+ 							{% capture myYear12 %}{{ splittedLink12[2] }}{% endcapture %}
+				 			<!--    get the link to the folders inside the categories ends -->
+        
+							{% if myYear12 == myYear11 %}   
+								{% if thePageName == page.name %}
+						<li>
+							<a href="{{ page.url | prepend:site.baseurl }}" class="ebene4 aktiv" id="{{years}}">{{ page.name }}</a>
+						</li>
+							{% else %}
+						<li>
+							<a href="{{ page.url | prepend:site.baseurl }}" class="ebene4" id="{{years}}">{{ page.name }}</a>
+						</li>
+						
+							{% endif %}
+						{% endif %}
+					{% endif %}							
+				{% endfor %}
+					</ul>
+				{% else %}
+				<li>
+					<a href="{{ site.baseurl }}/projects/{{years}}/hof-year" class="ebene3" id="{{years}}">{{years}}</a>
+				</li>
+				{% endif %}	
+				{% endfor %}
+			</ul>
+		<li id="li3"><a href="{{ site.baseurl }}/information" class="ebene1" id="3">Information</a></li>
+	</ul>
+</nav>
+<!-- left navigation bar ends-->	
+	
+
 
 
 
