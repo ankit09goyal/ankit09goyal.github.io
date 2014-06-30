@@ -41,9 +41,11 @@ layout: home
 			<ul>
 				 {% for years in (site.startingYear..site.currentYear) reversed %}
 				 <p>newmyyear11: {{myYear11}}</p>
-				{% if myYear21==years %}
-				<p>yes year: {{years}}, {{myYear21}}</p> 
+				
+				{% if myYear211==years %}
+					<p>yes year: {{years}}, {{myYear211}}</p> 
 				{%endif%}
+				
 				{% if myYear11==years %}
 				<p>myyear: {{myYear11}}</p>
 				<li>
