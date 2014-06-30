@@ -6,6 +6,7 @@ layout: home
 				{% assign splittedLink11 = page.url | split:"/" %}
 				<!--{% capture myYear11 %}{{ splittedLink11[2] }}{% endcapture %}-->
 				{% assign myYear11 = splittedLink11[2] %}
+				{% capture myYear211 %}{{ splittedLink11[2] }}{% endcapture %}
 	 			<!--    get the link to the folders inside the categories ends -->
 
 <!-- backlinking starts -->
@@ -40,6 +41,9 @@ layout: home
 			<ul>
 				 {% for years in (site.startingYear..site.currentYear) reversed %}
 				 <p>newmyyear11: {{myYear11}}</p>
+				{% if myYear21==years %}
+				<p>yes year: {{years}}, {{myYear21}}</p> 
+				{%endif%}
 				{% if myYear11==years %}
 				<p>myyear: {{myYear11}}</p>
 				<li>
