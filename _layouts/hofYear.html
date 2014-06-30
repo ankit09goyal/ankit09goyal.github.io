@@ -38,6 +38,8 @@ layout: home
 		<li id="li2"><a href="{{ site.baseurl }}/hof" class="ebene1" id="2">Hall of Fame</a></li>
 			<ul>
 				 {% for years in (page.startingYear..page.currentYear) reversed %}
+				<p>{{myYear11}}</p>
+								<p>{{years}}</p>
 				{% if myYear11==years %}
 				<p>{{myYear11}}</p>
 				<li>
