@@ -38,13 +38,12 @@ layout: home
 		<li id="li2"><a href="{{ site.baseurl }}/hof" class="ebene1 aktiv" id="2">Hall of Fame</a></li>
 			<ul>
 				 {% for years in (site.startingYear..site.currentYear) reversed %}
-
-					{% assign splittedLink111 = page.url | split:"/" %}
-				{% assign myYearInside = splittedLink111[2] %}
+				{% capture yearCapturing %}{{ years }}{% endcapture %}
+				{% assign splittedLink111 = page.url | split:"/" %}
 				{% capture myYearCaptured %}{{ splittedLink111[2] }}{% endcapture %}
-					 			<!--    get the link to the folders inside the categories ends -->
+	 			<!--    get the link to the folders inside the categories ends -->
 	 			
-				{% if myYearInside == years %}
+				{% if myYearCaptured == yearCapturing %}
 
 				<li>
 					<a href="{{ site.baseurl }}/projects/{{years}}/hof-year" class="ebene3 aktiv" id="{{years}}">{{years}}</a>
