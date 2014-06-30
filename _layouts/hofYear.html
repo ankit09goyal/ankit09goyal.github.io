@@ -4,7 +4,8 @@ layout: home
 
  <!-- get the link to the folders inside the categories starts -->
 				{% assign splittedLink11 = page.url | split:"/" %}
-				{% capture myYear11 %}{{ splittedLink11[2] }}{% endcapture %}
+				<!--{% capture myYear11 %}{{ splittedLink11[2] }}{% endcapture %}-->
+				{% assign myYear11 = splittedLink11[2] %}
 	 			<!--    get the link to the folders inside the categories ends -->
 
 <!-- backlinking starts -->
