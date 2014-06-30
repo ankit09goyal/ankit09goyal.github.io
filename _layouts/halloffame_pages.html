@@ -77,12 +77,12 @@ layout: home
                         <div class="teamNameDiv">
                     
                     <!-- Team name starts -->    
-						  {% if page.ownSite == 'ye' %}
+						  {% if page.ownSite == 'own' %}
                              <a href="{{ site.baseurl }}{{ folderLink }}site/"><h2>{{ page.name }}</h2></a>
-                          {% elsif page.url %}
-                             <a href="{{ page.url | prepend:site.baseurl }}"><h2>{{ page.name }}</h2></a>
+                          {% elsif page.ownSite == 'legacy' %}
+                             <a><h2>{{ page.name }}</h2></a>
                           {% else %}
-                            <a><h2>{{ page.name }}</h2></a>
+                             <a href="{{ page.url | prepend:site.baseurl }}"><h2>{{ page.name }}</h2></a>
                           {% endif %}
                     <!-- Team name ends -->
                     
