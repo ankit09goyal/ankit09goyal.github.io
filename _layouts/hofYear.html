@@ -40,7 +40,6 @@ layout: home
 		<li id="li2"><a href="{{ site.baseurl }}/hof" class="ebene1" id="2">Hall of Fame</a></li>
 			<ul>
 				 {% for years in (site.startingYear..site.currentYear) reversed %}
-				 <p>newmyyear11: {{myYear11}}</p>
 
 				{% if years == 2013 %}
 				<p>myyear: {{myYear11}}</p>
@@ -56,7 +55,7 @@ layout: home
  							{% capture myYear12 %}{{ splittedLink12[2] }}{% endcapture %}
 				 			<!--    get the link to the folders inside the categories ends -->
         
-							{% if myYear12 == 2013 %}   
+							{% if myYear12 == '2013' %}   
 							<p>further inside {{page.name}}</p>
 						
 						<li>
