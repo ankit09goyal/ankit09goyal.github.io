@@ -1,6 +1,6 @@
 ---
 kind: team
-name: tech crunch
+name: Doqumenters
 shortDescription: sample description of the team sample description of the team sample description of the team sample description of the team 
 logo: doqumentors.png
 partnerIndustry: name of the partner industry (SAP my company name)
