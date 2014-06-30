@@ -44,7 +44,7 @@ layout: home
 				{% capture myYearCaptured %}{{ splittedLink111[2] }}{% endcapture %}
 					 			<!--    get the link to the folders inside the categories ends -->
 	 			
-				{% if years == myYearCaptured %}
+				{% if myYearInside == years %}
 
 				<li>
 					<a href="{{ site.baseurl }}/projects/{{years}}/hof-year" class="ebene3 aktiv" id="{{years}}">{{years}}</a>
