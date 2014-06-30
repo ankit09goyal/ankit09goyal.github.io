@@ -4,7 +4,7 @@ layout: home
 
  <!-- get the link to the folders inside the categories starts -->
 				{% assign splittedLink11 = page.url | split:"/" %}
-				{% capture myYear11 %}{{splittedLink11[2]}}{% endcapture %}
+				{% capture myYear11 %}{{ splittedLink11[2] }}{% endcapture %}
 	 			<!--    get the link to the folders inside the categories ends -->
 
 <!-- backlinking starts -->
@@ -38,6 +38,7 @@ layout: home
 		<li id="li2"><a href="{{ site.baseurl }}/hof" class="ebene1" id="2">Hall of Fame</a></li>
 			<ul>
 				 {% for years in (site.startingYear..site.currentYear) reversed %}
+				 <p>myyear11: {{myYear11}}</p>
 				{% if myYear11==years %}
 				<p>myyear: {{myYear11}}</p>
 				<li>
