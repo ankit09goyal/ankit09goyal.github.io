@@ -56,9 +56,15 @@ layout: home
         
 							{% if myYear12 == myYear11 %}   
 						
-						<li>
-							<a href="{{ page.url | prepend:site.baseurl }}" class="ebene4" id="{{years}}">{{ page.name }}</a>
-						</li>
+						
+						 {% if page.ownSite == 'own' %}
+                             <li><a href="{{ site.baseurl }}{{ folderLink }}site/" class="ebene4">{{ page.name }}</a></li>
+                          {% elsif page.ownSite == 'legacy' %}
+                             <li><a class="ebene4">{{ page.name }}</a><li>
+                          {% else %}
+                             <li><a href="{{ page.url | prepend:site.baseurl }}" class="ebene4">{{ page.name }}</a></li>
+                          {% endif %}
+
 							{% endif %}
 							{% endif %}							
 						{% endfor %}

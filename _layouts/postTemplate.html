@@ -57,16 +57,28 @@ layout: home
  							{% capture myYear12 %}{{ splittedLink12[2] }}{% endcapture %}
 				 			<!--    get the link to the folders inside the categories ends -->
         
-							{% if myYear12 == myYear11 %}   
-								{% if thePageName == page.name %}
-						<li>
-							<a href="{{ page.url | prepend:site.baseurl }}" class="ebene4 aktiv" id="{{years}}">{{ page.name }}</a>
-						</li>
-							{% else %}
-						<li>
-							<a href="{{ page.url | prepend:site.baseurl }}" class="ebene4" id="{{years}}">{{ page.name }}</a>
-						</li>
+							{% if myYear12 == myYear11 %} 
+							  
+						{% if thePageName == page.name %}
+						 
+						 	  {% if page.ownSite == 'own' %}
+                            	 <li><a href="{{ site.baseurl }}{{ folderLink }}site/" class="ebene4 aktiv">{{ page.name }}</a></li>
+	                          {% elsif page.ownSite == 'legacy' %}
+    	                         <li><a class="ebene4 aktiv">{{ page.name }}</a><li>
+        	                  {% else %}
+            	                 <li><a href="{{ page.url | prepend:site.baseurl }}" class="ebene4 aktiv">{{ page.name }}</a></li>
+                	          {% endif %}
 						
+						{% else %}
+							
+							 {% if page.ownSite == 'own' %}
+        	                     <li><a href="{{ site.baseurl }}{{ folderLink }}site/" class="ebene4">{{ page.name }}</a></li>
+            	              {% elsif page.ownSite == 'legacy' %}
+                	             <li><a class="ebene4">{{ page.name }}</a><li>
+                    	      {% else %}
+                        	     <li><a href="{{ page.url | prepend:site.baseurl }}" class="ebene4">{{ page.name }}</a></li>
+                          	{% endif %}	
+                          	
 							{% endif %}
 						{% endif %}
 					{% endif %}							
