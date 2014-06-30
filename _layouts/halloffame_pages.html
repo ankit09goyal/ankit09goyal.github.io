@@ -78,7 +78,7 @@ layout: home
                     
                     <!-- Team name starts -->    
 						  {% if page.ownSite == 'ye' %}
-                             <a href="{{ site.baseurl }}/{{ folderLink }}/site/"><h2>{{ page.name }}</h2></a>
+                             <a href="{{ site.baseurl }}{{ folderLink }}site/"><h2>{{ page.name }}</h2></a>
                           {% elsif page.url %}
                              <a href="{{ page.url | prepend:site.baseurl }}"><h2>{{ page.name }}</h2></a>
                           {% else %}
