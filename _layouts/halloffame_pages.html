@@ -50,7 +50,7 @@ layout: home
       <div class="right-body">
       
         <h1 class="erste_ueberschrift">Hall Of Fame</h1>
-      {% for years in (page.startingYear..page.currentYear) reversed %}
+      {% for years in (site.startingYear..site.currentYear) reversed %}
        
        	 {% capture theYear %}{{ years }}{% endcapture %}
        	 
