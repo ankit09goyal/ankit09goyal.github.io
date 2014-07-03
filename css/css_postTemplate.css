@@ -19,12 +19,37 @@ body{
 	float:left;
 	width:100%;
 	margin-bottom:10px;
+	background-color:#EC6500;
+}
+
+.titleIndustry{
+	float:left;
+	width:100%;
+	margin-bottom:10px;
+}
+
+.nameIndustry{
+	float:left;
+	width:25%;
+	height:200px;
+	border-radius:60px;
+	background-color:#EC6500;
+}
+
+.nameIndustry h2{
+	font-size:30px;
+	color:#fff;
+	margin:20px;
+}
+
+.industry{
+	float:left;
+	width:40%
 }
 
 .name{
 	float:left;
 	width:75%;
-	background-color:#EC6500;
 }
 
 .name h1, .name h2, .name h3, .teamMember h2, .teamMember h3, .mentor h2, .mentor h3, .classH2, .classH3, .classH3 a{
@@ -37,7 +62,7 @@ body{
 
 .name h1{
  color:#fff;
- font-size:40px;
+ font-size:45px;
  margin:20px;
 }
 
@@ -58,6 +83,7 @@ body{
 .logoDivPostTemplate{
 	float:right;
 	width:25%;
+		background-color:#fff;
 }
 
 .logoDivPostTemplate img{
