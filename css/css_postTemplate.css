@@ -19,7 +19,7 @@ body{
 	float:left;
 	width:100%;
 	margin-bottom:10px;
-	background-color:#EC6500;
+
 }
 
 .titleIndustry{
@@ -29,27 +29,29 @@ body{
 }
 
 .nameIndustry{
-	float:left;
-	width:25%;
-	height:130px;
-	border-radius:90px;
-	background-color:#444;
+    background-color: #444444;
+    border-radius: 90px;
+    float: left;
+    height: 146px;
+    width: 28%;
 }
 
 .nameIndustry h2{
-	font-size:30px;
-	color:#fff;
-	margin:50px 0px 0px 4px;
+ color: #FFFFFF;
+    font-size: 19px;
+    margin: 63px 0 0 3px;
 }
 
 .industry{
-	float:left;
-	width:40%
+	float: left;
+    margin: 60px 0 0 19px;
+    width: 40%;
 }
 
 .name{
 	float:left;
 	width:75%;
+		background-color:#EC6500;
 }
 
 .name h1, .name h2, .name h3, .teamMember h2, .teamMember h3, .mentor h2, .mentor h3, .classH2, .classH3, .classH3 a{
@@ -62,7 +64,7 @@ body{
 
 .name h1{
  color:#fff;
- font-size:45px;
+ font-size:22px;
  margin:20px;
 }
 
