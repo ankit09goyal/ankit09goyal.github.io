@@ -53,6 +53,18 @@ body{
 	text-align:center;
 }
 
+.logoDivPostTemplateIndustry{
+	float:right;
+	width:25%;
+		background-color:#fff;
+}
+
+.logoDivPostTemplateIndustry img{
+	float: left;
+    margin: 50px 0px 0px 0px;
+    width: 7rem;
+}
+
 .name{
 	float:left;
 	width:75%;
