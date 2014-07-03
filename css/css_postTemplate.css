@@ -36,7 +36,7 @@ body{
     width: 28%;
 }
 
-.nameIndustry h2{
+.nameIndustry h2, .industry h3{
  color: #FFFFFF;
     font-size: 19px;
     margin: 63px 0 0 3px;
@@ -46,6 +46,11 @@ body{
 	float: left;
     margin: 60px 0 0 19px;
     width: 40%;
+}
+
+.industry h3{
+	color:#EC6500;
+	margin:0px;
 }
 
 .name{
