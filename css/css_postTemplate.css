@@ -33,13 +33,13 @@ body{
 	width:25%;
 	height:130px;
 	border-radius:90px;
-	background-color:#EC6500;
+	background-color:#444;
 }
 
 .nameIndustry h2{
 	font-size:30px;
 	color:#fff;
-	margin:20px;
+	margin:50px 0px 0px 4px;
 }
 
 .industry{
