@@ -163,60 +163,11 @@ h1 a,h2 a,h3 a,a:focus,a:hover,a:active,.weiter,a.aktiv,a.farbig,.farbig a,.bewe
 		<li id="li1"><a href="{{ site.baseurl }}/" class="ebene1" id="1">Home</a></li>
 		<li id="li2"><a href="{{ site.baseurl }}/hof" class="ebene1 aktiv" id="2">Hall of Fame</a></li>
 			<ul>
-			 {% for years in (site.startingYear..site.currentYear) reversed %}
-				{% capture yearCapturing %}{{ years }}{% endcapture %}
-				
-
-	 			
-				{% if myYear11 == yearCapturing %}
 
 				<li>
 					<a href="{{ site.baseurl }}/projects/{{years}}/hof-year" class="ebene3 aktiv" id="{{years}}">{{years}}</a>
 				</li>
-					<ul>
-						{% for page in site.pages %}
-							{% if page.kind == 'team' %}
-        	
-		        			 <!-- get the link to the folders inside the categories starts -->
-							{% assign splittedLink12 = page.url | split:"/" %}
- 							{% capture myYear12 %}{{ splittedLink12[2] }}{% endcapture %}
-				 			{% assign folderLink = "/" | append:splittedLink12[1] | append:'/' | append:splittedLink12[2] | append:'/' | append:splittedLink12[3] | append:'/' %}
-				 			<!--    get the link to the folders inside the categories ends -->
-        
-							{% if myYear12 == myYear11 %} 
-							  
-						{% if thePageName == page.name %}
-						 
-						 	  {% if page.ownSite == 'own' %}
-                            	 <li><a href="{{ site.baseurl }}{{ folderLink }}site/" class="ebene4 aktiv">{{ page.name }}</a></li>
-	                          {% elsif page.ownSite == 'legacy' %}
-    	                         <li><a class="ebene4 aktiv">{{ page.name }}</a><li>
-        	                  {% else %}
-            	                 <li><a href="{{ page.url | prepend:site.baseurl }}" class="ebene4 aktiv">{{ page.name }}</a></li>
-                	          {% endif %}
-						
-						{% else %}
-							
-							 {% if page.ownSite == 'own' %}
-        	                     <li><a href="{{ site.baseurl }}{{ folderLink }}site/" class="ebene4">{{ page.name }}</a></li>
-            	              {% elsif page.ownSite == 'legacy' %}
-                	             <li><a class="ebene4">{{ page.name }}</a><li>
-                    	      {% else %}
-                        	     <li><a href="{{ page.url | prepend:site.baseurl }}" class="ebene4">{{ page.name }}</a></li>
-                          	{% endif %}	
-                          	
-							{% endif %}
-						{% endif %}
-					{% endif %}							
-				{% endfor %}
-					</ul>
-				{% else %}
-				<li>
-					<a href="{{ site.baseurl }}/projects/{{years}}/hof-year" class="ebene3" id="{{years}}">{{years}}</a>
-				</li>
-				{% endif %}	
-				{% endfor %}
-			</ul>
+			
 		<li id="li3"><a href="{{ site.baseurl }}/information" class="ebene1" id="3">Information</a></li>
 	</ul>
 </nav>
@@ -292,19 +243,34 @@ h1 a,h2 a,h3 a,a:focus,a:hover,a:active,.weiter,a.aktiv,a.farbig,.farbig a,.bewe
 	<div class="teamMemMentor">
 		<!-- team member div -->
 		<div class="teamMember">
-		    <h2>Team Members</h2>
 		    <h3>Ankit Goyal</h3>
 		    <h3>Philipp</h3>
 		</div>
-		<!-- mentor div -->
+		<div class="orangeCircle">
+			<h2>Team Members</h2>
+		</div>
+		    <div class="clear"></div>
+	</div>
+    <!-- Team Members and mentors div ends -->	
+
+    <div class="clear"></div>
+    
+    <!-- Team Members and mentors div starts -->  
+	<div class="teamMemMentor">
+			<!-- div to create black circle -->
+		<div class="nameIndustry">
+		    <h2>Mentors</h2>
+		</div>    
+	
+	<!-- mentor div -->
 		<div class="mentor">
 		    <h2>Mentors</h2>
 		    <h3>Prof. abc</h3>
 		    <h3>Prof. Dr. Ing. X</h3>
 		</div>
-	</div>
-    <!-- Team Members and mentors div ends -->	
-
+		    <div class="clear"></div>
+	</div>	
+		
     <div class="clear"></div>
 
     <!-- img div starts -->  

@@ -36,7 +36,7 @@ body{
     width: 28%;
 }
 
-.nameIndustry h2, .industry h3{
+.nameIndustry h2, .industry h3, .orangeCircle h2{
  color: #FFFFFF;
     font-size: 19px;
     margin: 63px 0 0 3px;
@@ -122,6 +122,14 @@ body{
 
 .teamMember{
 	width:50%;
+}
+
+.orangeCircle{
+	float:right;
+	background-color: #EC6500;
+    border-radius: 90px;
+    height: 146px;
+    width: 28%;
 }
 
 .mentor{
