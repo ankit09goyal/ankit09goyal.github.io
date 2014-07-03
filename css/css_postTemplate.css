@@ -43,14 +43,14 @@ body{
 }
 
 .industry{
-	float: left;
-    margin: 60px 0 0 19px;
+   float: left;
+    height: 146px;
     width: 40%;
 }
 
 .industry h3{
 	color:#EC6500;
-	margin:0px;
+	text-align:center;
 }
 
 .name{
