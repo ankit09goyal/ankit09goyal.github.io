@@ -1,7 +1,7 @@
 ---
-layout: postTemplate
+layout: team
 kind: team
-ownSite: ye
+ownSite: ownSite
 name: my new team with a name
 shortDescription: sample description of the team sample description of the team sample description of the team sample description of the team 
 logo: logo.jpg

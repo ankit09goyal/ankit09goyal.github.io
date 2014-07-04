@@ -1,5 +1,5 @@
 ---
-layout: postTemplate
+layout: team
 kind: team
 name: yes bank
 shortDescription: sample description of the team sample description of the team sample description of the team sample description of the team 

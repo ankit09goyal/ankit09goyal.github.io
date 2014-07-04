@@ -1,5 +1,5 @@
 ---
-layout: postTemplate
+layout: team
 kind: team
 name: what is it?
 shortDescription: sample description of the team sample description of the team sample description of the team sample description of the team 
