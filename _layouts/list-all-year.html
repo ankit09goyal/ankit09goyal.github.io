@@ -1,11 +1,7 @@
 ---
-layout: home
+layout: default
 ---
 
-				 <!-- get the link to the folders inside the categories starts -->
-				{% assign splittedLink11 = page.url | split:"/" %}
-				{% capture myYear11 %}{{ splittedLink11[2] }}{% endcapture %}
-	 			<!--    get the link to the folders inside the categories ends -->
 
 <!-- backlinking starts -->
  <div class="right-header">
@@ -18,74 +14,35 @@ layout: home
 		</li>
 		<li class="doppelpfeil"></li>
 		<li>
-			<a href="{{ site.baseurl }}/hof">Hall of Fame</a>
-		</li>
-		<li class="doppelpfeil"></li>
-		<li>
-			<span class="grau">{{ myYear11 }}</span>
+			<span class="grau">Hall of Fame</span>
 		</li>
 		<div class="clear"></div>
 	</ol>		
 </nav>
 <!-- backlinking ends -->
-            
-	
+
+
 <!-- left navigation bar start-->
 <nav class="navigationsspalte float-left margin-right-normal">
 	<h1><a class="aktiv ohne_abstand" href="../../../teaching_iverview.en.jsp">Software Projects</a></h1>
 	<ul id="ul1" class="rahmenlinie_unten">
 		<li id="li1"><a href="{{ site.baseurl }}/" class="ebene1" id="1">Home</a></li>
-		<li id="li2"><a href="{{ site.baseurl }}/hof" class="ebene1 aktiv" id="2">Hall of Fame</a></li>
+		<li id="li2"><a href="{{ site.baseurl }}/projects/" class="ebene1 aktiv" id="2">Hall of Fame</a></li>
 			<ul>
-			 {% for years in (site.startingYear..site.currentYear) reversed %}
-				{% capture yearCapturing %}{{ years }}{% endcapture %}
-				
-				{% if myYear11 == yearCapturing %}
-
+			{% for years in (page.startingYear..page.currentYear) reversed %}
 				<li>
-					<a href="{{ site.baseurl }}/projects/{{years}}/hof-year" class="ebene3 aktiv" id="{{years}}">{{years}}</a>
+					<a href="{{ site.baseurl }}/projects/{{years}}/" class="ebene3" id="{{years}}">{{years}}</a>
 				</li>
-					<ul>
-						{% for page in site.pages %}
-							{% if page.kind == 'team' %}
-        	
-		        			 <!-- get the link to the folders inside the categories starts -->
-							{% assign splittedLink12 = page.url | split:"/" %}
- 							{% capture myYear12 %}{{ splittedLink12[2] }}{% endcapture %}
-							{% assign folderLink = "/" | append:splittedLink12[1] | append:'/' | append:splittedLink12[2] | append:'/' | append:splittedLink12[3] | append:'/' %}
-		 				<!--    get the link to the folders inside the categories ends -->
-        
-        
-        
-							{% if myYear12 == myYear11 %}   
-						
-						
-						 {% if page.ownSite == 'own' %}
-                             <li><a href="{{ site.baseurl }}{{ folderLink }}site/" class="ebene4">{{ page.name }}</a></li>
-                          {% elsif page.ownSite == 'legacy' %}
-                             <li><a class="ebene4">{{ page.name }}</a><li>
-                          {% else %}
-                             <li><a href="{{ page.url | prepend:site.baseurl }}" class="ebene4">{{ page.name }}</a></li>
-                          {% endif %}
-
-							{% endif %}
-							{% endif %}							
-						{% endfor %}
-					</ul>
-				{% else %}
-				<li>
-					<a href="{{ site.baseurl }}/projects/{{years}}/hof-year" class="ebene3" id="{{years}}">{{years}}</a>
-				</li>
-				{% endif %}	
-				{% endfor %}
+			{% endfor %}
 			</ul>
 		<li id="li3"><a href="{{ site.baseurl }}/information" class="ebene1" id="3">Information</a></li>
 	</ul>
 </nav>
-<!-- left navigation bar ends-->	
+<!-- left navigation bar ends-->
+
 	
-	
-	<!-- right content div starts -->
+
+<!-- right content div starts -->
 <div id="content" class="content">
 
 	<!-- add our content in this div -->
@@ -93,22 +50,19 @@ layout: home
 		<section id="intro">
 			
 		
-	<!-- my code starts -->	
-
-<!-- div right side starts -->
+	<!-- my code starts -->		
+	
+	<!-- div right side starts -->
       <div class="right-body">
       
-        <h1>Hall Of Fame</h1>
-        
-         <!-- get the link to the folders inside the categories starts -->
-				{% assign splittedLink1 = page.url | split:"/" %}
-				{% capture myYear1 %}{{ splittedLink1[2] }}{% endcapture %}
-	 			<!--    get the link to the folders inside the categories ends -->
-        
-        
-      	     <!-- div year starts -->
+        <h1 class="erste_ueberschrift">Hall Of Fame</h1>
+      {% for years in (site.startingYear..site.currentYear) reversed %}
+       
+       	 {% capture theYear %}{{ years }}{% endcapture %}
+       	 
+	     <!-- div year starts -->
          <div class="year">
-		    <h2>Year: {{ myYear1 }}</h2>
+		    <h2>Year: {{ theYear }}</h2>
             <!-- div added only to add dotted line -->
             <div class="dottedLineDiv">
               
@@ -121,7 +75,7 @@ layout: home
  				{% capture myYear %}{{ splittedLink[2] }}{% endcapture %}
 	 			<!--    get the link to the folders inside the categories ends -->
         
-				{% if myYear1 == myYear %}   
+				{% if theYear == myYear %}   
 
                 <!-- single team contatiner starts -->
                 <div class="team">
@@ -134,10 +88,10 @@ layout: home
                           {% elsif page.ownSite == 'legacy' %}
                              <a><h2>{{ page.name }}</h2></a>
                           {% else %}
-                            <a href="{{ page.url | prepend:site.baseurl }}"><h2>{{ page.name }}</h2></a>
+                             <a href="{{ page.url | prepend:site.baseurl }}"><h2>{{ page.name }}</h2></a>
                           {% endif %}
                     <!-- Team name ends -->
-    
+                    
                         </div>
                         
                     <!--team logo-->
@@ -177,16 +131,25 @@ layout: home
     <!--div dotted line ends-->
     </div>
     <!-- div year ends -->
-  
+    {% endfor %}
            
  </div>
-      <!-- div right side starts -->
-     
-       <div class="clear"></div>
-       
+<!-- div right side starts -->
+<div class="clear"></div>
+
 <!-- my code ends -->		
 		
 </section>
 </div>
 <!-- add our content in this div ends-->
+
+
+
+
+            
+
+
+
+
+
 
