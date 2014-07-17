@@ -6,7 +6,6 @@ baseurl: ""
 url: "http://yourdomain.com"
 year:
   - 2014
-  - 2013
   - 2012
 
 # Build settings
