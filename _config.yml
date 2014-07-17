@@ -6,6 +6,10 @@ baseurl: ""
 url: "http://yourdomain.com"
 startingYear: 2012
 currentYear: 2014
+year:
+  - 2014
+  - 2013
+  - 2012
 
 # Build settings
 markdown: kramdown
