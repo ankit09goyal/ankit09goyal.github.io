@@ -149,28 +149,28 @@ layout: default
 
      <div class="clear"></div>
     
-    <!-- partner industry div starts -->  
+    <!-- partner industry div starts  
    	{% if page.partnerIndustry %} 
     <div class="title">
-		<!-- Team Name -->		
+		 Team Name 	
 		<div class="name">
 		    <h2>Partner Industry</h2>
 		    <h3>{{ page.partnerIndustry }}</h3>
 		</div>
-		<!-- Logo -->
+		 Logo
 		<div class="logoDivPostTemplate">	
 			<img src="{{ page.partnerIndustryLogo | prepend:'img/' | prepend:folderLink | prepend:site.baseurl }}"> 
 		</div>
 	</div>
 	{% endif %}
-    <!-- partner industry div ends -->	
+    partner industry div ends -->	
 
-     <div class="clear"></div>
+    <!-- <div class="clear"></div> -->
     
-    <!-- Team Members and mentors div starts --> 
+    <!-- Team Members and mentors div starts 
     {% if page.teamMembers %}  
 	<div class="teamMemMentor">
-		<!-- team member div -->
+		// team member div 
 		<div class="teamMember">
 		    <h2>Team Members</h2>
 
@@ -178,7 +178,7 @@ layout: default
 			    <h3>{{ members }}</h3>
 		    {% endfor %}
 		</div>
-		<!-- mentor div -->
+		// mentor div 
 		<div class="mentor">
 		    <h2>Mentors</h2>
 		    {% for mentors in page.projectMentors%}		    
@@ -187,14 +187,14 @@ layout: default
 		</div>
 	</div>
 	{% endif %}
-    <!-- Team Members and mentors div ends -->	
+    // Team Members and mentors div ends -->	
 
     <div class="clear"></div>
 
 	{% if page.images %}
     <!-- img div starts -->  
 	<div class="images">
-		<h2 class="classH2">Images</h2>
+		<h2>Images</h2> 
 		{% for image in page.images %}
 			<!-- get small image link -->
 			{% assign myLinkImage = image %}
@@ -211,9 +211,12 @@ layout: default
     <!-- files div starts -->  
     {% if page.files %}
 	<div class="files">
-		<h2 class="classH2">Files</h2>
+		<h2>Files</h2>
 		{% for file in page.files %}
-			<h3 class="classH3"><a class='youtube' href="{{ file | prepend:'files/' | prepend:folderLink | prepend:site.baseurl }}">{{file}}</a></h3>
+			<ul>
+				<li><a class='teamFiles' href="{{ file | prepend:'files/' | prepend:folderLink | prepend:site.baseurl }}">{{file}}</a>
+				</li>
+			</ul>
 		{% endfor %}
 	</div>
 	{% endif %}

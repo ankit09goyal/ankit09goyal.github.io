@@ -1,0 +1,81 @@
+/*************************************/
+/* general template */
+/*************************************/
+.description div h2{
+	color: #333;
+	padding: 5px;
+	background-color: #FBE0CC;
+}
+
+.description h2, .images h2, .files h2{
+	color: #333;
+	padding: 5px;
+	background-color: #FBE0CC;
+}
+
+.description div h3{
+	color: #333;
+	margin: 10px 0px;
+}
+
+.description img{
+	float: left;
+}
+
+.description li{
+	list-style: square inside;
+}
+
+
+/* general templates for floating right and left */
+.floatRight{
+	float: right;
+}
+
+.floatLeft{
+	float: left;
+}
+
+/*************************************/
+/* specific template for team teamMembers
+with name, image and description */
+/*************************************/
+
+.teamMembers div{
+	float: left;
+	width: 100%;
+}
+
+.teamMembers img{
+	float: left; 
+	margin:10px 0px;
+	width: 20%;
+}
+
+.teamMembers div div{
+	float: right;
+	margin: 10px; 
+	width: 70%;
+}
+
+/* template for partner industry */
+.partnerIndustry{
+	float: left;
+	margin-bottom: 20px;
+	width:100%;
+}
+
+.partnerIndustry div{
+	float:left;
+	width:70%;
+}
+
+.partnerIndustry h3{
+	font-size: 14px;
+}
+
+.partnerIndustry img{
+	float:right;
+	width:20%;
+	margin-top: 5px;
+}
