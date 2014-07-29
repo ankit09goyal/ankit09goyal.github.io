@@ -1,5 +1,82 @@
 /*************************************/
-/* general template */
+/* classes for individual designing */
+/*************************************/
+.classH1{
+
+}
+
+.classH2{
+	color: #333;
+	padding: 5px;
+	background-color: #FBE0CC;
+}
+
+.classH3{
+	color: #333;
+	margin: 10px 0px;
+}
+
+.classUL-noListStyle{
+
+}
+
+.classUL-noListStyle li{
+	list-style: none;
+}
+
+.classUL-ListStyle{
+
+}
+
+.classUL-ListStyle li{
+	list-style: square inside;
+}
+
+.classDL{
+
+}
+
+.classDL dt{
+
+}
+
+.classDL dd{
+
+}
+
+/* general templates for floating right and left */
+.floatRight{
+	float: right;
+}
+
+.floatLeft{
+	float: left;
+}
+
+.paddingFive{
+	padding: 5px;
+}
+
+.marginTen{
+	margin: 10px;
+}
+
+/*.marginBottomTen{
+	margin-bottom: 10px;
+}
+
+.marginTopTen{
+	margin-top: 10px;
+}
+*/
+
+
+/*************************************/
+/* general template. The HTML written is automatically
+	added to the div with class "description".
+	This sepreates the style of "team" page from other pages style
+	and gives flexibility to write new CSS as well 
+	as helps to reuse old CSS */
 /*************************************/
 .description div h2{
 	color: #333;
@@ -20,6 +97,7 @@
 
 .description img{
 	float: left;
+	width: 100%;
 }
 
 .description li{
@@ -27,18 +105,9 @@
 }
 
 
-/* general templates for floating right and left */
-.floatRight{
-	float: right;
-}
-
-.floatLeft{
-	float: left;
-}
-
 /*************************************/
 /* specific template for team teamMembers
-with name, image and description */
+with name, image and description (TYPE 1) */
 /*************************************/
 
 .teamMembers div{
@@ -58,7 +127,11 @@ with name, image and description */
 	width: 70%;
 }
 
+
+/*************************************/
 /* template for partner industry */
+/*************************************/
+
 .partnerIndustry{
 	float: left;
 	margin-bottom: 20px;

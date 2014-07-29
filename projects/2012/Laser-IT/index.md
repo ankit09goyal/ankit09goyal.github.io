@@ -16,13 +16,15 @@ files:
   - poster.pdf
 ---
 
-<!-- 1) have kept team name and logo being generated from YAML
+<!-- Example 1:
+	 1) have kept team name and logo being generated from YAML
 	 2) General format for H2, H3, ul, dl is defined in CSS
 	 3) Specific format for team members with photo, name and description (TYPE 1)
 	 4) specific format for industry partners (FIXED)
 	 5) images are generated from YAML
 	 6) files are generated from YAML
-	 7) general float right and left classes have been formed -->
+	 7) general float right and left classes have been formed 
+	 8) Sepecific classes for H1, H2, etc. have been formed which can be used as per the need -->
 
 
 <!-- ******************************* -->
@@ -42,7 +44,7 @@ files:
 	<!-- ul type list -->
 	<ul>
 		<!-- heading of the ul tag -->
-		<h3>Lessons Learned</h3>
+		<h2>Lessons Learned</h2>
 		<!-- members of ul tag -->
 		<li>Teammanagement</li>
 		<li>Zeitmanagement</li>
@@ -64,7 +66,7 @@ files:
 		<h3>REA Elektronik GmbH</h3>
 	</div>
 	<!-- ****** EDIT IMAGE NAME OF INDUSTRY HERE ******* 
-		 ****** NOTE ONLLY CHANGE THE NAME ie "reajet.gif" ***** -->
+		 ****** NOTE ONLY CHANGE THE NAME ie "reajet.gif" ***** -->
 	<img src="{{ "reajet.gif" | prepend:'img/' | prepend:folderLink | prepend:site.baseurl }}">
 </div>
 <div class="clear"></div>
@@ -94,7 +96,7 @@ files:
 <!-- ******************************************************* -->
 
 <div class="teamMembers" style="margin: 10px 0px;">
-	<!-- member detail -->
+	<!-- Individual member detail block starts -->
 	<div>
 		<!-- member image -->
 		<img src="{{ "Sascha.jpg" | prepend:'img/' | prepend:folderLink | prepend:site.baseurl }}">
@@ -106,6 +108,8 @@ files:
 		</div>
 	</div>	
 	<div class="clear"></div>
+	<!-- Individual member detail block ends -->
+
 	<!-- member detail -->
 	<div>
 		<!-- member image -->
@@ -179,25 +183,15 @@ files:
 		<!-- heading of dl tag -->
 		<h2>Technologien und Tools</h2>
 		<!-- elements in dl -->
-		<dt>
-			Jenkins
-		</dt>
+		<dt><a href="">Jenkins</a></dt>
 			<dd>Continuous Integration</dd>
-		<dt>
-			Kunagi
-		</dt>
+		<dt><a href="">Kunagi</a></dt>
 			<dd>Task-Assignment + Sprint Management + Punishment Management</dd>
-		<dt>
-			CMake
-		</dt>
+		<dt><a href="">CMake</a></dt>
 			<dd>Build-tool, Cross-Compiling</dd>
-		<dt>
-			Qt
-		</dt>
+		<dt><a href="">Qt</a></dt>
 			<dd>c++ Gui-building</dd>
-		<dt>
-			SVN
-		</dt>
+		<dt><a href="">SVN</a></dt>
 			<dd>Version-Control-System</dd>
 	</dl>
 </div>

@@ -3,11 +3,11 @@ layout: default
 ---
 
 
-<!-- get the link to the folders inside the categories starts -->
+<!-- get the link to the folders, starts -->
 {% assign splittedLink11 = page.url | split:"/" %}
 {% capture myYear11 %}{{ splittedLink11[2] }}{% endcapture %}
 {% assign thePageName = page.name %}
-<!--    get the link to the folders inside the categories ends -->
+<!-- get the link to the folders, ends -->
 
 <!-- backlinking starts -->
  <div class="right-header">
@@ -46,10 +46,7 @@ layout: default
 		{% for years in site.year %}
 				{% capture yearCapturing %}{{ years }}{% endcapture %}
 				
-
-	 			
 				{% if myYear11 == yearCapturing %}
-
 				<li>
 					<a href="{{ site.baseurl }}/projects/{{years}}/" class="ebene3 aktiv" id="{{years}}">{{years}}</a>
 				</li>
@@ -119,10 +116,10 @@ layout: default
 <!-- div right side starts -->
 <div class="right-body">
       
-    <!-- get the link to the folders inside the categories starts -->
+    <!-- get the link to the folders, starts -->
 	{% assign splittedLink = page.url | split:"/" %}
 	{% assign folderLink = "/" | append:splittedLink[1] | append:'/' | append:splittedLink[2] | append:'/' | append:splittedLink[3] | append:'/' %}
- <!--    get the link to the folders inside the categories ends -->
+ <!--    get the link to the folders, ends -->
           
                       
     <!-- title div starts -->  
@@ -214,7 +211,7 @@ layout: default
 		<h2>Files</h2>
 		{% for file in page.files %}
 			<ul>
-				<li><a class='teamFiles' href="{{ file | prepend:'files/' | prepend:folderLink | prepend:site.baseurl }}">{{file}}</a>
+				<li><img src="/projects/2012/Laser-IT/img/Zeichnung1_small.jpg"><a class='teamFiles' href="{{ file | prepend:'files/' | prepend:folderLink | prepend:site.baseurl }}">{{file}}</a>
 				</li>
 			</ul>
 		{% endfor %}
