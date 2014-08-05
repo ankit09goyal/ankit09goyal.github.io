@@ -1,0 +1,265 @@
+---
+layout: team
+kind: team
+name: Template
+shortDescription:  Sample short description
+partnerIndustry: Template Industry
+images:
+  - overview.png
+  - qs-code.png
+files:
+  - poster.pdf
+---
+<!-- ***************** -->
+<!-- ***************** -->
+
+
+<!-- ***************** -->
+<!-- Team Description Starts -->
+<!-- ***************** -->
+<!-- could be contained in a div or not -->
+<div>
+<h2 class="classH2">Template Description<!-- Enter the heading eg: Team Description--></h2>
+<p> Desciption of the team. Could be multiple paragraphs, images, lists etc</p>
+<p> another paragraph has been added in the template</p>
+<ul>
+	<li>Sample List in the description</li>
+	<li>Sample List in the description</li>
+	<li>Sample List in the description</li>
+</ul>
+<p>Sample image in a paragraph tag <br/>
+	<img src="{{ "overview.png" | prepend:'img/' | prepend:folderLink | prepend:site.baseurl }}"> <br />
+	Sample Image outside the paragragh <br />
+</p>
+<img src="{{ "qs-code.png" | prepend:'img/' | prepend:folderLink | prepend:site.baseurl }}">
+</div>
+<div class="clear"></div>
+<!-- ***************** -->
+<!-- ***************** -->
+
+
+<!-- ***************** -->
+<!-- list of lessons learned -->
+<!-- ***************** -->
+<!-- could be contained in a div or not -->
+<!-- we can use specific classes eg: "classH2, classH3" etc. or not -->
+<h2 class="classH2">Lessons Learned</h2>
+<ul>
+	<li>Template Lessons Learned</li>
+	<li>Template Lessons Learned</li>
+</ul>
+<!-- ***************** -->
+<!-- ***************** -->
+
+
+<!-- ***************** -->
+<!-- Partner Industry name and logo -->
+<!-- ***************** -->
+<!-- Have to be inside a div with class = "partnerIndustry" -->
+<div class="partnerIndustry">
+	<h2>Partner Industry</h2>
+	<div>
+		<!-- ****** EDIT NAME OF INDUSTRY HERE ******* -->
+		<h3>Name of the industry</h3>
+	</div>
+	<!-- ****** EDIT IMAGE NAME OF INDUSTRY HERE ******* 
+		 ****** NOTE ONLY CHANGE THE NAME ie "reajet.gif" ***** -->
+	<img src="{{ "overview.png" | prepend:'img/' | prepend:folderLink | prepend:site.baseurl }}">
+</div>
+<div class="clear"></div>
+<!-- ***************** -->
+<!-- ***************** -->
+
+
+<!-- ***************** -->
+<!-- team group pic -->
+<!-- ***************** -->
+<!-- ******* NEED ONLY IF THERE IS A GROUP PIC OF THE TEAM ******** -->
+<div>
+	<!-- team picture -->
+	<h2>Team</h2>
+	<!-- ***** link to big image (OPTIONAL) ****** 
+		 ***** CHANGE THE IMAGE NAME ONLY ****** -->
+	<a href="{{ "Gruppenbild.JPG" | prepend:'img/' | prepend:folderLink | prepend:site.baseurl }}">
+		<!-- small image image to be displayed on the team's page-->
+		<!-- ***** EDIT IMAGE NAME ONLY ***** -->
+		<img src="{{ "Gruppenbild.JPG" | prepend:'img/' | prepend:folderLink | prepend:site.baseurl }}">
+	</a>
+</div>
+<div class="clear"></div>
+<!-- ***************** -->
+<!-- ***************** -->
+
+
+<!-- ******************************************************* -->
+<!-- Team members {Type1} ********* (Name, pic, description) -->
+<!-- ******************************************************* -->
+<div class="teamMembers">
+	<h2>Team</h2>
+	<!-- Individual member detail block starts -->
+	<div>
+		<!-- member image -->
+		<img src="{{ "Sascha.jpg" | prepend:'img/' | prepend:folderLink | prepend:site.baseurl }}">
+		<div>
+			<!-- member name -->
+			<h3>Name of the team member</h3>
+			<!-- member description -->
+			<p>Brief description of the team member</p>
+		</div>
+	</div>	
+	<div class="clear"></div>
+	<!-- Individual member detail block ends -->
+
+	<!-- Individual member detail block starts -->
+	<div>
+		<img src="{{ "Sascha.jpg" | prepend:'img/' | prepend:folderLink | prepend:site.baseurl }}">
+		<div>
+			<h3>Name of the team member</h3>
+			<p>Brief description of the team member</p>
+		</div>
+	</div>	
+	<div class="clear"></div>
+	<!-- Individual member detail block ends -->	
+</div>
+<div class="clear"></div>
+<!-- ***************** -->
+<!-- ***************** -->
+
+
+<!-- ******************************************************* -->
+<!-- Team members {Type2} ********* (Name, description) -->
+<!-- ******************************************************* -->
+<!-- Could be in a div or not -->
+<!-- we can use specific classes eg: "classH2, classH3" etc. or not -->
+<h2 class="classH2">Team</h2>
+<dl>
+	<dt>Name of the Team Member</dt>
+	<dd>Brief description of the team member</dd>
+	<dt>Name of the Team Member</dt>
+	<dd>Brief description of the team member</dd>
+	<dt>Name of the Team Member</dt>
+	<dd>Brief description of the team member</dd>
+</dl>
+<div class="clear"></div>
+<!-- ***************** -->
+<!-- ***************** -->
+
+
+<!-- ******************************************************* -->
+<!-- Team members {Type3.1} ********* (Name) in dl tag-->
+<!-- ******************************************************* -->
+<!-- Could be in a div or not -->
+<div>
+	<h2>Team</h2>
+	<dl>
+		<dt>Name of the Team Member</dt>
+		<dt>Name of the Team Member</dt>
+		<dt>Name of the Team Member</dt>
+	</dl>
+</div>
+<div class="clear"></div>
+<!-- ***************** -->
+<!-- ***************** -->
+
+
+<!-- ******************************************************* -->
+<!-- Team members {Type3.2} ********* (Name) in ul tag -->
+<!-- ******************************************************* -->
+<!-- Could be in a div or not -->
+<div>
+	<h2>Team</h2>
+	<ul>
+		<li>Name of the Team Member</li>
+		<li>Name of the Team Member</li>
+		<li>Name of the Team Member</li>
+	</ul>
+</div>
+<div class="clear"></div>
+<!-- ***************** -->
+<!-- ***************** -->
+
+
+<!-- ******************************************************* -->
+<!-- Team members {Type4} ********* (Name, pic) -->
+<!-- ******************************************************* -->
+<div class="teamMembers">
+	<h2>Team</h2>
+	<!-- Individual member detail block starts -->
+	<div>
+		<!-- member image -->
+		<img src="{{ "Sascha.jpg" | prepend:'img/' | prepend:folderLink | prepend:site.baseurl }}">
+		<div>
+			<!-- member name -->
+			<h3>Name of the team member</h3>
+		</div>
+	</div>	
+	<div class="clear"></div>
+	<!-- Individual member detail block ends -->
+
+	<!-- Individual member detail block starts -->
+	<div>
+		<img src="{{ "Sascha.jpg" | prepend:'img/' | prepend:folderLink | prepend:site.baseurl }}">
+		<div>
+			<h3>Name of the team member</h3>
+		</div>
+	</div>	
+	<div class="clear"></div>
+	<!-- Individual member detail block ends -->	
+</div>
+<div class="clear"></div>
+<!-- ***************** -->
+<!-- ***************** -->
+
+
+<!-- ******************************* -->
+<!-- Techonologies {TYPE 1} Name, Link, description-->
+<!-- ******************************* -->
+<h2 class="classH2">Benutzte Technologien</h2>
+<dl>
+	<dt><a href="Link to website (OPTIONAL)">Name of the Technology</a></dt>
+	<dd>Brief description of the technology</dd>
+
+	<dt><a href="Link to website (OPTIONAL)">Name of the Technology</a></dt>
+	<dd>Brief description of the technology</dd>
+</dl>
+<div class="clear"></div>
+<!-- ***************** -->
+<!-- ***************** -->
+
+
+<!-- ******************************* -->
+<!-- Techonologies {TYPE 2} Name, Link, description, image-->
+<!-- ******************************* -->
+<div class="technologyTypeTwo">
+	<h2>Technologien</h2>
+	<!-- Techonology block starts -->
+	<div>
+		<div>
+			<!-- Technology name -->
+			<h3><a href="#">JBoss + JEE 6</a></h3>
+			<!-- Technology description -->
+			<p>Applikationsumgebung</p>
+		</div>
+		<!-- image -->
+		<img src="{{ "JBoss_logo.jpg" | prepend:'img/' | prepend:folderLink | prepend:site.baseurl }}">
+	</div>	
+	<div class="clear"></div>
+	<!-- Techonology block ends -->
+
+<!-- Techonology block starts -->
+	<div>
+		<div>
+			<!-- Technology name -->
+			<h3><a href="#">JBoss + JEE 6</a></h3>
+			<!-- Technology description -->
+			<p>Applikationsumgebung</p>
+		</div>
+		<!-- image -->
+		<img src="{{ "JBoss_logo.jpg" | prepend:'img/' | prepend:folderLink | prepend:site.baseurl }}">
+	</div>	
+	<div class="clear"></div>
+	<!-- Techonology block ends -->
+</div>
+<div class="clear"></div>
+<!-- ***************** -->
+<!-- ***************** -->

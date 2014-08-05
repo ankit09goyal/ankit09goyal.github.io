@@ -1,6 +1,10 @@
 /*************************************/
 /* classes for individual designing */
 /*************************************/
+ul li ul{
+	margin-left: 10px;
+}
+
 .classH1{
 
 }
@@ -104,11 +108,14 @@
 	list-style: square inside;
 }
 
-
 /*************************************/
 /* specific template for team teamMembers
 with name, image and description (TYPE 1) */
 /*************************************/
+
+.teamMembers{
+	margin: 10px 0px;
+}
 
 .teamMembers div{
 	float: left;
@@ -127,6 +134,39 @@ with name, image and description (TYPE 1) */
 	width: 70%;
 }
 
+/*************************************/
+/* specific template for technologies
+with name, image and description (TYPE 2) */
+/*************************************/
+
+.technologyTypeTwo{
+	margin: 10px 0px;
+}
+
+.technologyTypeTwo div{
+	float: left;
+	width: 100%;
+}
+
+.technologyTypeTwo img{
+	float: right; 
+	margin:10px 0px;
+	width: 7rem;
+}
+
+.technologyTypeTwo div div{
+	float: left;
+	margin: 10px; 
+	width: 70%;
+}
+
+.technologyTypeTwo div div h3, .technologyTypeTwo div div h3 a{
+	color:#333 !important;
+}
+
+.technologyTypeTwo div div h3 a:hover{
+	color:#EC6500 !important;
+}
 
 /*************************************/
 /* template for partner industry */

@@ -191,7 +191,7 @@ layout: default
 	{% if page.images %}
     <!-- img div starts -->  
 	<div class="images">
-		<h2>Images</h2> 
+		<h2>Files</h2> 
 		{% for image in page.images %}
 			<!-- get small image link -->
 			{% assign myLinkImage = image %}
@@ -208,10 +208,9 @@ layout: default
     <!-- files div starts -->  
     {% if page.files %}
 	<div class="files">
-		<h2>Files</h2>
 		{% for file in page.files %}
 			<ul>
-				<li><img src="/projects/2012/Laser-IT/img/Zeichnung1_small.jpg"><a class='teamFiles' href="{{ file | prepend:'files/' | prepend:folderLink | prepend:site.baseurl }}">{{file}}</a>
+				<li><img src="/images/fileIcon.jpg"><a class='teamFiles' href="{{ file | prepend:'files/' | prepend:folderLink | prepend:site.baseurl }}">{{file}}</a>
 				</li>
 			</ul>
 		{% endfor %}
