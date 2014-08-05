@@ -1,7 +1,7 @@
 ---
 layout: team
 kind: team
-name: Jet Stream
+myName: Jet Stream
 shortDescription:  Das Projekt CloudMiner übernimmt die Aufgaben, die vorhandene Software von evoila um zwei Kernkompetenzen zu erweitern. ChargeBack Rechnungserstellung Sammeln und archivieren von rechnungsrelevanten Daten zum Erstellen von rechtskräftigen Rechnungen. Monitoring Echtzeitanzeige von verwendeten Ressourcen Sammeln von Betriebsdaten zur Kostenoptimierung und zum Aufzeigen von Engpässen.
 partnerIndustry: Evoila
 images:

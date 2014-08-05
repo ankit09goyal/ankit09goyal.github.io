@@ -1,7 +1,7 @@
 ---
 layout: team
 kind: team
-name: TimeScale
+myName: TimeScale
 shortDescription: Die erstellte Anwendung ermöglicht die Verwaltung der Kunden, Projekte, Aufträge und Tätigkeiten des Auftraggebers, um auf dieser Basis eine einfachere, intuitive Stundenerfassung der Mitarbeiter zu ermöglichen. Dabei werden die Buchungen von Arbeitszeiten auf die korrekten Elemente in der komplexen Hierarchie aus Projekten, internen und externen Aufträgen und Tätigkeiten verteilt. Außerdem können Bericht über Tätigkeiten der Mitarbeiter erzeugt und exportiert werden, sowie Urlaube und Abwesenheiten erfasst werden.
 logo: ts3_breit.png
 partnerIndustry: Dr. Eckhardt + Partner GmbH

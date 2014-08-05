@@ -1,7 +1,7 @@
 ---
 layout: team
 kind: team
-name: what is it?
+myName: what is it?
 shortDescription: sample description of the team sample description of the team sample description of the team sample description of the team 
 logo: logo.jpg
 partnerIndustry: Bosch Industries

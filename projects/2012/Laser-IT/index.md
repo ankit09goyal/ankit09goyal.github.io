@@ -1,7 +1,7 @@
 ---
 layout: team
 kind: team
-name: Laser-IT
+myName: Laser-IT
 shortDescription: Das Projekt beinhaltet die Entwicklung einer Software, welche Zeichen eines Fonts welche Standardkonform im Outline dargestellt sind) in Singleline zu übertragen. Dies hat den Hintergrund, dass der Auftraggeber Zeit im Laserdruck sparen möchte. Als Teil der Aufgabe ist das Entwickeln eines Algorithmus, der den Konvertierungsvorgang automatisiert durchführt.
 logo: Logo.png
 partnerIndustry: REA Elektronik GmbH

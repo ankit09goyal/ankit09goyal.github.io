@@ -6,7 +6,7 @@ layout: default
 <!-- get the link to the folders, starts -->
 {% assign splittedLink11 = page.url | split:"/" %}
 {% capture myYear11 %}{{ splittedLink11[2] }}{% endcapture %}
-{% assign thePageName = page.name %}
+{% assign thePageName = page.myName %}
 <!-- get the link to the folders, ends -->
 
 <!-- backlinking starts -->
@@ -28,7 +28,7 @@ layout: default
 		</li>
 		<li class="doppelpfeil"></li>
 		<li>
-			<span class="grau">{{ page.name }}</span>
+			<span class="grau">{{ page.myName }}</span>
 		</li>
 		<div class="clear"></div>
 	</ol>		
@@ -62,24 +62,24 @@ layout: default
         
 							{% if myYear12 == myYear11 %} 
 							  
-						{% if thePageName == page.name %}
+						{% if thePageName == page.myName %}
 						 
 						 	  {% if page.ownSite == 'own' %}
-                            	 <li><a href="{{ site.baseurl }}{{ folderLink }}site/" class="ebene4 aktiv">{{ page.name }}</a></li>
+                            	 <li><a href="{{ site.baseurl }}{{ folderLink }}site/" class="ebene4 aktiv">{{ page.myName }}</a></li>
 	                          {% elsif page.ownSite == 'legacy' %}
-    	                         <li><a class="ebene4 aktiv">{{ page.name }}</a><li>
+    	                         <li><a class="ebene4 aktiv">{{ page.myName }}</a><li>
         	                  {% else %}
-            	                 <li><a href="{{ page.url | prepend:site.baseurl }}" class="ebene4 aktiv">{{ page.name }}</a></li>
+            	                 <li><a href="{{ page.url | prepend:site.baseurl }}" class="ebene4 aktiv">{{ page.myName }}</a></li>
                 	          {% endif %}
 						
 						{% else %}
 							
 							 {% if page.ownSite == 'own' %}
-        	                     <li><a href="{{ site.baseurl }}{{ folderLink }}site/" class="ebene4">{{ page.name }}</a></li>
+        	                     <li><a href="{{ site.baseurl }}{{ folderLink }}site/" class="ebene4">{{ page.myName }}</a></li>
             	              {% elsif page.ownSite == 'legacy' %}
-                	             <li><a class="ebene4">{{ page.name }}</a><li>
+                	             <li><a class="ebene4">{{ page.myName }}</a><li>
                     	      {% else %}
-                        	     <li><a href="{{ page.url | prepend:site.baseurl }}" class="ebene4">{{ page.name }}</a></li>
+                        	     <li><a href="{{ page.url | prepend:site.baseurl }}" class="ebene4">{{ page.myName }}</a></li>
                           	{% endif %}	
                           	
 							{% endif %}
@@ -126,7 +126,7 @@ layout: default
 	<div class="title">
 		<!-- Team Name -->
 		<div class="name">
-		    <h1>{{ page.name }}</h1>
+		    <h1>{{ page.myName }}</h1>
 		</div>
 		<!-- Logo -->
 	

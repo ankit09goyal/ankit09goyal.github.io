@@ -1,7 +1,7 @@
 ---
 layout: team
 kind: team
-name: yes bank
+myName: yes bank
 shortDescription: sample description of the team sample description of the team sample description of the team sample description of the team 
 logo: logo.jpg
 partnerIndustry: Bosch Industries
