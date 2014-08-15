@@ -463,10 +463,10 @@ overflow:hidden;
 margin-bottom:0;
 }
 .highlighted,.ep_toolbox{
-background-image:url(http://www.stg.tu-darmstadt.de/media/corporate_design/cd_grafiken/schleier_1x1_50.png);
+background-image:url(tudarmstadt_v11.images/schleier_1x1_50.png);
 }
 tr.highlighted{
-background-image:url(http://www.stg.tu-darmstadt.de/media/corporate_design/cd_grafiken/schleier_1x1_25.png);
+background-image:url(tudarmstadt_v11.images/schleier_1x1_25.png);
 }
 .trennlinie{
 border-top:1px solid #E5E5E5;
