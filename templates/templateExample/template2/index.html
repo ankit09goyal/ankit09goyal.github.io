@@ -102,7 +102,7 @@ files:
 		<img src="{{ "Sascha.jpg" | prepend:'img/' | prepend:folderLink | prepend:site.baseurl }}">
 		<div>
 			<!-- member name -->
-			<h3>Name of the team member</h3>
+			<h3>Name (with desc)</h3>
 			<!-- member description -->
 			<p>Brief description of the team member</p>
 		</div>
@@ -114,8 +114,7 @@ files:
 	<div>
 		<img src="{{ "Sascha.jpg" | prepend:'img/' | prepend:folderLink | prepend:site.baseurl }}">
 		<div>
-			<h3>Name of the team member</h3>
-			<p>Brief description of the team member</p>
+			<h3>Name (without desc)</h3>
 		</div>
 	</div>	
 	<div class="clear"></div>
@@ -133,30 +132,10 @@ files:
 <!-- we can use specific classes eg: "classH2, classH3" etc. or not -->
 <h2 class="classH2">Team</h2>
 <dl>
-	<dt>Name of the Team Member</dt>
-	<dd>Brief description of the team member</dd>
-	<dt>Name of the Team Member</dt>
-	<dd>Brief description of the team member</dd>
+	<dt>Name of the Team Member (without description)</dt>
 	<dt>Name of the Team Member</dt>
 	<dd>Brief description of the team member</dd>
 </dl>
-<div class="clear"></div>
-<!-- ***************** -->
-<!-- ***************** -->
-
-
-<!-- ******************************************************* -->
-<!-- Team members {Type3.1} ********* (Name) in dl tag-->
-<!-- ******************************************************* -->
-<!-- Could be in a div or not -->
-<div>
-	<h2>Team</h2>
-	<dl>
-		<dt>Name of the Team Member</dt>
-		<dt>Name of the Team Member</dt>
-		<dt>Name of the Team Member</dt>
-	</dl>
-</div>
 <div class="clear"></div>
 <!-- ***************** -->
 <!-- ***************** -->
@@ -173,38 +152,6 @@ files:
 		<li>Name of the Team Member</li>
 		<li>Name of the Team Member</li>
 	</ul>
-</div>
-<div class="clear"></div>
-<!-- ***************** -->
-<!-- ***************** -->
-
-
-<!-- ******************************************************* -->
-<!-- Team members {Type4} ********* (Name, pic) -->
-<!-- ******************************************************* -->
-<div class="teamMembers">
-	<h2>Team</h2>
-	<!-- Individual member detail block starts -->
-	<div>
-		<!-- member image -->
-		<img src="{{ "Sascha.jpg" | prepend:'img/' | prepend:folderLink | prepend:site.baseurl }}">
-		<div>
-			<!-- member name -->
-			<h3>Name of the team member</h3>
-		</div>
-	</div>	
-	<div class="clear"></div>
-	<!-- Individual member detail block ends -->
-
-	<!-- Individual member detail block starts -->
-	<div>
-		<img src="{{ "Sascha.jpg" | prepend:'img/' | prepend:folderLink | prepend:site.baseurl }}">
-		<div>
-			<h3>Name of the team member</h3>
-		</div>
-	</div>	
-	<div class="clear"></div>
-	<!-- Individual member detail block ends -->	
 </div>
 <div class="clear"></div>
 <!-- ***************** -->
