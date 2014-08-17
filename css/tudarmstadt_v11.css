@@ -618,7 +618,7 @@ background-color:#F1F1F1;
 margin:0;
 }
 .header,.main{
-background:#fff url(http://www.stg.tu-darmstadt.de/media/corporate_design/cd_grafiken/css-sprite-repeat-y.png) repeat-y 0 0;
+background:#fff url(tudarmstadt_v11.images/css-sprite-repeat-y.png) repeat-y 0 0;
 margin-left:20px;
 padding-left:23px;
 padding-right:23px;
@@ -713,7 +713,7 @@ padding:0 2px !important;
 width:100px;
 }
 .suche_abschicken{
-background:#fff url(http://www.stg.tu-darmstadt.de/media/corporate_design/cd_grafiken/css-sprite_v02.png) no-repeat 0 -2866px;
+background:#fff url(tudarmstadt_v11.images/css-sprite_v02.png) no-repeat 0 -2866px;
 border-style:none;
 height:13px;
 width:7px;
@@ -730,11 +730,11 @@ right:0;
 top:23px;
 }
 .athene{
-background:url(http://www.stg.tu-darmstadt.de/media/corporate_design/cd_grafiken/css-sprite_v02.png) no-repeat 0 0;
+background:url(tudarmstadt_v11.images/css-sprite_v02.png) no-repeat 0 0;
 height:84px;
 }
 .athene_partner{
-background:url(http://www.stg.tu-darmstadt.de/media/corporate_design/cd_grafiken/tudarmstadtpartner.png) no-repeat;
+background:url(tudarmstadt_v11.images/tudarmstadtpartner.png) no-repeat;
 height:117px;
 }
 .breadcrumbs{
@@ -753,7 +753,7 @@ padding:0;
 color:#666;
 }
 .doppelpfeil{
-background:url(http://www.stg.tu-darmstadt.de/media/corporate_design/cd_grafiken/css-sprite_v02.png) no-repeat 0 -3110px;
+background:url(tudarmstadt_v11.images/css-sprite_v02.png) no-repeat 0 -3110px;
 height:6px;
 margin-top:7px;
 width:5px;
@@ -789,7 +789,7 @@ margin:0;
 padding:0;
 }
 .navi_pfeil,.navi_pfeil_links{
-background:url(http://www.stg.tu-darmstadt.de/media/corporate_design/cd_grafiken/css-sprite_v02.png) no-repeat;
+background:url(tudarmstadt_v11.images/css-sprite_v02.png) no-repeat;
 height:8px;
 width:7px;
 }
@@ -804,7 +804,7 @@ float:left;
 margin-top:4px;
 }
 .neues_fenster,.hat_untermenue{
-background:url(http://www.stg.tu-darmstadt.de/media/corporate_design/cd_grafiken/css-sprite_v02.png) no-repeat;
+background:url(tudarmstadt_v11.images/css-sprite_v02.png) no-repeat;
 float:right;
 visibility:hidden;
 }
@@ -827,21 +827,21 @@ visibility:visible;
 font-weight:700;
 }
 .navigationsspalte .ebene2{
-background:url(http://www.stg.tu-darmstadt.de/media/corporate_design/cd_grafiken/css-sprite-repeat-y.png) repeat-y -1027px 0;
+background:url(tudarmstadt_v11.images/css-sprite-repeat-y.png) repeat-y -1027px 0;
 padding-top:4px !important;
 }
 .navigationsspalte .ebene3{
-background:url(http://www.stg.tu-darmstadt.de/media/corporate_design/cd_grafiken/css-sprite-repeat-y.png) repeat-y -1259px 0;
+background:url(tudarmstadt_v11.images/css-sprite-repeat-y.png) repeat-y -1259px 0;
 padding:3px 8px 3px 18px !important;
 width:156px !important;
 }
 .navigationsspalte .ebene4{
-background:url(http://www.stg.tu-darmstadt.de/media/corporate_design/cd_grafiken/css-sprite-repeat-y.png) repeat-y -1491px 0;
+background:url(tudarmstadt_v11.images/css-sprite-repeat-y.png) repeat-y -1491px 0;
 padding:2px 8px 2px 28px !important;
 width:146px !important;
 }
 .navigationsspalte .ebene5{
-background:url(http://www.stg.tu-darmstadt.de/media/corporate_design/cd_grafiken/css-sprite-repeat-y.png) repeat-y -1723px 0;
+background:url(tudarmstadt_v11.images/css-sprite-repeat-y.png) repeat-y -1723px 0;
 padding:1px 8px 2px 38px !important;
 width:136px !important;
 }
@@ -850,19 +850,19 @@ background-color:#fff !important;
 border-bottom:1px solid #fff;
 }
 .login{
-background:url(http://www.stg.tu-darmstadt.de/media/corporate_design/cd_grafiken/css-sprite_v02.png) no-repeat 0 -2696px;
+background:url(tudarmstadt_v11.images/css-sprite_v02.png) no-repeat 0 -2696px;
 display:inline-block;
 height:10px;
 width:9px;
 }
 .angemeldet,.gruppe{
-background:url(http://www.stg.tu-darmstadt.de/media/corporate_design/cd_grafiken/css-sprite_v02.png) no-repeat 0 -2574px;
+background:url(tudarmstadt_v11.images/css-sprite_v02.png) no-repeat 0 -2574px;
 display:inline-block;
 height:11px;
 width:10px;
 }
 .autorisiert{
-background:url(http://www.stg.tu-darmstadt.de/media/corporate_design/cd_grafiken/css-sprite_v02.png) no-repeat 0 -2635px;
+background:url(tudarmstadt_v11.images/css-sprite_v02.png) no-repeat 0 -2635px;
 display:inline-block;
 height:11px;
 width:10px;
@@ -940,7 +940,7 @@ z-index:2;
 width:931px;
 }
 .schatten_unten{
-background:url(http://www.stg.tu-darmstadt.de/media/corporate_design/cd_grafiken/schatten_unten.png) no-repeat;
+background:url(tudarmstadt_v11.images/schatten_unten.png) no-repeat;
 height:3px;
 margin:0 -23px 5px;
 }
@@ -951,7 +951,7 @@ text-decoration:underline;
 text-decoration:none !important;
 }
 .raquo,.laquo{
-background-image:url(http://www.stg.tu-darmstadt.de/media/corporate_design/cd_grafiken/css-sprite_v02.png);
+background-image:url(tudarmstadt_v11.images/css-sprite_v02.png);
 background-repeat:no-repeat;
 display:inline-block;
 height:8px;
@@ -969,7 +969,7 @@ margin-right:2px;
 background-color:#333 !important;
 }
 .icon{
-background:url(http://www.stg.tu-darmstadt.de/media/corporate_design/cd_grafiken/css-sprite_v02.png) no-repeat 0 -682px;
+background:url(tudarmstadt_v11.images/css-sprite_v02.png) no-repeat 0 -682px;
 padding-left:19px;
 }
 h2 .icon,h3 .icon{
@@ -1094,7 +1094,7 @@ color:#000;
 font-size:145% !important;
 }
 .plus a,a.plus,.plus_inaktiv a,a.plus_inaktiv,.minus a,a.minus{
-background:url(http://www.stg.tu-darmstadt.de/media/corporate_design/cd_grafiken/css-sprite_v02.png) no-repeat;
+background:url(tudarmstadt_v11.images/css-sprite_v02.png) no-repeat;
 padding-left:14px;
 }
 .plus a,a.plus{
@@ -1107,11 +1107,11 @@ background-position:0 -3281px;
 background-position:0 -4391px;
 }
 .doppel_plus{
-background:url(http://www.stg.tu-darmstadt.de/media/corporate_design/cd_grafiken/css-sprite_v02.png) no-repeat 0 -3222px;
+background:url(tudarmstadt_v11.images/css-sprite_v02.png) no-repeat 0 -3222px;
 padding-left:20px;
 }
 .doppel_minus{
-background:url(http://www.stg.tu-darmstadt.de/media/corporate_design/cd_grafiken/css-sprite_v02.png) no-repeat 0 -3163px;
+background:url(tudarmstadt_v11.images/css-sprite_v02.png) no-repeat 0 -3163px;
 padding-left:20px;
 }
 .counter{
@@ -1119,7 +1119,7 @@ position:absolute;
 bottom:0.8em;
 }
 .abspielen{
-background:url(http://www.stg.tu-darmstadt.de/media/corporate_design/cd_grafiken/icons_3/abspielen.png) no-repeat;
+background:url(tudarmstadt_v11.images/abspielen.png) no-repeat;
 display:inline-block;
 height:58px;
 opacity:.7;
@@ -1143,7 +1143,7 @@ background-image:url(http://www.stg.tu-darmstadt.de/cd_grafiken/ui/descending.pn
 background-color:#F0F0F0;
 }
 .nach_oben{
-background:url(http://www.stg.tu-darmstadt.de/media/corporate_design/cd_grafiken/css-sprite_v02.png) no-repeat 0 -3045px;
+background:url(tudarmstadt_v11.images/css-sprite_v02.png) no-repeat 0 -3045px;
 display:inline-block;
 height:15px;
 width:15px;
@@ -1220,7 +1220,7 @@ width:164px;
 margin-bottom:1.4em
 }
 .rss_icon,.ical{
-background:url(http://www.stg.tu-darmstadt.de/media/corporate_design/cd_grafiken/css-sprite_v02.png) no-repeat;
+background:url(tudarmstadt_v11.images/css-sprite_v02.png) no-repeat;
 display:inline-block;
 }
 .rss_icon{
@@ -1237,7 +1237,7 @@ width:20px;
 margin-top:6px;
 }
 .lupe{
-background-image:url(http://www.stg.tu-darmstadt.de/media/corporate_design/cd_grafiken/schleier_1x1_50.png);
+background-image:url(tudarmstadt_v11.images/schleier_1x1_50.png);
 line-height:1;
 padding:3px;
 position:absolute;
@@ -1290,7 +1290,7 @@ padding-top:3px;
 width:60px;
 }
 .stern,.stern_klein{
-background:#f0f0f0 url(http://www.stg.tu-darmstadt.de/media/corporate_design/cd_grafiken/css-sprite_v02.png) no-repeat;
+background:#f0f0f0 url(tudarmstadt_v11.images/css-sprite_v02.png) no-repeat;
 display:inline-block;
 }
 .stern{
@@ -1330,7 +1330,7 @@ margin-bottom:0;
 margin-bottom:.4em;
 }
 .ui{
-background:url(http://www.stg.tu-darmstadt.de/media/corporate_design/cd_grafiken/css-sprite_v02.png) no-repeat;
+background:url(tudarmstadt_v11.images/css-sprite_v02.png) no-repeat;
 display:inline-block;
 height:16px;
 width:16px;
@@ -1447,7 +1447,7 @@ max-width: 100%;
 max-height: 100%;
 }
 #fancybox-loading, .fancybox-close, .fancybox-prev span, .fancybox-next span {
-background-image: url('http://www.stg.tu-darmstadt.de/media/corporate_design/cd_grafiken/fancybox_1/fancybox_sprite_2_1_15.png');
+background-image: url('tudarmstadt_v11.images/fancybox_sprite_2_1_15.png');
 }
 #fancybox-loading {
 position: fixed;
@@ -1463,7 +1463,7 @@ z-index: 8060;
 #fancybox-loading div {
 width: 44px;
 height: 44px;
-background: url('http://www.stg.tu-darmstadt.de/media/corporate_design/cd_grafiken/fancybox_1/fancybox_loading_2_1_15.gif') center center no-repeat;
+background: url('tudarmstadt_v11.images/fancybox_loading_2_1_15.gif') center center no-repeat;
 }
 .fancybox-close {
 position: absolute;
@@ -1481,7 +1481,7 @@ width: 40%;
 height: 100%;
 cursor: pointer;
 text-decoration: none;
-background: transparent url('http://www.stg.tu-darmstadt.de/media/corporate_design/cd_grafiken/fancybox_1/blank.gif'); /* helps IE */
+background: transparent url('http://www.stg.tu-darmstadt.de/media/corporate_design/cd_grafiken/blank.gif'); /* helps IE */
 -webkit-tap-highlight-color: rgba(0,0,0,0);
 z-index: 8040;
 }
@@ -1539,7 +1539,7 @@ left: 0;
 overflow: hidden;
 display: none;
 z-index: 8010;
-background: url('http://www.stg.tu-darmstadt.de/media/corporate_design/cd_grafiken/fancybox_1/fancybox_overlay_2_1_15.png');
+background: url('tudarmstadt_v11.images/fancybox_overlay_2_1_15.png');
 }
 .fancybox-overlay-fixed {
 position: fixed;
@@ -1602,11 +1602,11 @@ background: rgba(0, 0, 0, .8);
 only screen and (min--moz-device-pixel-ratio: 1.5),
 only screen and (min-device-pixel-ratio: 1.5){
 #fancybox-loading, .fancybox-close, .fancybox-prev span, .fancybox-next span {
-background-image: url('http://www.stg.tu-darmstadt.de/media/corporate_design/cd_grafiken/fancybox_1/fancybox_sprite2_2_1_15.png');
+background-image: url('tudarmstadt_v11.images/fancybox_sprite2_2_1_15.png');
 background-size: 44px 152px; /*The size of the normal image, half the size of the hi-res image*/
 }
 #fancybox-loading div {
-background-image: url('http://www.stg.tu-darmstadt.de/media/corporate_design/cd_grafiken/fancybox_1/fancybox_loading2_2_1_15.gif');
+background-image: url('tudarmstadt_v11.images/fancybox_loading2_2_1_15.gif');
 background-size: 24px 24px; /*The size of the normal image, half the size of the hi-res image*/
 }
 }
