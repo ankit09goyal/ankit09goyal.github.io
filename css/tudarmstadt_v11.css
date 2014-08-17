@@ -1,3 +1,14 @@
+/*
+	--- CHANGES ---
+
+	Links of the background-image:url has been changed
+	to css/tudarmstadt_v11.images/IMAGE-NAME
+
+	Few links are not changed as they are no longer found
+	in the original website and are not used in our website
+*/
+
+
 body{
 background-color:#fff;
 color:#333;
