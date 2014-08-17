@@ -101,7 +101,7 @@ body{
 }
 
 .logoDivPostTemplate img{
-	float: left;
+	float: right;
     margin-left: 8px;
     width: 7rem;
 }
