@@ -29,8 +29,8 @@ files:
 <!-- ***************** -->
 
 <div>
-	<!-- heading -->
-	<h2>Projektbeschreibung</h2>
+	<!-- heading 
+	<h2>Projektbeschreibung</h2> -->
 	<!-- paragraph -->
 	<p>Der Auftraggeber verfügt bereits über ein Tool zur Verwaltung der laufenden Projekte, der zugehörigen Aufträge und Tätigkeiten. Schwerpunkte der Software sind die tätigkeitsbezogene Stundenerfassung der Mitarbeiter sowie die Personaleinsatzplanung.</p>
 	

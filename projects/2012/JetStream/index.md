@@ -27,7 +27,6 @@ files:
 <!-- Team Description -->
 <!-- ***************** -->
 
-<h2 class="classH2">Projektbeschreibung</h2>
 <p> Aktuell gibt es ein prototypisches System, welches bereits die Funktionen der Konfigurationserstellung und Kundenbetreuung ermöglicht. Die Rechnungen werden derzeit noch über ein Festpreisverfahren in Abhängigkeit der Mietdauer erstellt.<br />
 
 Evoila möchte die Nutzung dieses Systems, wie branchenüblich, über ein skalierendes Berechnungsverfahren in Abhängigkeit zur verursachten Auslastung stellen. Zurzeit fehlt jedoch eine Möglichkeit, die verbrauchten Ressourcen und damit verbundenen Kosten zu beobachten und sie dem Kunden in Rechnung zu stellen. Dies bedeutet im Genauen, dass die Ressourcen für die vom Kunden gebuchten, virtuellen Server im Verhältnis zum Buchungszeitraum berechnet werden müssen. Dies wären z.B. Speicherplatz, Anzahl der CPUs u.a. aber auch die Anzahl der Konfigurationen, die vorgehalten werden. Die hierfür benötigten Daten befinden sich jedoch sowohl auf den angemieteten Cloud-Servern, als auch auf den virtuellen Maschinen der Kunden. Es fehlt zudem eine Möglichkeit, die Ressourcen in Echtzeit zu überwachen, um das System zu warten.<br />
